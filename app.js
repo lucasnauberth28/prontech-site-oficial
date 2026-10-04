@@ -43,7 +43,9 @@ addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); 
 const projectInfo = {
   forma:{name:'Forma',description:'Uma landing page de arquitetura com fotografia em primeiro plano, composição editorial e um convite direto para conversar sobre o projeto. A imagem, o nome e o negócio são conceituais.'},
   brisa:{name:'Brisa',description:'Uma página de climatização residencial que traduz o serviço em conforto e cuidado. A oferta conduz ao pedido de orçamento. Nome, negócio e imagem são fictícios; este estudo parte do nosso primeiro recorte comercial em São Paulo.'},
-  orbita:{name:'Órbita',description:'Uma apresentação de produto digital que combina materiais, contraste e uma mensagem curta. O caminho escolhido é conhecer a solução e iniciar uma conversa. Nome e produto são fictícios.'}
+  alma:{name:'Alma',description:'Uma landing page para clínica médica que combina acolhimento, autoridade e um caminho direto para o agendamento. Nome, negócio e imagem são fictícios.'},
+  forno:{name:'Forno',description:'Uma página de padaria e restaurante que transforma atmosfera, produto e desejo em pedidos e reservas. Nome, negócio e imagem são fictícios.'},
+  linha:{name:'Linha',description:'Uma apresentação para escritório de advocacia que comunica clareza e confiança antes da primeira conversa. Nome, negócio e imagem são fictícios.'}
 };
 const projectDialog = document.getElementById('project-dialog');
 const briefDialog = document.getElementById('brief-dialog');
@@ -106,7 +108,7 @@ function positionProjects() {
     card.inert = index !== projectIndex;
     card.setAttribute('aria-hidden',String(index !== projectIndex));
   });
-  carouselCount.textContent = String(projectIndex + 1).padStart(2,'0') + ' / 03';
+  carouselCount.textContent = String(projectIndex + 1).padStart(2,'0') + ' / 04';
 }
 function showProject(index) {
   projectIndex = (index + cards.length) % cards.length;
