@@ -1,9 +1,244 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#202224"><meta name="description" content="Estudo conceitual de página para oficina, criado pela ProNTech."><title>Ponto auto — Exemplo de oficina | ProNTech</title><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="/assets/fonts/dm-sans-regular.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/inter-tight-semibold.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script></head>
-<body class="sample-page sample-auto"><a class="skip-link" href="#conteudo">Pular para o conteúdo</a><div class="read-progress" aria-hidden="true"></div>
-<header class="site-header wrap"><a class="wordmark" href="/" aria-label="ProNTech, início"><svg class="brand-symbol" viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg><span>ProN<span class="brand-light">Tech</span><i></i></span></a><nav aria-label="Navegação principal"><a href="/#exemplos">Outros exemplos</a><a href="/#oferta">Preço e entrega</a><a class="header-contact" data-wa data-segment="oficina" href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Quero um site assim ↗</a></nav><button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button><nav class="mobile-menu" id="mobile-menu" aria-label="Navegação no celular" hidden><a href="/#exemplos">Outros exemplos</a><a href="/#oferta">Preço e entrega</a><a data-wa data-segment="oficina" href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Quero um site assim ↗</a></nav></header>
-<div class="sample-note wrap"><span>Estudo conceitual / negócio fictício</span><a href="/#exemplos">← Voltar aos exemplos</a></div>
-<main id="conteudo"><section class="sample-hero" id="inicio" aria-labelledby="sample-title"><div class="wrap sample-hero-grid"><div><p class="sample-brand">Ponto auto</p><p class="eyebrow">Oficina & manutenção</p><h1 id="sample-title">Seu carro em<br>boas mãos.</h1><p>Da revisão ao reparo, entenda o que seu carro precisa. Converse com a equipe e receba orientação antes de decidir.</p><a class="button button-primary" href="#contato">Pedir orçamento <span aria-hidden="true">↗</span></a></div><img class="sample-image" src="/assets/auto-v1.webp" width="1200" height="675" alt="Mecânico examinando o motor de um carro na oficina" fetchpriority="high"></div></section>
-<section class="sample-content light-section" id="servicos" aria-labelledby="services-title"><div class="wrap"><div class="reveal"><p class="eyebrow">Conheça o atendimento</p><h2 id="services-title">Clareza antes de cada serviço.</h2></div><div class="sample-services"><article class="sample-service reveal"><h3>Revisão</h3><p>Verificação dos itens importantes para a rotina do seu carro.</p></article><article class="sample-service reveal"><h3>Manutenção</h3><p>Cuidado com freios, suspensão e funcionamento do motor.</p></article><article class="sample-service reveal"><h3>Diagnóstico</h3><p>Entenda o problema e os próximos passos para resolver.</p></article></div></div></section>
-<section class="sample-contact light-section" id="contato" aria-labelledby="contact-title"><div class="wrap reveal"><p class="eyebrow">Estudo conceitual / negócio fictício</p><h2 id="contact-title">Gostou desta página?<br>Ela pode ter a sua marca.</h2><p>Este atendimento é um exemplo. A ProNTech cria a versão com seus serviços, fotos, endereço e seu WhatsApp, a partir de R$ 450.</p><a class="button button-primary" data-wa data-segment="oficina" href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Criar minha página <span aria-hidden="true">↗</span></a></div></section></main>
-<footer class="site-footer wrap"><div><a class="wordmark" href="/" aria-label="ProNTech, início"><svg class="brand-symbol" viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg><span>ProN<span class="brand-light">Tech</span><i></i></span></a><p>Páginas para negócios locais.<br>São Paulo, Brasil.</p></div><div class="footer-contacts"><a class="button button-whatsapp" data-wa data-segment="oficina" href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">WhatsApp · (11) 96779-4744 ↗</a><a class="text-link" href="mailto:lucasnauberth@gmail.com">lucasnauberth@gmail.com ↗</a></div><a class="text-link" href="/#exemplos">Ver outros exemplos ↗</a></footer></body></html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#121518">
+<meta name="description" content="Página de exemplo da ProNTech para oficinas mecânicas: Ponto Auto, negócio fictício.">
+<title>Ponto Auto — Exemplo de oficina mecânica | ProNTech</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&amp;family=Barlow:wght@400;500;600&amp;family=Hanken+Grotesk:wght@500;600;700&amp;display=swap">
+<link rel="preload" href="/assets/ex/auto/01-carro-elevador.webp" as="image">
+<link rel="stylesheet" href="/assets/ex/ex.css">
+<style>
+:root{--bg:#121518;--panel:#1b2024;--panel-2:#232a2f;--text:#e8ebed;--muted:#9aa4ab;--line:#2e363c;--orange:#f26b1d;--orange-2:#ff8a45;--cond:'Barlow Condensed',system-ui,sans-serif;--sans:'Barlow',system-ui,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+body{background:var(--bg);color:var(--text);font-family:var(--sans)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 28px}
+.tag{font-family:var(--cond);font-size:14px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-2)}
+.h2{font-family:var(--cond);font-weight:800;font-size:clamp(48px,6vw,96px);line-height:.9;text-transform:uppercase;letter-spacing:-.01em}
+.h2 span{color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 26px;border-radius:12px;text-decoration:none;font-family:var(--cond);font-weight:700;font-size:18px;letter-spacing:.06em;text-transform:uppercase;border:0;cursor:pointer;transition:transform .35s var(--ease),background-color .35s}
+.btn:hover{transform:translateY(-2px)}
+.btn-orange{background:var(--orange);color:#120a05}
+.btn-orange:hover{background:var(--orange-2)}
+.btn-line{border:1px solid #4a545b;color:var(--text)}
+
+.top{position:absolute;left:0;right:0;top:0;z-index:5}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:22px}
+.logo{display:inline-flex;align-items:center;gap:10px;font-family:var(--cond);font-weight:800;font-size:28px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none}
+.logo i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--orange);color:#120a05;font-style:normal;font-size:16px}
+.menu{display:flex;gap:32px;font-family:var(--cond);font-weight:600;font-size:16px;letter-spacing:.12em;text-transform:uppercase}
+.menu a{text-decoration:none;color:#cfd5d9}
+.menu a:hover{color:#fff}
+
+/* hero */
+.hero{position:relative;min-height:860px;display:flex;align-items:flex-end;overflow:hidden;isolation:isolate}
+.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;animation:hz 3s var(--ease) both}
+@keyframes hz{from{transform:scale(1.15)}to{transform:none}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(18,21,24,.7) 0%,rgba(18,21,24,.15) 35%,rgba(18,21,24,.55) 65%,var(--bg) 100%)}
+.hero-inner{width:100%;padding-bottom:72px}
+.hero-inner .tag{display:inline-block;margin-bottom:14px;padding:6px 12px;border-radius:8px;background:rgba(18,21,24,.6)}
+.hero h1{font-family:var(--cond);font-weight:800;font-size:clamp(72px,11.5vw,184px);line-height:.84;text-transform:uppercase;letter-spacing:-.015em}
+.hero h1 .row{display:block;overflow:hidden;padding-top:.12em;margin-top:-.12em}
+.hero h1 .row span{display:block;transform:translateY(100%);animation:slide 1.1s var(--ease) forwards}
+.hero h1 .row:nth-child(2) span{animation-delay:.12s;color:var(--orange)}
+@keyframes slide{to{transform:none}}
+.hero-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:32px;margin-top:36px}
+.hero-bottom p{max-width:460px;font-size:18px;line-height:1.6;color:#cdd3d7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chips span{padding:8px 14px;border:1px solid #3d474e;border-radius:999px;font-size:14px;color:#cdd3d7;background:rgba(18,21,24,.4);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.live{position:absolute;right:28px;top:120px;display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:14px;background:rgba(27,32,36,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--line);opacity:0;animation:fade .9s var(--ease) 1s forwards}
+@keyframes fade{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.live .blink{width:9px;height:9px;border-radius:50%;background:#3ccf74;animation:bl 1.6s infinite}
+@keyframes bl{50%{opacity:.25}}
+.live small{display:block;font-size:12px;color:var(--muted)}
+.live b{font-size:15px}
+
+/* serviços */
+.services{padding:110px 0}
+.svc-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px}
+.svc-head p{max-width:400px;color:var(--muted);line-height:1.6}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.svc{position:relative;padding:32px;background:var(--bg);min-height:250px;display:flex;flex-direction:column;transition:background-color .4s}
+.svc:hover{background:var(--panel)}
+.svc .num{font-family:var(--cond);font-size:14px;letter-spacing:.2em;color:var(--muted)}
+.svc svg{margin:22px 0 18px;color:var(--orange)}
+.svc h3{font-family:var(--cond);font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.02em}
+.svc p{margin-top:8px;color:var(--muted);line-height:1.55;font-size:15px}
+.svc .from{margin-top:auto;padding-top:18px;font-family:var(--cond);font-size:20px;font-weight:600;color:var(--text)}
+.svc .from small{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400}
+
+/* transparência */
+.trust{padding:0 0 110px}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto auto;gap:16px}
+.trust-grid .big{grid-column:span 2;grid-row:span 2;position:relative;border-radius:20px;overflow:hidden;min-height:560px}
+.trust-grid .big img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.trust-grid .big .copy{position:absolute;left:0;right:0;bottom:0;padding:36px;background:linear-gradient(transparent,rgba(18,21,24,.92))}
+.trust-grid .big .copy p{max-width:460px;margin-top:12px;color:#cdd3d7;line-height:1.6}
+.trust-grid figure{position:relative;border-radius:20px;overflow:hidden}
+.trust-grid figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:1;transition:transform 1.2s var(--ease)}
+.trust-grid figure:hover img{transform:scale(1.06)}
+.trust-grid figcaption{position:absolute;left:14px;bottom:14px;padding:6px 12px;border-radius:8px;background:rgba(18,21,24,.85);font-family:var(--cond);font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:13px}
+
+/* etapas */
+.steps{padding:100px 0;background:var(--panel)}
+.steps-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:52px}
+.step{padding-top:22px;border-top:2px solid var(--line);transition:border-color .5s}
+.step.in{border-color:var(--orange)}
+.step b{display:block;font-family:var(--cond);font-weight:800;font-size:56px;line-height:1;color:var(--orange)}
+.step h3{margin:14px 0 8px;font-family:var(--cond);font-weight:700;font-size:24px;text-transform:uppercase}
+.step p{color:var(--muted);line-height:1.6}
+
+/* orçamento */
+.quote{padding:110px 0}
+.quote-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:center}
+.quote-grid > img{border-radius:20px;aspect-ratio:16/12;object-fit:cover}
+.form{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form label{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--muted)}
+.form .full{grid-column:1/-1}
+.form input,.form select{min-height:52px;padding:0 16px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--text);font:500 16px var(--sans)}
+.form input:focus,.form select:focus{outline:2px solid var(--orange);outline-offset:2px}
+.form .btn{justify-content:center}
+.form small{grid-column:1/-1;color:var(--muted);font-size:13px}
+
+.info{padding:0 0 60px}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.info-grid div{padding:28px;border-radius:20px;background:var(--panel)}
+.info-grid b{display:block;margin-bottom:8px;font-family:var(--cond);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-2)}
+.info-grid p{color:#cdd3d7;line-height:1.6}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:32px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot a{text-decoration:none}
+.demo-note{color:var(--muted)}
+
+@media (max-width:960px){
+  .menu{display:none}
+  .live{display:none}
+  .hero{min-height:0;padding-top:120px}
+  .hero h1{font-size:clamp(54px,15vw,110px);line-height:.92}
+  .logo{font-size:22px;white-space:nowrap}
+  .top .btn{min-height:40px!important;padding:0 14px!important;font-size:14px!important;white-space:nowrap}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr 1fr}
+  .trust-grid .big{grid-column:1/-1;grid-row:auto;min-height:460px}
+  .steps-grid{grid-template-columns:1fr 1fr}
+  .quote-grid,.info-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){.svc-grid,.steps-grid{grid-template-columns:minmax(0,1fr)}.form{grid-template-columns:minmax(0,1fr)}}
+</style>
+</head>
+<body data-segment="oficina mecânica">
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<div class="demo-bar"><div class="demo-left"><a class="demo-brand" href="/"><svg viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg>ProNTech</a><span>Página de exemplo · negócio fictício</span></div><div style="display:flex;gap:14px;align-items:center"><a class="demo-back" href="/#segmentos">← Outros exemplos</a><a class="demo-cta" data-wa href="https://wa.me/5511967794744">Quero uma assim ↗</a></div></div>
+
+<main id="conteudo">
+<section class="hero">
+  <header class="top"><div class="wrap">
+    <a class="logo" href="#"><i>P</i>Ponto Auto</a>
+    <nav class="menu" aria-label="Seções"><a href="#servicos">Serviços</a><a href="#como">Como trabalhamos</a><a href="#orcamento">Orçamento</a></nav>
+    <a class="btn btn-orange" data-wa href="https://wa.me/5511967794744" style="min-height:44px;padding:0 18px;font-size:16px">Orçamento ↗</a>
+  </div></header>
+  <img src="/assets/ex/auto/01-carro-elevador.webp" alt="Carro erguido no elevador de uma oficina moderna" width="1600" height="900" fetchpriority="high">
+  <div class="live" aria-hidden="true"><span class="blink"></span><div><small>Box 2 · agora</small><b>Revisão de 40 mil km em andamento</b></div></div>
+  <div class="wrap hero-inner">
+    <p class="tag">Oficina mecânica · Mooca, SP</p>
+    <h1><span class="row"><span>Seu carro em</span></span><span class="row"><span>boas mãos.</span></span></h1>
+    <div class="hero-bottom">
+      <div>
+        <p>Diagnóstico explicado, orçamento antes de mexer e foto de cada peça trocada no seu WhatsApp.</p>
+        <div class="chips"><span>Revisão</span><span>Freios</span><span>Suspensão</span><span>Elétrica</span><span>Ar-condicionado</span></div>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-orange" href="#orcamento">Pedir orçamento</a>
+        <a class="btn btn-line" href="#servicos">Ver serviços</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicos">
+  <div class="wrap">
+    <div class="svc-head" data-reveal>
+      <div><p class="tag">Serviços</p><h2 class="h2" style="margin-top:12px">Do óleo <span>ao motor.</span></h2></div>
+      <p>Valores de referência para carros de passeio. O preço final vem no orçamento, antes de qualquer serviço.</p>
+    </div>
+    <div class="svc-grid" data-reveal>
+      <article class="svc"><span class="num">01</span><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3c3 4 5 6.5 5 9.5A5 5 0 0 1 7 12.5C7 9.5 9 7 12 3z"/></svg><h3>Troca de óleo</h3><p>Óleo e filtro conforme o manual, com checagem de 20 itens.</p><span class="from"><small>a partir de </small>R$ 180</span></article>
+      <article class="svc"><span class="num">02</span><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><h3>Freios</h3><p>Pastilhas, discos e fluido, com teste de frenagem na entrega.</p><span class="from"><small>a partir de </small>R$ 260</span></article>
+      <article class="svc"><span class="num">03</span><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20 10 9l4 6 6-11"/></svg><h3>Suspensão</h3><p>Amortecedores, buchas e alinhamento para o carro parar de bater.</p><span class="from"><small>a partir de </small>R$ 320</span></article>
+      <article class="svc"><span class="num">04</span><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Elétrica</h3><p>Bateria, alternador e luzes no painel, com scanner de diagnóstico.</p><span class="from"><small>diagnóstico </small>R$ 120</span></article>
+      <article class="svc"><span class="num">05</span><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2v20M4.9 4.9l14.2 14.2M2 12h20M4.9 19.1 19.1 4.9"/></svg><h3>Ar-condicionado</h3><p>Higienização, carga de gás e conserto de vazamentos.</p><span class="from"><small>a partir de </small>R$ 190</span></article>
+      <article class="svc"><span class="num">06</span><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 14h3"/></svg><h3>Revisão completa</h3><p>Revisão por quilometragem, com relatório e fotos do que foi feito.</p><span class="from"><small>a partir de </small>R$ 450</span></article>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap trust-grid">
+    <div class="big" data-reveal="clip">
+      <img src="/assets/ex/auto/05-mecanico-cliente.webp" alt="Mecânico explicando o serviço para o cliente ao lado do carro" width="1600" height="900" loading="lazy">
+      <div class="copy"><p class="tag">Transparência</p><h2 class="h2" style="font-size:clamp(40px,4.6vw,72px);margin-top:10px">Você aprova antes. <span>A gente faz depois.</span></h2><p>Nada é trocado sem a sua autorização. Você recebe o orçamento detalhado e as fotos da peça antiga.</p></div>
+    </div>
+    <figure data-reveal="clip"><img src="/assets/ex/auto/02-freio-macro.webp" alt="Disco e pinça de freio vistos através da roda" width="1254" height="1254" loading="lazy"><figcaption>Freios</figcaption></figure>
+    <figure data-reveal="clip" style="--d:120ms"><img src="/assets/ex/auto/04-motor-detalhado.webp" alt="Motor limpo e detalhado sob luz de trabalho" width="1122" height="1402" loading="lazy"><figcaption>Motor</figcaption></figure>
+  </div>
+</section>
+
+<section class="steps" id="como">
+  <div class="wrap">
+    <p class="tag" data-reveal>Como trabalhamos</p>
+    <h2 class="h2" data-reveal style="margin-top:12px">Sem surpresa <span>na conta.</span></h2>
+    <div class="steps-grid">
+      <div class="step" data-reveal><b>01</b><h3>Diagnóstico</h3><p>Avaliação com scanner e teste de rodagem.</p></div>
+      <div class="step" data-reveal style="--d:120ms"><b>02</b><h3>Orçamento</h3><p>Valores por peça e mão de obra no seu WhatsApp.</p></div>
+      <div class="step" data-reveal style="--d:240ms"><b>03</b><h3>Serviço</h3><p>Fotos durante o conserto e aviso se algo mudar.</p></div>
+      <div class="step" data-reveal style="--d:360ms"><b>04</b><h3>Entrega</h3><p>Carro testado, peças antigas e 90 dias de garantia.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="orcamento">
+  <div class="wrap quote-grid">
+    <img data-reveal="clip" src="/assets/ex/auto/03-tablet-diagnostico.webp" alt="Mecânico usando tablet de diagnóstico ao lado do motor" width="1122" height="1402" loading="lazy">
+    <div data-reveal>
+      <p class="tag">Orçamento rápido</p>
+      <h2 class="h2" style="margin-top:12px">Conte o problema, <span>a gente responde.</span></h2>
+      <form class="form" id="quote">
+        <label>Carro e modelo<input name="carro" placeholder="Ex.: Onix 2019" required></label>
+        <label>Quilometragem<input name="km" inputmode="numeric" placeholder="Ex.: 60.000"></label>
+        <label class="full">O que precisa?<select name="servico"><option>Revisão</option><option>Freios</option><option>Suspensão</option><option>Barulho estranho</option><option>Luz no painel</option><option>Ar-condicionado</option></select></label>
+        <button class="btn btn-orange full" type="submit">Enviar pelo WhatsApp ↗</button>
+        <small>Exemplo: o formulário monta a mensagem e abre o WhatsApp, sem cadastro.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap info-grid">
+    <div data-reveal><b>Endereço</b><p>Rua da Mooca, 000 · Mooca, São Paulo</p></div>
+    <div data-reveal style="--d:100ms"><b>Horário</b><p>Seg a sex, 8h às 18h<br>Sábado, 8h às 13h</p></div>
+    <div data-reveal style="--d:200ms"><b>Contato</b><p>(11) 90000-0000<br>Atendimento pelo WhatsApp</p></div>
+  </div>
+  <div class="wrap"><footer class="foot" style="margin-top:60px"><span>Ponto Auto · Mooca, São Paulo</span><a href="#">Voltar ao topo ↑</a></footer></div>
+</section>
+</main>
+
+<p class="demo-note">Esta é uma página de exemplo da <a href="/">ProNTech</a> com um negócio fictício. Nomes, preços, endereço e telefone são ilustrativos.</p>
+
+<a class="wa-float" data-wa href="https://wa.me/5511967794744" aria-label="Quero um site assim pelo WhatsApp"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11.6 9.8c-.3-.7-.6-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4.1 6.4 5.6 3.2 1.2 3.8 1 4.5.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5l-2.4-1.2c-.3-.1-.6-.2-.8.2l-1.1 1.3c-.2.3-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6.1-.2.1-.5 0-.7l-1-2.6z" fill="currentColor"/></svg><span class="wa-label">Quero um site assim</span></a>
+
+<script src="/assets/ex/ex.js"></script>
+<script>
+// formulário de orçamento monta a mensagem e abre o WhatsApp
+document.getElementById('quote').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const msg = `Olá, ProNTech! Testei o orçamento do exemplo de oficina (${f.get('carro')}${f.get('km') ? ', ' + f.get('km') + ' km' : ''}, ${f.get('servico')}) e quero uma página assim para o meu negócio. Podemos conversar sobre a oferta a partir de R$ 450?`;
+  window.open('https://wa.me/5511967794744?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+});
+</script>
+</body>
+</html>
