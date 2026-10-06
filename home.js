@@ -37,7 +37,7 @@ document.querySelectorAll('[data-wa]').forEach(link => {
   const segment = link.dataset.segment;
   const message = segment
     ? `Olá, ProNTech! Tenho um negócio de ${segment} e quero uma página. Podemos conversar sobre a oferta a partir de R$ 450?`
-    : 'Olá, ProNTech! Quero uma página para meu negócio a partir de R$ 450, com WhatsApp e entrega em 24h. Podemos conversar?';
+    : 'Olá, ProNTech! Quero uma página para meu negócio a partir de R$ 450, com WhatsApp e entrega em 48h. Podemos conversar?';
   link.href = 'https://wa.me/5511967794744?text=' + encodeURIComponent(message);
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
