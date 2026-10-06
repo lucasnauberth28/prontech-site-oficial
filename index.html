@@ -4,68 +4,350 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#202224">
-  <meta name="description" content="Página para seu negócio em São Paulo, a partir de R$ 300. Pronta em 24h, com seus serviços e botão de WhatsApp.">
-  <title>ProNTech — Seu negócio online em 24h</title>
+  <meta name="theme-color" content="#f4f3f0">
+  <meta name="description" content="Páginas profissionais para negócios locais de São Paulo. Prontas em 24h, a partir de R$ 300, com seus serviços e botão de WhatsApp.">
+  <title>ProNTech — Apareça. Converse. Venda.</title>
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="preload" href="/assets/fonts/dm-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/inter-tight-semibold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/styles.css">
-  <script src="/app.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+  <link rel="preload" href="/assets/home/hero-ceu.webp" as="image" type="image/webp">
+  <link rel="preload" href="/assets/home/hero-fachada.webp" as="image" type="image/webp">
+  <link rel="stylesheet" href="/home.css">
+  <script src="/home.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="read-progress" aria-hidden="true"></div>
-  <header class="site-header wrap">
-    <a class="wordmark" href="/" aria-label="ProNTech, início"><svg class="brand-symbol" viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg><span>ProN<span class="brand-light">Tech</span><i></i></span></a>
-    <nav aria-label="Navegação principal"><a href="#exemplos">Exemplos</a><a href="#oferta">Preço e entrega</a><a href="#duvidas">Dúvidas</a><a class="header-contact" data-wa href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp <span aria-hidden="true">↗</span></a></nav>
-    <button class="mobile-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Navegação no celular" hidden><a href="#exemplos">Exemplos</a><a href="#oferta">Preço e entrega</a><a href="#duvidas">Dúvidas</a><a data-wa href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp ↗</a></nav>
-  </header>
-  <main id="conteudo">
-    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Sites para negócios locais de São Paulo</p>
-        <h1 id="hero-title">Seu negócio no Google e no WhatsApp.<br>Página pronta em 24h.</h1>
-        <p class="hero-description">Seus serviços, seu endereço e um botão para falar com você. Uma página feita para seu negócio, <strong>a partir de R$ 300.</strong></p>
-        <div class="hero-actions"><a class="button button-primary" data-wa href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp <span aria-hidden="true">↗</span></a><a class="text-link" href="#exemplos">Ver exemplos <span aria-hidden="true">↓</span></a></div>
-        <p class="hero-note">24h após recebermos suas informações e a entrada.</p>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- ================= HERO ================= -->
+<header class="hero-shell">
+  <section class="hero" aria-label="Apresentação">
+    <img class="hero-sky" src="/assets/home/hero-ceu.webp" alt="" width="1672" height="941" fetchpriority="high">
+    <div class="layer clouds-back px-cloud" aria-hidden="true"><img src="/assets/home/hero-nuvens.webp" alt="" width="2000" height="667"></div>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="/" aria-label="ProNTech, início"><svg viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg>ProNTech</a>
+      <div class="nav-links">
+        <a href="#segmentos">Segmentos</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#processo">Como funciona</a>
+        <a href="#preco">Preço</a>
+        <a href="#duvidas">Dúvidas</a>
       </div>
-      <div class="hero-showcase" aria-label="Prévias das páginas de beleza, saúde e pet">
-        <a class="phone phone-beauty" href="/beleza/" aria-label="Ver exemplo de beleza"><div class="phone-speaker" aria-hidden="true"></div><div class="phone-screen"><span class="phone-brand">Corte & Cia.</span><img src="/assets/beauty-v1.webp" width="1200" height="675" alt="Barbeiro cuidando do corte de um cliente" fetchpriority="high"><div class="phone-copy"><span class="phone-label">Beleza</span><p>Seu estilo.<br>Seu momento.</p><span class="mini-button">Agendar horário ↗</span></div></div></a>
-        <a class="phone phone-health" href="/saude/" aria-label="Ver exemplo de saúde"><div class="phone-speaker" aria-hidden="true"></div><div class="phone-screen"><span class="phone-brand">Alma clínica</span><img src="/assets/medical-v1.webp" width="1200" height="675" alt="Conversa entre médico e paciente"><div class="phone-copy"><span class="phone-label">Saúde</span><p>Cuidado que<br>começa na escuta.</p><span class="mini-button">Marcar consulta ↗</span></div></div></a>
-        <a class="phone phone-pet" href="/pet/" aria-label="Ver exemplo de pet shop"><div class="phone-speaker" aria-hidden="true"></div><div class="phone-screen"><span class="phone-brand">Perto pet</span><img src="/assets/pet-v1.webp" width="1200" height="800" alt="Cachorro e gato em um pet shop"><div class="phone-copy"><span class="phone-label">Pet</span><p>Seu melhor amigo.<br>Nosso cuidado.</p><span class="mini-button">Agendar banho ↗</span></div></div></a>
-        <p class="showcase-caption">Estudos conceituais · negócios fictícios</p>
+      <a class="btn btn-ink btn-sm" data-wa href="https://wa.me/5511967794744">Fale conosco <span class="ar" aria-hidden="true">↗</span></a>
+    </nav>
+
+    <div class="hero-copy px-head">
+      <h1><span class="word">Apareça.</span> <span class="word">Converse.</span> <span class="word">Venda.</span></h1>
+      <p class="fadein" style="animation-delay:.8s">Páginas profissionais para negócios locais de São Paulo. Prontas em 24h, a partir de R$&nbsp;300.</p>
+      <div class="hero-ctas fadein" style="animation-delay:.95s">
+        <a class="btn btn-ink" data-wa href="https://wa.me/5511967794744">Quero minha página <span class="ar" aria-hidden="true">↗</span></a>
+        <a class="btn btn-glass" href="#segmentos">Ver segmentos</a>
       </div>
-      <div class="hero-bottom"><span>Uma página. Tudo o que seu cliente precisa.</span><span>Feita para abrir bem no celular.</span></div>
-    </section>
+    </div>
 
-    <section class="examples light-section" id="exemplos" aria-labelledby="examples-title"><div class="wrap">
-      <div class="section-heading reveal"><div><p class="eyebrow">Veja o seu negócio aqui</p><h2 id="examples-title">Uma página com<br>a sua cara.</h2></div><p>Abra um exemplo do seu segmento. O nome, as fotos e o conteúdo serão os do seu negócio.</p></div>
-      <div class="examples-grid">
-        <article class="example-card reveal"><a class="example-preview preview-beauty" href="/beleza/" aria-label="Abrir prévia de beleza"><div class="preview-top"><span>Corte & Cia.</span><span aria-hidden="true">↗</span></div><img src="/assets/beauty-v1.webp" width="1200" height="675" loading="lazy" alt="Prévia de barbearia com atendimento ao cliente"><div class="preview-copy"><p>Seu estilo.<br>Seu momento.</p><span class="mini-button">Agendar horário ↗</span></div></a><div class="example-meta"><h3>Beleza</h3><p>Salões, barbearias e profissionais.</p><a class="card-link" href="/beleza/">Ver página completa <span aria-hidden="true">↗</span></a></div></article>
-        <article class="example-card reveal"><a class="example-preview preview-health" href="/saude/" aria-label="Abrir prévia de saúde"><div class="preview-top"><span>Alma clínica</span><span aria-hidden="true">↗</span></div><img src="/assets/medical-v1.webp" width="1200" height="675" loading="lazy" alt="Prévia de clínica com consulta médica"><div class="preview-copy"><p>Cuidado que começa<br>na escuta.</p><span class="mini-button">Marcar consulta ↗</span></div></a><div class="example-meta"><h3>Saúde e estética</h3><p>Clínicas, consultórios e estética.</p><a class="card-link" href="/saude/">Ver página completa <span aria-hidden="true">↗</span></a></div></article>
-        <article class="example-card reveal"><a class="example-preview preview-pet" href="/pet/" aria-label="Abrir prévia de pet shop"><div class="preview-top"><span>Perto pet</span><span aria-hidden="true">↗</span></div><img src="/assets/pet-v1.webp" width="1200" height="800" loading="lazy" alt="Prévia de pet shop com cachorro e gato"><div class="preview-copy"><p>Seu melhor amigo.<br>Nosso cuidado.</p><span class="mini-button">Agendar banho ↗</span></div></a><div class="example-meta"><h3>Pet</h3><p>Pet shops, banho e tosa.</p><a class="card-link" href="/pet/">Ver página completa <span aria-hidden="true">↗</span></a></div></article>
-        <article class="example-card reveal"><a class="example-preview preview-auto" href="/auto/" aria-label="Abrir prévia de oficina"><div class="preview-top"><span>Ponto auto</span><span aria-hidden="true">↗</span></div><img src="/assets/auto-v1.webp" width="1200" height="675" loading="lazy" alt="Prévia de oficina com mecânico inspecionando motor"><div class="preview-copy"><p>Seu carro em<br>boas mãos.</p><span class="mini-button">Pedir orçamento ↗</span></div></a><div class="example-meta"><h3>Auto</h3><p>Oficinas e serviços automotivos.</p><a class="card-link" href="/auto/">Ver página completa <span aria-hidden="true">↗</span></a></div></article>
-        <article class="example-card reveal"><a class="example-preview preview-fitness" href="/esporte-ensino/" aria-label="Abrir prévia de academia e escola"><div class="preview-top"><span>Movimento</span><span aria-hidden="true">↗</span></div><img src="/assets/fitness-v1.webp" width="1200" height="675" loading="lazy" alt="Prévia de academia com professora orientando uma aluna"><div class="preview-copy"><p>O próximo passo<br>começa aqui.</p><span class="mini-button">Conhecer as aulas ↗</span></div></a><div class="example-meta"><h3>Academias e escolas</h3><p>Treinos, cursos e aulas.</p><a class="card-link" href="/esporte-ensino/">Ver página completa <span aria-hidden="true">↗</span></a></div></article>
+    <div class="layer building px-build"><img src="/assets/home/hero-fachada.webp" alt="Fachada de um pequeno negócio moderno com plantas e luzes acesas, surgindo entre as nuvens" width="1497" height="1024" fetchpriority="high"></div>
+    <div class="layer clouds-front px-cloud" aria-hidden="true"><img src="/assets/home/hero-nuvens.webp" alt="" width="2000" height="667"></div>
+    <div class="layer hero-fade" aria-hidden="true"></div>
+
+    <div class="live-l" aria-hidden="true">
+      <div class="notif glass-card">
+        <div class="notif-head">
+          <span class="notif-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/></svg></span>
+          <div><div class="notif-title">Nova conversa no WhatsApp</div><div class="notif-meta">Corte &amp; Cia. · agora</div></div>
+          <span class="live-dot"></span>
+        </div>
+        <div class="notif-body">Olá! Vi a página de vocês. Tem horário amanhã às 15h?</div>
       </div>
-      <p class="concept-note">Estudos conceituais / negócios fictícios. Exemplos de páginas, sem resultados ou clientes atribuídos à ProNTech.</p>
-    </div></section>
+      <div class="notif glass-card">
+        <div class="notif-head">
+          <span class="notif-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <div><div class="notif-title">Página publicada</div><div class="notif-meta">Alma clínica · há 2 min</div></div>
+        </div>
+        <div class="notif-body">Link pronto para divulgar no Instagram e no Google.</div>
+      </div>
+      <div class="notif glass-card">
+        <div class="notif-head">
+          <span class="notif-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 7h16M4 12h10M4 17h7"/></svg></span>
+          <div><div class="notif-title">Pedido de orçamento</div><div class="notif-meta">Ponto Auto · agora</div></div>
+          <span class="live-dot"></span>
+        </div>
+        <div class="notif-body">Revisão completa para um SUV. Vocês atendem sábado?</div>
+      </div>
+    </div>
 
-    <section class="offer light-section" id="oferta" aria-labelledby="offer-title"><div class="wrap offer-layout">
-      <div class="offer-copy reveal"><p class="eyebrow">O que você recebe</p><h2 id="offer-title">Seu negócio online.<br>Sem complicação.</h2><p>Uma página reúne o que seu cliente procura e facilita o primeiro contato.</p><ul class="included-list"><li><span aria-hidden="true">✓</span><div><h3>Página para celular e computador</h3><p>Serviços, fotos, endereço e horário de atendimento.</p></div></li><li><span aria-hidden="true">✓</span><div><h3>Texto claro sobre seu negócio</h3><p>Organizamos suas informações para o cliente entender.</p></div></li><li><span aria-hidden="true">✓</span><div><h3>Botão de WhatsApp</h3><p>Uma mensagem pronta para começar a conversa.</p></div></li><li><span aria-hidden="true">✓</span><div><h3>Publicação incluída</h3><p>Seu site com um link para divulgar.</p></div></li></ul></div>
-      <div class="price-card reveal"><p class="eyebrow">Seu site em uma página</p><p class="price-label">A partir de</p><p class="price">R$ 300</p><p>Pronta em <strong>24h</strong>, após recebermos as informações e o pagamento inicial.</p><dl class="offer-terms"><div><dt>Revisão</dt><dd>1 rodada de ajustes de texto e imagens.</dd></div><div><dt>Pagamento</dt><dd>50% no início. 50% na entrega.</dd></div><div><dt>Escopo</dt><dd>Página com seus serviços e WhatsApp.</dd></div></dl><a class="button button-primary" data-wa href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Quero minha página <span aria-hidden="true">↗</span></a><p class="price-note">Domínio próprio é opcional e cobrado à parte. Funções extras são combinadas antes de começar.</p></div>
-    </div></section>
+    <div class="live-r glass-card fadein" aria-hidden="true">
+      <div class="top"><span class="notif-title">Sua página</span><span class="notif-meta">prazo · 24h</span></div>
+      <div class="track"><i></i></div>
+      <ul class="steps">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Informações e fotos recebidas</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Página em produção</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Primeira versão para você aprovar</li>
+      </ul>
+    </div>
+  </section>
+</header>
 
-    <section class="steps light-section" id="como-funciona" aria-labelledby="steps-title"><div class="wrap"><div class="section-heading reveal"><div><p class="eyebrow">Como funciona</p><h2 id="steps-title">Você cuida do negócio.<br>A gente cuida da página.</h2></div></div><ol class="steps-grid"><li class="reveal"><span class="step-number">01</span><h3>Conte o que você faz</h3><p>Envie seus serviços, fotos e contatos pelo WhatsApp. Combinamos o escopo e você paga a entrada.</p></li><li class="reveal"><span class="step-number">02</span><h3>Veja sua página pronta</h3><p>Em 24h, você recebe a primeira versão para conferir. Uma rodada de ajustes está incluída.</p></li><li class="reveal"><span class="step-number">03</span><h3>Receba o link e divulgue</h3><p>Após sua aprovação e o saldo, publicamos. Use o link no Instagram, no Google e onde seus clientes estão.</p></li></ol></div></section>
+<main id="conteudo">
 
-    <section class="destination wrap" id="destinos" aria-labelledby="destination-title"><div class="destination-copy reveal"><p class="eyebrow">Da visita à conversa</p><h2 id="destination-title">E depois<br>do clique?</h2><p>O cliente conhece seus serviços e chega ao seu WhatsApp com uma mensagem pronta.</p><p class="destination-note">Formulário e agenda também podem entrar no projeto, conforme o escopo combinado.</p></div><div class="destination-visual reveal"><div class="demo-browser"><div class="browser-top"><span class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>brisa · climatização</span></div><div class="demo-web"><span class="demo-brand">brisa✳</span><img src="/assets/interior-v3.webp" width="1672" height="941" loading="lazy" alt="Sala com climatização, exemplo fictício"><h3>Conforto em<br>cada detalhe.</h3><span class="demo-button">Conversar no WhatsApp ↗</span></div></div><div class="result-card"><div class="result-top"><span class="result-icon" aria-hidden="true">↗</span><strong>Uma nova conversa</strong></div><p class="message-bubble">Olá! Gostaria de um orçamento para meu espaço.</p><p class="result-note">O interesse chega com contexto.</p></div><p class="demo-caption">Exemplo de funcionamento · estudo conceitual</p></div></section>
+<!-- ================= MANIFESTO + NÚMEROS ================= -->
+<section class="manifesto">
+  <div class="wrap grid-2">
+    <div>
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1v22M1 12h22M4.2 4.2l15.6 15.6M19.8 4.2 4.2 19.8" stroke="currentColor" stroke-width="1.4"/></svg>
+      <p class="statement ink">Criamos páginas para quem vive do atendimento. Salões, clínicas, oficinas e pet shops que querem ser encontrados no Google e chamados no WhatsApp, sem complicação e sem esperar semanas.</p>
+      <a class="btn btn-ink" data-wa href="https://wa.me/5511967794744">Conversar sobre o meu negócio <span class="ar" aria-hidden="true">↗</span></a>
+    </div>
+    <ul class="stats rv">
+      <li><span class="stat-num">R$ 300</span><span class="stat-txt">a partir de, página completa e publicada</span></li>
+      <li><span class="stat-num">24h</span><span class="stat-txt">para a primeira versão, após o envio das informações</span></li>
+      <li><span class="stat-num">50/50</span><span class="stat-txt">metade no início, metade na entrega</span></li>
+    </ul>
+  </div>
+</section>
 
-    <section class="faq light-section" id="duvidas" aria-labelledby="faq-title"><div class="wrap faq-layout"><div class="reveal"><p class="eyebrow">Dúvidas frequentes</p><h2 id="faq-title">Antes de<br>começar.</h2></div><div class="faq-list reveal"><details><summary>O que está incluído nos R$ 300?<span aria-hidden="true">+</span></summary><p>Uma página com a apresentação do negócio, serviços, fotos, endereço, horários, botão de WhatsApp, texto organizado, publicação e uma rodada de ajustes. Confirmamos o valor e o escopo antes de começar.</p></details><details><summary>Quando começam as 24h?<span aria-hidden="true">+</span></summary><p>Após combinarmos o projeto e recebermos as informações, as fotos e os 50% iniciais. Esse é o prazo para a primeira versão. Ajustes e aprovação podem mudar a data da publicação final.</p></details><details><summary>Preciso comprar um domínio?<span aria-hidden="true">+</span></summary><p>Você pode começar com o link da publicação. Um domínio como seunegocio.com.br é opcional, tem custo separado e pode ser conectado depois.</p></details><details><summary>Meu site vai aparecer no Google?<span aria-hidden="true">+</span></summary><p>A página pode ser preparada para o Google e vinculada ao seu Perfil da Empresa. A indexação depende do Google; uma posição nos resultados não é garantida. Anúncios e gestão de tráfego não estão incluídos no preço inicial.</p></details></div></div></section>
+<section class="photo-band">
+  <figure class="rv-clip">
+    <img src="/assets/home/confianca.webp" alt="Atendente embrulhando uma compra para uma cliente no balcão de uma loja de bairro, ao fim da tarde" width="1600" height="900" loading="lazy">
+    <figcaption><span class="label">(01) Para quem atende</span><strong>O cliente encontra, entende o que você faz e chama na hora.</strong></figcaption>
+  </figure>
+</section>
 
-    <section class="start wrap" id="comecar" aria-labelledby="start-title"><div class="reveal"><p class="eyebrow">Vamos colocar seu negócio online?</p><h2 id="start-title">Seu próximo cliente<br>precisa encontrar você.</h2><p>Conte o que você faz. A gente te mostra o caminho para uma página a partir de R$ 300.</p></div><div class="start-actions reveal"><a class="button button-whatsapp" data-wa href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">Chamar no WhatsApp <span aria-hidden="true">↗</span></a><span class="contact-number">(11) 96779-4744</span><a class="text-link" href="mailto:nprontech@gmail.com">Enviar e-mail <span aria-hidden="true">↗</span></a></div></section>
-  </main>
-  <footer class="site-footer wrap"><div><a class="wordmark" href="/" aria-label="ProNTech, início"><svg class="brand-symbol" viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg><span>ProN<span class="brand-light">Tech</span><i></i></span></a><p>Páginas para negócios locais.<br>São Paulo, Brasil.</p></div><div class="footer-contacts"><a class="button button-whatsapp" data-wa href="https://wa.me/5511967794744" target="_blank" rel="noopener noreferrer">WhatsApp · (11) 96779-4744 ↗</a><a class="text-link" href="mailto:nprontech@gmail.com">nprontech@gmail.com ↗</a></div><a class="text-link" href="#inicio">Voltar ao topo ↑</a></footer>
+<!-- ================= O QUE VOCÊ RECEBE ================= -->
+<section class="features">
+  <div class="wrap">
+    <div class="section-head rv">
+      <div><div class="label">(02) O que você recebe</div><h2 class="h2">Seu parceiro para estar online.</h2></div>
+      <p class="lead">Uma página reúne o que seu cliente procura e facilita o primeiro contato. Você cuida do negócio; a gente cuida da página.</p>
+    </div>
+    <div class="grid-4">
+      <article class="feat rv">
+        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="4" y="9" width="30" height="21" rx="2"/><path d="M12 36h14M19 30v6"/><rect x="31" y="18" width="13" height="22" rx="2.5"/><path d="M36 36h3"/></svg>
+        <h3>Página para celular e computador</h3><p>Serviços, fotos, endereço e horário de atendimento.</p>
+      </article>
+      <article class="feat rv">
+        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="8" y="5" width="32" height="38" rx="3"/><path d="M15 15h18M15 21h18M15 27h12M15 33h8"/></svg>
+        <h3>Texto claro sobre seu negócio</h3><p>Organizamos suas informações para o cliente entender.</p>
+      </article>
+      <article class="feat rv">
+        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M42 23a17 17 0 0 1-25 15L6 41l3-10a17 17 0 1 1 33-8z"/><path d="M17 23h.01M24 23h.01M31 23h.01" stroke-width="3" stroke-linecap="round"/></svg>
+        <h3>Botão de WhatsApp</h3><p>Uma mensagem pronta para começar a conversa.</p>
+      </article>
+      <article class="feat rv">
+        <svg width="44" height="44" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M6 24h36M24 6c5 5 7 11 7 18s-2 13-7 18c-5-5-7-11-7-18s2-13 7-18z"/></svg>
+        <h3>Publicação incluída</h3><p>Seu site com um link para divulgar.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEGMENTOS ================= -->
+<section class="segments" id="segmentos">
+  <div class="wrap">
+    <div class="seg-head rv">
+      <div><div class="label">(03) Segmentos</div><h2 class="h2">Feita para o seu tipo de negócio.</h2></div>
+      <div class="filters" role="group" aria-label="Filtrar segmentos">
+        <button class="filter" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+        <button class="filter" type="button" data-filter="beleza" aria-pressed="false">Beleza e saúde</button>
+        <button class="filter" type="button" data-filter="servicos" aria-pressed="false">Serviços</button>
+        <button class="filter" type="button" data-filter="comercio" aria-pressed="false">Comércio local</button>
+      </div>
+    </div>
+    <div class="grid-3">
+      <a class="card" data-cat="beleza" href="/beleza/">
+        <div class="card-media"><img src="/assets/home/seg-salao.webp" alt="Fachada de salão de beleza com cadeiras e espelhos iluminados" width="1448" height="1086" loading="lazy"><span class="tag">Beleza</span></div>
+        <div class="card-foot"><div><h3>Salões e barbearias</h3><div class="chips"><span>Agendamento</span><span>Galeria</span><span>WhatsApp</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="card" data-cat="beleza" href="/saude/">
+        <div class="card-media"><img src="/assets/home/seg-clinica.webp" alt="Fachada de clínica de estética em travertino com recepção iluminada" width="1448" height="1086" loading="lazy"><span class="tag">Saúde e estética</span></div>
+        <div class="card-foot"><div><h3>Clínicas e consultórios</h3><div class="chips"><span>Tratamentos</span><span>Equipe</span><span>Consultas</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="card" data-cat="servicos" href="/pet/">
+        <div class="card-media"><img src="/assets/home/seg-pet.webp" alt="Fachada de pet shop de madeira e vidro com área de banho visível" width="1448" height="1086" loading="lazy"><span class="tag">Pet</span></div>
+        <div class="card-foot"><div><h3>Pet shops, banho e tosa</h3><div class="chips"><span>Banho e tosa</span><span>Produtos</span><span>WhatsApp</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="card" data-cat="servicos" href="/auto/">
+        <div class="card-media"><img src="/assets/home/seg-oficina.webp" alt="Oficina mecânica moderna com carro no elevador e ferramentas organizadas" width="1448" height="1086" loading="lazy"><span class="tag">Automotivo</span></div>
+        <div class="card-foot"><div><h3>Oficinas e serviços</h3><div class="chips"><span>Orçamento</span><span>Serviços</span><span>Localização</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="card" data-cat="servicos" href="/esporte-ensino/">
+        <div class="card-media"><img src="/assets/home/seg-academia.webp" alt="Estúdio de treino com fachada de vidro e equipamentos de madeira" width="1448" height="1086" loading="lazy"><span class="tag">Esporte e ensino</span></div>
+        <div class="card-foot"><div><h3>Academias e escolas</h3><div class="chips"><span>Aulas</span><span>Horários</span><span>Matrícula</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+      </a>
+      <a class="card" data-cat="comercio" data-wa data-segment="café ou padaria" href="https://wa.me/5511967794744">
+        <div class="card-media"><img src="/assets/home/seg-padaria.webp" alt="Fachada de padaria com vitrine de pães e mesinhas na calçada" width="1448" height="1086" loading="lazy"><span class="tag">Comércio local</span></div>
+        <div class="card-foot"><div><h3>Cafés e padarias</h3><div class="chips"><span>Cardápio</span><span>Encomendas</span><span>WhatsApp</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+      </a>
+    </div>
+    <p class="note">Páginas de exemplo com negócios fictícios, criadas como estudo de cada segmento.</p>
+  </div>
+</section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section class="services-shell" id="servicos">
+  <div class="services">
+    <div class="wrap grid-2">
+      <div class="rv">
+        <div class="label">(04) Como a página trabalha por você</div>
+        <div class="svc-list">
+          <button class="svc" type="button" aria-expanded="true">
+            <span class="svc-row"><span class="svc-num">01</span><span class="svc-title">Página para celular e computador</span></span>
+            <span class="svc-text"><span>Serviços, fotos, endereço e horário organizados para o cliente entender em segundos, na tela que ele estiver usando.</span></span>
+          </button>
+          <button class="svc" type="button" aria-expanded="false">
+            <span class="svc-row"><span class="svc-num">02</span><span class="svc-title">Conversa direto no WhatsApp</span></span>
+            <span class="svc-text"><span>Um botão com mensagem pronta leva o cliente do clique à conversa, sem formulário no meio do caminho.</span></span>
+          </button>
+          <button class="svc" type="button" aria-expanded="false">
+            <span class="svc-row"><span class="svc-num">03</span><span class="svc-title">Publicação com link para divulgar</span></span>
+            <span class="svc-text"><span>Sua página no ar com um link para o Instagram e preparada para o seu Perfil da Empresa no Google.</span></span>
+          </button>
+        </div>
+      </div>
+      <div class="svc-media rv" aria-hidden="true">
+        <img class="is-active" src="/assets/home/serv-mesa.webp" alt="" width="1536" height="1024" loading="lazy">
+        <img src="/assets/home/serv-celular.webp" alt="" width="1536" height="1024" loading="lazy">
+        <img src="/assets/home/serv-vitrine.webp" alt="" width="1536" height="1024" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VITRINE ================= -->
+<section class="showcase">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="label">(05) Do jeito que seu cliente vê</div>
+      <h2 class="h2">Bonita no computador. Perfeita no celular.</h2>
+    </div>
+    <div class="devices">
+      <figure class="device rv-clip">
+        <img src="/assets/home/mock-notebook.webp" alt="Notebook sobre uma pedra bruta mostrando a página de um salão" width="1600" height="900" loading="lazy">
+        <div class="screen screen-laptop" aria-hidden="true">
+          <div class="autoscroll">
+            <div class="mini-hero">
+              <img src="/assets/home/seg-salao.webp" alt="" width="1448" height="1086" loading="lazy">
+              <div class="mini-nav"><span>Corte &amp; Cia.</span><span>Serviços · Equipe · Contato</span></div>
+              <div class="mini-title"><b>Seu estilo.<br>Seu momento.</b><span class="mini-btn">Agendar horário ↗</span></div>
+            </div>
+            <div class="mini-body">
+              <h4>Serviços</h4>
+              <div class="mini-grid">
+                <div><b>Corte</b>a partir de R$ 60</div>
+                <div><b>Coloração</b>a partir de R$ 180</div>
+                <div><b>Escova</b>a partir de R$ 70</div>
+              </div>
+              <div class="mini-gallery"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+        </div>
+      </figure>
+      <figure class="device rv-clip">
+        <img src="/assets/home/mock-celular.webp" alt="Celular em pé sobre uma pedra mostrando a página de uma clínica" width="1122" height="1402" loading="lazy">
+        <div class="screen screen-phone" aria-hidden="true">
+          <div class="autoscroll">
+            <div class="phone-top">
+              <img src="/assets/home/seg-clinica.webp" alt="" width="1448" height="1086" loading="lazy">
+              <div class="phone-copy"><small>Alma clínica</small><b>Cuidado que começa na escuta.</b><span class="phone-btn">Marcar consulta ↗</span></div>
+            </div>
+            <div class="phone-body">
+              <h4>Tratamentos</h4>
+              <div>Limpeza de pele</div><div>Avaliação facial</div><div>Drenagem</div><div>Falar no WhatsApp</div>
+            </div>
+          </div>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESSO ================= -->
+<section class="process" id="processo">
+  <div class="wrap">
+    <div class="rv"><div class="label">(06) Como funciona</div><h2 class="h2">Do primeiro contato à página no ar.</h2></div>
+    <div class="progress-line" aria-hidden="true"><i></i></div>
+    <ol class="grid-3" style="list-style:none;margin:0;padding:0">
+      <li class="rv"><span class="step-n">01</span><h3>Conte o que você faz</h3><p>Envie seus serviços, fotos e contatos pelo WhatsApp. Combinamos o escopo e você paga a entrada.</p></li>
+      <li class="rv"><span class="step-n">02</span><h3>Veja sua página pronta</h3><p>Em 24h, você recebe a primeira versão para conferir. Uma rodada de ajustes está incluída.</p></li>
+      <li class="rv"><span class="step-n">03</span><h3>Receba o link e divulgue</h3><p>Após sua aprovação e o saldo, publicamos. Use o link no Instagram, no Google e onde seus clientes estão.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= PREÇO ================= -->
+<section class="pricing" id="preco">
+  <div class="wrap price-card rv">
+    <div class="price-main">
+      <div class="label">(07) Preço e entrega</div>
+      <div class="price-from">Seu site em uma página, a partir de</div>
+      <div class="price">R$ 300</div>
+      <a class="btn btn-ink" data-wa href="https://wa.me/5511967794744">Quero minha página <span class="ar" aria-hidden="true">↗</span></a>
+      <small>Domínio próprio é opcional e cobrado à parte. Funções extras são combinadas antes de começar.</small>
+    </div>
+    <dl class="terms">
+      <div><dt>Prazo</dt><dd>Pronta em 24h, após recebermos as informações e o pagamento inicial.</dd></div>
+      <div><dt>Revisão</dt><dd>1 rodada de ajustes de texto e imagens.</dd></div>
+      <div><dt>Pagamento</dt><dd>50% no início. 50% na entrega.</dd></div>
+      <div><dt>Escopo</dt><dd>Página com seus serviços e WhatsApp.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ================= DÚVIDAS ================= -->
+<section class="faq" id="duvidas">
+  <div class="wrap grid-2">
+    <div class="rv"><div class="label">(08) Dúvidas</div><h2 class="h2">Antes de começar.</h2></div>
+    <div class="rv">
+      <details open>
+        <summary>O que está incluído nos R$ 300?<span class="plus" aria-hidden="true">+</span></summary>
+        <p>Uma página com a apresentação do negócio, serviços, fotos, endereço, horários, botão de WhatsApp, texto organizado, publicação e uma rodada de ajustes. Confirmamos o valor e o escopo antes de começar.</p>
+      </details>
+      <details>
+        <summary>Quando começam as 24h?<span class="plus" aria-hidden="true">+</span></summary>
+        <p>Após combinarmos o projeto e recebermos as informações, as fotos e os 50% iniciais. Esse é o prazo para a primeira versão. Ajustes e aprovação podem mudar a data da publicação final.</p>
+      </details>
+      <details>
+        <summary>Preciso comprar um domínio?<span class="plus" aria-hidden="true">+</span></summary>
+        <p>Você pode começar com o link da publicação. Um domínio como seunegocio.com.br é opcional, tem custo separado e pode ser conectado depois.</p>
+      </details>
+      <details>
+        <summary>Meu site vai aparecer no Google?<span class="plus" aria-hidden="true">+</span></summary>
+        <p>A página pode ser preparada para o Google e vinculada ao seu Perfil da Empresa. A indexação depende do Google; uma posição nos resultados não é garantida. Anúncios e gestão de tráfego não estão incluídos no preço inicial.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="final">
+  <div class="final-box rv-clip">
+    <img src="/assets/home/hero-ceu.webp" alt="" width="1672" height="941" loading="lazy">
+    <div class="layer final-clouds" aria-hidden="true"><img src="/assets/home/hero-nuvens.webp" alt="" width="2000" height="667" loading="lazy"></div>
+    <div class="final-copy">
+      <h2>Seu próximo cliente está procurando você.</h2>
+      <p>Conte o que você faz. A gente mostra o caminho para uma página a partir de R$&nbsp;300.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-ink" data-wa href="https://wa.me/5511967794744">Chamar no WhatsApp <span class="ar" aria-hidden="true">↗</span></a>
+        <a class="btn btn-glass" href="mailto:lucasnauberth@gmail.com">Enviar e-mail</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="/" aria-label="ProNTech, início"><svg viewBox="0 0 26 28" aria-hidden="true"><path d="M3 25V3h6l11 22V3h3v22h-6L6 3v22z" fill="currentColor"/></svg>ProNTech</a>
+      <small>Páginas para negócios locais. São Paulo, Brasil.</small>
+    </div>
+    <div class="footer-links">
+      <a data-wa href="https://wa.me/5511967794744">WhatsApp · (11) 96779-4744 ↗</a>
+      <a href="mailto:lucasnauberth@gmail.com">lucasnauberth@gmail.com ↗</a>
+      <a href="#">Voltar ao topo ↑</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
-
