@@ -42,3 +42,56 @@ document.querySelectorAll('[data-wa]').forEach(link => {
   link.target = '_blank';
   link.rel = 'noopener noreferrer';
 });
+
+// Vitrine de segmentos: destaca um por vez e troca sozinha
+(() => {
+  const feature = document.getElementById('seg-feature');
+  const thumbs = [...document.querySelectorAll('.thumb')];
+  if (!feature || !thumbs.length) return;
+  const imgs = [...feature.querySelectorAll('.feature-media img')];
+  const tag = document.getElementById('seg-tag');
+  const name = document.getElementById('seg-name');
+  const desc = document.getElementById('seg-desc');
+  const DURATION = 5500;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.documentElement.style.setProperty('--seg-ms', DURATION + 'ms');
+  let current = 0, timer = null, paused = false, visible = false;
+
+  function show(i) {
+    if (i === current && feature.dataset.ready) return;
+    feature.dataset.ready = '1';
+    current = i;
+    const t = thumbs[i];
+    feature.classList.add('is-swapping');
+    imgs.forEach((img, k) => img.classList.toggle('is-active', k === i));
+    thumbs.forEach((b, k) => { b.classList.toggle('is-active', k === i); b.setAttribute('aria-pressed', String(k === i)); b.classList.remove('is-running'); });
+    setTimeout(() => {
+      tag.textContent = t.dataset.tag;
+      name.textContent = t.dataset.name;
+      desc.textContent = t.dataset.desc;
+      feature.href = t.dataset.href;
+      feature.classList.remove('is-swapping');
+    }, 280);
+    schedule();
+  }
+  function schedule() {
+    clearTimeout(timer);
+    const t = thumbs[current];
+    if (reduce || paused || !visible) return;
+    void t.offsetWidth; t.classList.add('is-running');
+    timer = setTimeout(() => show((current + 1) % thumbs.length), DURATION);
+  }
+  function pause() { paused = true; clearTimeout(timer); thumbs[current].classList.remove('is-running'); }
+  function resume() { paused = false; schedule(); }
+
+  thumbs.forEach((b, i) => b.addEventListener('click', () => show(i)));
+  const showroom = feature.parentElement;
+  showroom.addEventListener('mouseenter', pause);
+  showroom.addEventListener('mouseleave', resume);
+  showroom.addEventListener('focusin', pause);
+  showroom.addEventListener('focusout', resume);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; visible ? schedule() : clearTimeout(timer); }, { threshold: 0.35 }).observe(showroom);
+  } else { visible = true; schedule(); }
+  feature.dataset.ready = '1';
+})();

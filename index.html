@@ -146,38 +146,43 @@
   <div class="wrap">
     <div class="seg-head rv">
       <div><div class="label">(03) Segmentos</div><h2 class="h2">Feita para o seu tipo de negócio.</h2></div>
-      <div class="filters" role="group" aria-label="Filtrar segmentos">
-        <button class="filter" type="button" data-filter="todos" aria-pressed="true">Todos</button>
-        <button class="filter" type="button" data-filter="beleza" aria-pressed="false">Beleza e saúde</button>
-        <button class="filter" type="button" data-filter="servicos" aria-pressed="false">Serviços</button>
-        <button class="filter" type="button" data-filter="comercio" aria-pressed="false">Comércio local</button>
-      </div>
+      <p class="lead">Cada segmento tem uma página de exemplo pronta. Escolha o seu ou deixe a vitrine passar.</p>
     </div>
-    <div class="grid-3">
-      <a class="card" data-cat="beleza" href="/beleza/">
-        <div class="card-media"><img src="/assets/home/seg-salao.webp" alt="Fachada de salão de beleza com cadeiras e espelhos iluminados" width="1448" height="1086" loading="lazy"><span class="tag">Beleza</span></div>
-        <div class="card-foot"><div><h3>Salões e barbearias</h3><div class="chips"><span>Agendamento</span><span>Galeria</span><span>WhatsApp</span></div></div><span class="go" aria-hidden="true">↗</span></div>
+    <div class="showroom rv">
+      <a class="feature" id="seg-feature" href="/beleza/">
+        <span class="feature-media"><img class="is-active" data-i="0" src="/assets/home/seg-salao.webp" alt="Fachada de salão de beleza com cadeiras e espelhos iluminados" width="1448" height="1086" loading="lazy"><img class="" data-i="1" src="/assets/home/seg-clinica.webp" alt="Fachada de clínica de estética em travertino com recepção iluminada" width="1448" height="1086" loading="lazy"><img class="" data-i="2" src="/assets/home/seg-pet.webp" alt="Fachada de pet shop de madeira e vidro com área de banho visível" width="1448" height="1086" loading="lazy"><img class="" data-i="3" src="/assets/home/seg-oficina.webp" alt="Oficina mecânica moderna com carro no elevador e ferramentas organizadas" width="1448" height="1086" loading="lazy"><img class="" data-i="4" src="/assets/home/seg-academia.webp" alt="Estúdio de treino com fachada de vidro e equipamentos de madeira" width="1448" height="1086" loading="lazy"><img class="" data-i="5" src="/assets/home/seg-padaria.webp" alt="Fachada de padaria com vitrine de pães e mesinhas na calçada" width="1448" height="1086" loading="lazy"></span>
+        <span class="feature-top"><span class="feature-tag" id="seg-tag">Beleza</span><span class="feature-name" id="seg-name">Salões e barbearias</span></span>
+        <span class="feature-bottom">
+          <span class="feature-desc" id="seg-desc">Agenda, galeria de cortes e botão para marcar horário.</span>
+          <span class="feature-cta">Ver página de exemplo <span aria-hidden="true">↗</span></span>
+        </span>
       </a>
-      <a class="card" data-cat="beleza" href="/saude/">
-        <div class="card-media"><img src="/assets/home/seg-clinica.webp" alt="Fachada de clínica de estética em travertino com recepção iluminada" width="1448" height="1086" loading="lazy"><span class="tag">Saúde e estética</span></div>
-        <div class="card-foot"><div><h3>Clínicas e consultórios</h3><div class="chips"><span>Tratamentos</span><span>Equipe</span><span>Consultas</span></div></div><span class="go" aria-hidden="true">↗</span></div>
-      </a>
-      <a class="card" data-cat="servicos" href="/pet/">
-        <div class="card-media"><img src="/assets/home/seg-pet.webp" alt="Fachada de pet shop de madeira e vidro com área de banho visível" width="1448" height="1086" loading="lazy"><span class="tag">Pet</span></div>
-        <div class="card-foot"><div><h3>Pet shops, banho e tosa</h3><div class="chips"><span>Banho e tosa</span><span>Produtos</span><span>WhatsApp</span></div></div><span class="go" aria-hidden="true">↗</span></div>
-      </a>
-      <a class="card" data-cat="servicos" href="/auto/">
-        <div class="card-media"><img src="/assets/home/seg-oficina.webp" alt="Oficina mecânica moderna com carro no elevador e ferramentas organizadas" width="1448" height="1086" loading="lazy"><span class="tag">Automotivo</span></div>
-        <div class="card-foot"><div><h3>Oficinas e serviços</h3><div class="chips"><span>Orçamento</span><span>Serviços</span><span>Localização</span></div></div><span class="go" aria-hidden="true">↗</span></div>
-      </a>
-      <a class="card" data-cat="servicos" href="/esporte-ensino/">
-        <div class="card-media"><img src="/assets/home/seg-academia.webp" alt="Estúdio de treino com fachada de vidro e equipamentos de madeira" width="1448" height="1086" loading="lazy"><span class="tag">Esporte e ensino</span></div>
-        <div class="card-foot"><div><h3>Academias e escolas</h3><div class="chips"><span>Aulas</span><span>Horários</span><span>Matrícula</span></div></div><span class="go" aria-hidden="true">↗</span></div>
-      </a>
-      <a class="card" data-cat="comercio" data-wa data-segment="café ou padaria" href="https://wa.me/5511967794744">
-        <div class="card-media"><img src="/assets/home/seg-padaria.webp" alt="Fachada de padaria com vitrine de pães e mesinhas na calçada" width="1448" height="1086" loading="lazy"><span class="tag">Comércio local</span></div>
-        <div class="card-foot"><div><h3>Cafés e padarias</h3><div class="chips"><span>Cardápio</span><span>Encomendas</span><span>WhatsApp</span></div></div><span class="go" aria-hidden="true">↗</span></div>
-      </a>
+      <ul class="thumbs" aria-label="Escolha um segmento">
+        <li><button class="thumb is-active" type="button" data-i="0" data-tag="Beleza" data-name="Salões e barbearias" data-desc="Agenda, galeria de cortes e botão para marcar horário." data-href="/beleza/" data-chips="Agendamento|Galeria|WhatsApp" aria-pressed="true">
+          <span class="thumb-media"><img src="/assets/home/seg-salao.webp" alt="" width="1448" height="1086" loading="lazy"><i class="thumb-bar"></i></span>
+          <span class="thumb-tag">Beleza</span><span class="thumb-name">Salões e barbearias</span>
+        </button></li>
+        <li><button class="thumb" type="button" data-i="1" data-tag="Saúde e estética" data-name="Clínicas e consultórios" data-desc="Tratamentos explicados com clareza e consulta marcada em um toque." data-href="/saude/" data-chips="Tratamentos|Equipe|Consultas" aria-pressed="false">
+          <span class="thumb-media"><img src="/assets/home/seg-clinica.webp" alt="" width="1448" height="1086" loading="lazy"><i class="thumb-bar"></i></span>
+          <span class="thumb-tag">Saúde e estética</span><span class="thumb-name">Clínicas e consultórios</span>
+        </button></li>
+        <li><button class="thumb" type="button" data-i="2" data-tag="Pet" data-name="Pet shops, banho e tosa" data-desc="Serviços, pacotes e o tutor chamando no WhatsApp para agendar." data-href="/pet/" data-chips="Banho e tosa|Produtos|WhatsApp" aria-pressed="false">
+          <span class="thumb-media"><img src="/assets/home/seg-pet.webp" alt="" width="1448" height="1086" loading="lazy"><i class="thumb-bar"></i></span>
+          <span class="thumb-tag">Pet</span><span class="thumb-name">Pet shops, banho e tosa</span>
+        </button></li>
+        <li><button class="thumb" type="button" data-i="3" data-tag="Automotivo" data-name="Oficinas e serviços" data-desc="Serviços, localização e pedido de orçamento sem enrolação." data-href="/auto/" data-chips="Orçamento|Serviços|Localização" aria-pressed="false">
+          <span class="thumb-media"><img src="/assets/home/seg-oficina.webp" alt="" width="1448" height="1086" loading="lazy"><i class="thumb-bar"></i></span>
+          <span class="thumb-tag">Automotivo</span><span class="thumb-name">Oficinas e serviços</span>
+        </button></li>
+        <li><button class="thumb" type="button" data-i="4" data-tag="Esporte e ensino" data-name="Academias e escolas" data-desc="Modalidades, horários e aula experimental a um clique." data-href="/esporte-ensino/" data-chips="Aulas|Horários|Matrícula" aria-pressed="false">
+          <span class="thumb-media"><img src="/assets/home/seg-academia.webp" alt="" width="1448" height="1086" loading="lazy"><i class="thumb-bar"></i></span>
+          <span class="thumb-tag">Esporte e ensino</span><span class="thumb-name">Academias e escolas</span>
+        </button></li>
+        <li><button class="thumb" type="button" data-i="5" data-tag="Comércio local" data-name="Cafés e padarias" data-desc="Cardápio, encomendas e o endereço que o cliente procura no Google." data-href="https://wa.me/5511967794744" data-chips="Cardápio|Encomendas|WhatsApp" aria-pressed="false">
+          <span class="thumb-media"><img src="/assets/home/seg-padaria.webp" alt="" width="1448" height="1086" loading="lazy"><i class="thumb-bar"></i></span>
+          <span class="thumb-tag">Comércio local</span><span class="thumb-name">Cafés e padarias</span>
+        </button></li>
+      </ul>
     </div>
     <p class="note">Páginas de exemplo com negócios fictícios, criadas como estudo de cada segmento.</p>
   </div>
@@ -349,5 +354,9 @@
     </div>
   </div>
 </footer>
+<a class="wa-float" data-wa href="https://wa.me/5511967794744" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11.6 9.8c-.3-.7-.6-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4.1 6.4 5.6 3.2 1.2 3.8 1 4.5.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5l-2.4-1.2c-.3-.1-.6-.2-.8.2l-1.1 1.3c-.2.3-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6.1-.2.1-.5 0-.7l-1-2.6z" fill="currentColor"/></svg>
+  <span class="wa-label">Fale no WhatsApp</span>
+</a>
 </body>
 </html>
