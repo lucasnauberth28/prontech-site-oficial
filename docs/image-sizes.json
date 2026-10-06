@@ -1,0 +1,51 @@
+[
+  {
+    "name": "beauty-v1",
+    "width": 1200,
+    "height": 675,
+    "before": 2052373,
+    "after": 68098
+  },
+  {
+    "name": "pet-v1",
+    "width": 1200,
+    "height": 800,
+    "before": 2432067,
+    "after": 92484
+  },
+  {
+    "name": "auto-v1",
+    "width": 1200,
+    "height": 675,
+    "before": 2209117,
+    "after": 84912
+  },
+  {
+    "name": "fitness-v1",
+    "width": 1200,
+    "height": 675,
+    "before": 1893298,
+    "after": 56066
+  },
+  {
+    "name": "medical-v1",
+    "width": 1200,
+    "height": 675,
+    "before": 1871894,
+    "after": 55664
+  },
+  {
+    "name": "bakery-v1",
+    "width": 1200,
+    "height": 675,
+    "before": 2573738,
+    "after": 137344
+  },
+  {
+    "name": "legal-v1",
+    "width": 1200,
+    "height": 675,
+    "before": 1953076,
+    "after": 71902
+  }
+]
