@@ -42,7 +42,7 @@ matchMedia('(min-width:769px)').addEventListener('change', event => { if (event.
 document.querySelectorAll('[data-wa]').forEach(link => {
   const segment = link.dataset.segment;
   const message = segment
-    ? `Olá, ProNTech! Vi o exemplo de ${segment} e quero uma página para meu negócio. Podemos conversar sobre a oferta a partir de R$ 300?`
-    : 'Olá, ProNTech! Quero uma página para meu negócio a partir de R$ 300, com WhatsApp e entrega em 24h. Podemos conversar?';
+    ? `Olá, ProNTech! Vi o exemplo de ${segment} e quero uma página para meu negócio. Podemos conversar sobre a oferta a partir de R$ 450?`
+    : 'Olá, ProNTech! Quero uma página para meu negócio a partir de R$ 450, com WhatsApp e entrega em 24h. Podemos conversar?';
   link.href = 'https://wa.me/5511967794744?text=' + encodeURIComponent(message);
 });
