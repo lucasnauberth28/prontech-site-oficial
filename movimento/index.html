@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0F0F0E">
+<meta name="description" content="Página de exemplo premium da ProNTech para estúdio de treino: Movimento, negócio fictício.">
+<title>Movimento — Exemplo premium de estúdio de treino | ProNTech</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --carvao:#0F0F0E; --grafite:#1C1C1A; --grafite2:#252522; --concreto:#2B2B28;
+  --cal:#EFEDE8; --volt:#D4F23A; --voltInk:#161A05; --po:#9B9A93; --linha:rgba(239,237,232,.1);
+  --wa:#25D366; --waInk:#0b2914;
+  --cond:'Anton',Impact,sans-serif; --sans:'Inter Tight',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--carvao);color:var(--cal);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1220px,100% - 32px);margin:0 auto}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--po)}
+.label.v{color:var(--volt)}
+.label.v::before{content:"// ";}
+.cond{font-family:var(--cond);font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.005em}
+h2.cond{font-size:clamp(42px,6.4vw,92px)}
+h1 em,h2 em{font-style:normal;color:var(--volt)}
+.lead{color:var(--po);max-width:520px;font-size:17px}
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.head .label{display:block;margin-bottom:16px}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,border-color .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn.volt{background:var(--volt);color:var(--voltInk)}
+.btn.ghost{border:1px solid rgba(239,237,232,.25)}
+.btn.ghost:hover{border-color:var(--cal)}
+.btn.wa{background:var(--wa);color:var(--waInk)}
+.btn.wa svg{width:18px;height:18px}
+.btn .arr{width:26px;height:26px;border-radius:50%;background:var(--voltInk);color:var(--volt);display:grid;place-items:center;margin-right:-12px;font-size:13px}
+
+.ph{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 70%,rgba(212,242,58,.10),transparent 60%),var(--grafite)}
+.ph::before{content:attr(data-ph);position:absolute;inset:auto 0 50% 0;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:rgba(239,237,232,.25);text-transform:uppercase}
+.ph img{position:relative;width:100%;height:100%;object-fit:cover}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(15,15,14,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--linha)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;white-space:nowrap;font-family:var(--cond);font-size:22px;letter-spacing:.04em}
+.logo svg{width:30px;height:30px;color:var(--volt)}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;color:var(--po)}
+nav ul a:hover{color:var(--cal)}
+nav .btn{padding:11px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;min-height:max(740px,100svh);overflow:hidden;
+  background:radial-gradient(55% 60% at 68% 78%,rgba(212,242,58,.13),transparent 70%),radial-gradient(90% 80% at 70% 30%,#22221F,var(--carvao) 70%)}
+.bigword{position:absolute;left:50%;top:92px;transform:translateX(-50%);font-family:var(--cond);font-size:20.5vw;line-height:.8;color:var(--concreto);white-space:nowrap;letter-spacing:.01em;user-select:none;display:flex}
+.bigword span{display:inline-block}
+.athlete{position:absolute;right:150px;bottom:0;width:min(560px,46vw);height:min(88%,820px);z-index:2;background:none}
+.athlete::before{inset:auto 0 40% 0}
+.athlete img{object-fit:contain;object-position:bottom center;filter:drop-shadow(0 30px 50px rgba(0,0,0,.5))}
+.athlete.empty{border-radius:280px 280px 0 0;background:linear-gradient(180deg,rgba(212,242,58,.08),rgba(239,237,232,.04))}
+.hero .wrap{position:relative;z-index:3;min-height:max(740px,100svh);display:flex;flex-direction:column;justify-content:flex-end;padding:120px 0 56px}
+.hero-txt{max-width:560px}
+.hero h1{font-size:clamp(64px,9.6vw,148px);margin:18px 0 20px}
+.hero-txt p{color:#C8C6BF;font-size:18px;max-width:430px;margin-bottom:24px}
+.live{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border-radius:999px;background:rgba(28,28,26,.75);border:1px solid var(--linha);font-family:var(--mono);font-size:12px;color:var(--cal);backdrop-filter:blur(8px);margin-bottom:22px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--volt);box-shadow:0 0 0 0 rgba(212,242,58,.6);animation:pulse 2s infinite}
+.live.off i{background:var(--po);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(212,242,58,0)}100%{box-shadow:0 0 0 0 rgba(212,242,58,0)}}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.stats{position:absolute;right:0;bottom:56px;z-index:4;display:flex;flex-direction:column;gap:12px;width:220px}
+.stat{background:rgba(28,28,26,.62);border:1px solid rgba(239,237,232,.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:20px;padding:18px 20px}
+.stat b{display:block;font-family:var(--cond);font-weight:400;font-size:52px;line-height:1;color:var(--cal)}
+.stat b small{font-size:26px;color:var(--volt)}
+.stat>span{font-size:13px;color:#C8C6BF;line-height:1.4;display:block;margin-top:6px}
+.stat.hot{background:var(--volt);border-color:var(--volt)}
+.stat.hot b,.stat.hot>span{color:var(--voltInk)}
+
+/* caminhos */
+.paths{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.path{position:relative;text-align:left;border-radius:22px;overflow:hidden;background:var(--grafite);border:1px solid var(--linha);display:flex;flex-direction:column;transition:transform .25s,border-color .25s,background .25s;min-width:0}
+.path:hover{transform:translateY(-4px)}
+.path .ph{aspect-ratio:4/5;background:radial-gradient(circle at 50% 60%,rgba(212,242,58,.10),transparent 60%),var(--grafite2)}
+.path .ph img{filter:grayscale(.25) contrast(1.05);transition:filter .3s,transform .6s}
+.path:hover .ph img{transform:scale(1.04)}
+.path .pb{padding:18px 20px 20px}
+.path .n{font-family:var(--mono);font-size:11px;color:var(--po);letter-spacing:.14em}
+.path h3{font-family:var(--cond);font-weight:400;font-size:30px;text-transform:uppercase;line-height:1;margin:8px 0 8px}
+.path p{font-size:14px;color:var(--po)}
+.path .go{display:block;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--volt)}
+.path.is-on{background:var(--volt);border-color:var(--volt);color:var(--voltInk)}
+.path.is-on p,.path.is-on .n,.path.is-on .go{color:var(--voltInk)}
+.path.is-on .ph img{filter:none}
+
+/* grade */
+.grade{background:var(--cal);color:var(--carvao);border-radius:32px;margin:0 8px;padding:96px 0}
+.grade .label{color:#6A6963}
+.grade .label.v{color:#4D5A00}
+.grade h2 em{color:var(--carvao);background:var(--volt);padding:0 .12em}
+.grade .lead{color:#55544F}
+.gbar{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.days{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;min-width:0}
+.days::-webkit-scrollbar{display:none}
+.day{padding:10px 16px;border-radius:14px;border:1px solid rgba(15,15,14,.14);text-align:center;min-width:72px;flex:0 0 auto}
+.day b{display:block;font-family:var(--cond);font-weight:400;font-size:22px;line-height:1;text-transform:uppercase}
+.day span{font-family:var(--mono);font-size:10px;color:#6A6963;letter-spacing:.08em}
+.day.is-on{background:var(--carvao);color:var(--cal);border-color:var(--carvao)}
+.day.is-on span{color:var(--volt)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:9px 14px;border-radius:999px;border:1px solid rgba(15,15,14,.18);font-size:13px;font-weight:500}
+.chip.is-on{background:var(--carvao);color:var(--cal);border-color:var(--carvao)}
+.classes{border-top:1px solid rgba(15,15,14,.14)}
+.cl{display:grid;grid-template-columns:110px 1.2fr 1fr 190px 150px;align-items:center;gap:18px;padding:18px 4px;border-bottom:1px solid rgba(15,15,14,.12)}
+.cl .t{font-family:var(--cond);font-size:34px;line-height:1}
+.cl .m b{display:block;font-weight:600;font-size:17px}
+.cl .m small{color:#6A6963;font-size:13px}
+.cl .pr{display:flex;align-items:center;gap:10px;font-size:14px}
+.cl .pr i{width:34px;height:34px;border-radius:50%;background:var(--carvao);color:var(--volt);display:grid;place-items:center;font-family:var(--cond);font-style:normal;font-size:15px;flex:0 0 auto}
+.vag{font-family:var(--mono);font-size:11px;color:#55544F}
+.vag .bar{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;margin-top:6px}
+.vag .bar i{height:6px;border-radius:2px;background:rgba(15,15,14,.12)}
+.vag .bar i.f{background:var(--carvao)}
+.cl .act{justify-self:end}
+.cl .act .btn{padding:10px 16px;font-size:13px}
+.cl .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 12px;border-radius:999px;border:1px solid rgba(15,15,14,.18);color:#6A6963}
+.cl.is-past{opacity:.42}
+.cl.is-now .tag{background:var(--volt);border-color:var(--volt);color:var(--voltInk)}
+.cl.is-full .vag{color:#9A3B1E}
+.gnote{margin-top:18px;font-size:13px;color:#6A6963}
+.empty-cl{padding:28px 4px;color:#6A6963}
+
+/* planner */
+.planner{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.pq,.pout{background:var(--grafite);border:1px solid var(--linha);border-radius:28px;padding:34px}
+.pq h3{font-family:var(--cond);font-weight:400;font-size:20px;text-transform:uppercase;letter-spacing:.02em;margin:26px 0 12px}
+.pq h3:first-of-type{margin-top:0}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{padding:11px 16px;border-radius:999px;border:1px solid rgba(239,237,232,.2);font-size:14px;transition:background .2s,border-color .2s}
+.opt:hover{border-color:var(--cal)}
+.opt.is-on{background:var(--volt);color:var(--voltInk);border-color:var(--volt);font-weight:600}
+.range{display:flex;align-items:center;gap:18px}
+.range input{flex:1;accent-color:var(--volt);height:4px}
+.range output{font-family:var(--cond);font-size:44px;line-height:1;min-width:84px;text-align:right}
+.range output small{font-size:18px;color:var(--po)}
+.pout{position:relative;overflow:hidden;background:linear-gradient(160deg,#20201D,var(--grafite) 60%)}
+.ptop{display:flex;align-items:center;gap:22px;margin-bottom:22px}
+.ring{position:relative;width:118px;height:118px;flex:0 0 auto}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:9}
+.ring .bg{stroke:rgba(239,237,232,.1)}
+.ring .fg{stroke:var(--volt);stroke-linecap:round;transition:stroke-dashoffset .6s ease}
+.ring div{position:absolute;inset:0;display:grid;place-content:center;text-align:center}
+.ring b{font-family:var(--cond);font-weight:400;font-size:36px;line-height:1}
+.ring span{font-family:var(--mono);font-size:9px;color:var(--po);letter-spacing:.1em}
+.ptop h4{font-family:var(--cond);font-weight:400;font-size:30px;line-height:1;text-transform:uppercase}
+.ptop p{color:var(--po);font-size:14px;margin-top:6px}
+.week{list-style:none;border-top:1px solid var(--linha);margin-bottom:22px}
+.week li{display:grid;grid-template-columns:52px 64px 1fr;gap:12px;align-items:baseline;padding:12px 0;border-bottom:1px solid var(--linha);font-size:15px}
+.week li b{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--volt);letter-spacing:.08em}
+.week li span:nth-child(2){font-family:var(--mono);font-size:13px}
+.week li small{color:var(--po)}
+.plan-pick{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:rgba(212,242,58,.08);border:1px solid rgba(212,242,58,.3);margin-bottom:18px}
+.plan-pick span{font-size:14px;color:#C8C6BF}
+.plan-pick b{font-family:var(--mono);font-size:15px;color:var(--volt);white-space:nowrap}
+
+/* bento */
+.bento{display:grid;grid-template-columns:1fr 1fr 1.25fr 1fr 1fr;grid-template-rows:repeat(3,minmax(150px,auto));grid-auto-flow:dense;gap:12px}
+.bx{background:var(--grafite);border:1px solid var(--linha);border-radius:22px;padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;min-width:0}
+.bx svg{width:30px;height:30px;color:var(--volt)}
+.bx p{font-size:16px;line-height:1.35;font-weight:500}
+.bx small{display:block;color:var(--po);font-size:13px;font-weight:400;margin-top:4px}
+.bx.big{grid-column:3;grid-row:1/4;padding:0;overflow:hidden;position:relative}
+.bx.big .ph{position:absolute;inset:0}
+.bx.big .cap{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(15,15,14,.7);backdrop-filter:blur(8px);border-radius:999px;padding:8px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.bx.num{grid-row:span 2;justify-content:flex-end}
+.bx.num b{font-family:var(--cond);font-weight:400;font-size:150px;line-height:.8;color:var(--volt)}
+.bx.w2{grid-column:span 2}
+.bx.hot{background:var(--volt);color:var(--voltInk);border-color:var(--volt)}
+.bx.hot svg{color:var(--voltInk)}
+.bx.hot small{color:#3D4510}
+
+/* números */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.nums div{padding:34px 26px;border-left:1px solid var(--linha)}
+.nums div:first-child{border-left:0}
+.nums b{display:block;font-family:var(--cond);font-weight:400;font-size:clamp(46px,5vw,70px);line-height:1}
+.nums b small{color:var(--volt);font-size:.55em}
+.nums div>span{font-size:14px;color:var(--po)}
+
+/* manifesto */
+.manifesto{position:relative;min-height:min(86vh,760px);margin:0 8px;border-radius:32px;overflow:hidden;display:flex;align-items:flex-end;padding:0}
+.manifesto .ph{position:absolute;inset:0;background:linear-gradient(180deg,#5d6366,#2a2c2c 70%)}
+.manifesto .ph img{object-position:50% 70%;filter:saturate(.7)}
+.manifesto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,15,14,.05) 30%,rgba(15,15,14,.82))}
+.manifesto .wrap{position:relative;z-index:2;padding:0 0 64px;display:grid;grid-template-columns:1fr;justify-items:end;gap:28px}
+.manifesto p{max-width:340px}
+.manifesto h2{font-size:clamp(54px,8.6vw,138px);text-align:right}
+.manifesto h2 span{display:block;color:rgba(239,237,232,.35)}
+.manifesto p{color:#D8D6CF;font-size:15px}
+.manifesto p b{display:block;font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.16em;color:var(--volt);margin-bottom:12px}
+
+/* planos */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pl{background:var(--grafite);border:1px solid var(--linha);border-radius:26px;padding:30px;display:flex;flex-direction:column;gap:18px}
+.pl h3{font-family:var(--cond);font-weight:400;font-size:34px;text-transform:uppercase;line-height:1}
+.pl .pr{font-family:var(--cond);font-size:64px;line-height:1}
+.pl .pr small{font-family:var(--sans);font-size:15px;color:var(--po)}
+.pl ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:15px;color:#C8C6BF;flex:1}
+.pl li::before{content:"// ";font-family:var(--mono);color:var(--volt);font-size:12px}
+.pl .btn{justify-content:center}
+.pl.is-hot{background:var(--volt);color:var(--voltInk);border-color:var(--volt)}
+.pl.is-hot ul{color:#2C3308}.pl.is-hot li::before{color:var(--voltInk)}.pl.is-hot .pr small{color:#3D4510}
+.pl.is-hot .btn.ghost{border-color:rgba(22,26,5,.35)}
+.pl .badge{align-self:flex-start;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;background:var(--voltInk);color:var(--volt);padding:6px 10px;border-radius:999px}
+.trial{margin-top:14px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 26px;border-radius:22px;border:1px dashed rgba(239,237,232,.25)}
+.trial b{font-family:var(--cond);font-weight:400;font-size:26px;text-transform:uppercase;letter-spacing:.01em}
+
+/* depoimentos */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.quotes blockquote{background:var(--grafite);border:1px solid var(--linha);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:18px}
+.quotes p{font-size:17px;line-height:1.5}
+.quotes footer{display:flex;justify-content:space-between;font-size:13px;color:var(--po);margin-top:auto}
+.quotes footer b{color:var(--cal);font-weight:600}
+.stars{color:var(--volt);letter-spacing:.2em;font-size:13px}
+
+/* faq */
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+details{border-bottom:1px solid var(--linha);padding:20px 0}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-size:19px;font-weight:600}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--volt);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{color:var(--po);margin-top:12px;max-width:620px}
+
+/* final */
+.final-card{display:grid;grid-template-columns:1.1fr 1fr;border-radius:32px;overflow:hidden;background:var(--grafite);border:1px solid var(--linha)}
+.final-card .ph{min-height:480px}
+.final-card .ph img{object-position:88% 50%}
+.final-card .in{padding:48px}
+.final-card h2{font-size:clamp(44px,5vw,72px);margin:14px 0 16px}
+.final-card p{color:var(--po);margin-bottom:22px}
+.info{border-top:1px solid var(--linha);margin:6px 0 26px}
+.info div{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px solid var(--linha);font-size:14px;text-align:right}
+.info div span:first-child{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--po);text-align:left}
+
+footer.f{padding:40px 0 100px;border-top:1px solid var(--linha)}
+footer.f .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;color:var(--po)}
+.float{position:fixed;right:18px;bottom:18px;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:1080px){
+  .cl{grid-template-columns:90px 1fr 1fr 150px;}
+  .cl .pr{display:none}
+  .bento{grid-template-columns:1fr 1fr 1fr;grid-template-rows:auto}
+  .bx.big{grid-column:1/-1;grid-row:auto;min-height:420px}
+  .bx.num{grid-row:auto}
+  .bx.w2{grid-column:span 2}
+}
+@media (max-width:980px){
+  nav ul{display:none}
+  .stats{position:relative;right:auto;bottom:auto;flex-direction:row;width:auto;margin-top:22px}
+  .stat{flex:1}
+  .athlete{width:min(440px,62vw);height:66%;right:0;opacity:.95}
+  .hero-txt{max-width:none}
+  .paths{grid-template-columns:repeat(2,1fr)}
+  .planner,.faq,.final-card{grid-template-columns:1fr}
+  .plans,.quotes{grid-template-columns:1fr}
+  .nums{grid-template-columns:repeat(2,1fr)}
+  .nums div:nth-child(3){border-left:0}
+  .nums div:nth-child(n+3){border-top:1px solid var(--linha)}
+  .manifesto .wrap{justify-items:start;gap:20px}
+  .manifesto h2{text-align:left}
+  .faq{gap:20px}
+}
+@media (max-width:640px){
+  section{padding:80px 0}
+  .bigword{top:84px;font-size:21vw}
+  .hero{min-height:auto}
+  .hero .wrap{min-height:auto;padding:170px 0 36px;justify-content:flex-start}
+  .athlete{position:relative;right:auto;width:100%;height:auto;aspect-ratio:4/5;max-height:520px;margin:-10px 0 0}
+  .athlete.empty{border-radius:200px 200px 24px 24px}
+  .hero-stage{display:flex;flex-direction:column}
+  .hero h1{font-size:clamp(58px,19vw,92px)}
+  .stats{gap:8px}
+  .stat{padding:14px}
+  .stat b{font-size:38px}
+  .stat>span{font-size:12px}
+  .paths{grid-template-columns:1fr 1fr;gap:10px}
+  .path .pb{padding:14px}
+  .path h3{font-size:22px}
+  .path p{display:none}
+  .grade{padding:70px 0;border-radius:24px;margin:0 6px}
+  .cl{grid-template-columns:62px 1fr auto;gap:12px;padding:16px 0}
+  .cl .t{font-size:26px}
+  .cl .vag{grid-column:2;grid-row:2}
+  .cl .act{grid-column:3;grid-row:1/3}
+  .pq,.pout{padding:24px;border-radius:22px}
+  .ring{width:96px;height:96px}
+  .bento{grid-template-columns:1fr 1fr}
+  .bx.w2,.bx.big{grid-column:1/-1}
+  .bx.num b{font-size:110px}
+  .manifesto{border-radius:24px;margin:0 6px}
+  .final-card .in{padding:28px}
+  .final-card .ph{min-height:300px}
+  .float span{display:none}
+  .float{padding:15px}
+  .trial{padding:20px}
+}
+#pt-demo{position:relative;z-index:80;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:9px clamp(16px,3vw,24px);background:#131412;color:#f4f3f0;font:500 13px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}
+#pt-demo a{color:inherit;text-decoration:none}
+#pt-demo span{color:#c4c1bb}
+#pt-demo span a{text-decoration:underline}
+#pt-demo .cta{padding:6px 12px;border-radius:999px;background:#f4f3f0;color:#131412;font-weight:600;white-space:nowrap}
+@media (max-width:640px){#pt-demo span{display:none}}
+nav#nav{transform:translateY(var(--pt-demo,0px))}
+</style>
+</head>
+<body>
+<div id="pt-demo"><a href="/"><b>ProNTech</b></a><span>Página de exemplo · negócio fictício · <a href="/movimento/marca/">ver a marca</a></span><a class="cta" href="https://wa.me/5511967794744?text=Ol%C3%A1%2C%20ProNTech%21%20Vi%20o%20exemplo%20Movimento%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio.">Quero uma assim ↗</a></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 120 120"><path fill="currentColor" d="M14 100h26l30-80H44zM52 100h26l30-80H82z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-coach" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="9" r="4.5"/><path d="M7 28c0-5 4-9 9-9s9 4 9 9"/><path d="M16 19v5"/></g></symbol>
+  <symbol id="i-test" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24l7-8 6 5 11-12"/><path d="M21 9h7v7"/></g></symbol>
+  <symbol id="i-shower" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 28V9a5 5 0 0 1 10 0"/><path d="M11 12h10"/><path d="M13 17v2M16 17v4M19 17v2M14.5 23v2M17.5 23v2"/></g></symbol>
+  <symbol id="i-car" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="24" height="24" rx="6"/><path d="M12 23V9h5.5a4.5 4.5 0 0 1 0 9H12"/></g></symbol>
+  <symbol id="i-app" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="14" height="26" rx="3"/><path d="M14 25h4"/><path d="M13 11l3 3 4-5"/></g></symbol>
+  <symbol id="i-bolt" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M18 3L7 18h8l-2 11 12-16h-8z"/></symbol>
+</svg>
+
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#top"><svg><use href="#mark"/></svg>MOVIMENTO</a>
+  <ul><li><a href="#caminhos">Aulas</a></li><li><a href="#grade">Grade</a></li><li><a href="#semana">Sua semana</a></li><li><a href="#planos">Planos</a></li><li><a href="#estudio">Estúdio</a></li></ul>
+  <a class="btn volt" href="#semana">Aula experimental</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="grain"></div>
+  <div class="bigword" id="bigword" aria-hidden="true"><span>M</span><span>O</span><span>V</span><span>I</span><span>M</span><span>E</span><span>N</span><span>T</span><span>O</span></div>
+  <div class="wrap">
+    <div class="hero-txt">
+      <span class="label v">Estúdio de treino · Perdizes, São Paulo</span>
+      <h1 class="cond" id="heroTitle">Força<br>que <em>fica.</em></h1>
+      <p>Turmas de até 8 pessoas, professor olhando a sua técnica e uma grade que cabe na sua semana.</p>
+      <span class="live" id="live"><i></i><span id="liveTxt">Próxima aula com vaga</span></span>
+      <div class="row">
+        <a class="btn volt" href="#semana">Montar minha semana <span class="arr">→</span></a>
+        <a class="btn ghost" href="#grade">Ver a grade</a>
+      </div>
+    </div>
+    <figure class="ph athlete" id="athlete" data-ph="01-hero-atleta"><img src="/assets/ex/movimento/01-hero-atleta.webp" alt="Professora Duda segurando um kettlebell" onerror="this.parentNode.classList.add('empty');this.remove()"></figure>
+    <div class="stats">
+      <div class="stat"><b><span data-count="8">8</span></b><span>alunos por turma, no máximo</span></div>
+      <div class="stat hot"><b><span data-count="87">87</span><small>%</small></b><span>seguem treinando depois de 6 meses</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="caminhos"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label v">Escolha seu caminho</span><h2 class="cond">Quatro aulas,<br><em>um objetivo seu.</em></h2></div>
+    <p class="lead">Toque num caminho para ver só as aulas dele na grade.</p>
+  </div>
+  <div class="paths rv" id="paths">
+    <button class="path" data-m="forca"><figure class="ph" data-ph="03-forca"><img src="/assets/ex/movimento/03-forca.webp" alt="Mãos com magnésio na barra olímpica" loading="lazy" onerror="this.remove()"></figure><div class="pb"><span class="n">01</span><h3>Força</h3><p>Barra, kettlebell e técnica de levantamento, com carga que sobe aos poucos.</p><span class="go">Ver aulas →</span></div></button>
+    <button class="path" data-m="cond"><figure class="ph" data-ph="02-funcional"><img src="/assets/ex/movimento/02-funcional.webp" alt="Turma pequena fazendo burpee" loading="lazy" onerror="this.remove()"></figure><div class="pb"><span class="n">02</span><h3>Condicionamento</h3><p>Circuitos de 45 minutos para fôlego e resistência, sempre em turma.</p><span class="go">Ver aulas →</span></div></button>
+    <button class="path" data-m="mob"><figure class="ph" data-ph="04-mobilidade"><img src="/assets/ex/movimento/04-mobilidade.webp" alt="Professora ajustando a postura de mobilidade de um aluno" loading="lazy" onerror="this.remove()"></figure><div class="pb"><span class="n">03</span><h3>Mobilidade</h3><p>Quadril, ombro e coluna soltos para treinar sem dor e dormir melhor.</p><span class="go">Ver aulas →</span></div></button>
+    <button class="path" data-m="zero"><figure class="ph" data-ph="05-iniciantes"><img src="/assets/ex/movimento/05-iniciantes.webp" alt="Aluna iniciante aprendendo o agachamento com o professor" loading="lazy" onerror="this.remove()"></figure><div class="pb"><span class="n">04</span><h3>Começar do zero</h3><p>Para quem nunca treinou ou parou faz tempo. Técnica antes de carga.</p><span class="go">Ver aulas →</span></div></button>
+  </div>
+</div></section>
+
+<section class="grade" id="grade"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label v">Grade ao vivo</span><h2 class="cond">Escolha a aula,<br><em>a vaga é sua.</em></h2></div>
+    <p class="lead">As vagas mudam ao longo do dia. Reserve pelo WhatsApp e a gente confirma em minutos.</p>
+  </div>
+  <div class="gbar rv">
+    <div class="days" id="days"></div>
+    <div class="chips" id="chips"></div>
+  </div>
+  <div class="classes rv" id="classes"></div>
+  <p class="gnote">Aulas de 50 minutos. Chegue 10 minutos antes na primeira vez.</p>
+</div></section>
+
+<section id="semana"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label v">Monte sua semana</span><h2 class="cond">Três respostas,<br><em>sua semana pronta.</em></h2></div>
+    <p class="lead">A gente monta com aulas de verdade da grade. Depois é só mandar no WhatsApp e marcar a aula experimental.</p>
+  </div>
+  <div class="planner">
+    <div class="pq rv">
+      <h3>Seu objetivo</h3>
+      <div class="opts" id="oGoal">
+        <button class="opt is-on" data-v="forca">Ganhar força</button><button class="opt" data-v="cond">Mais fôlego</button><button class="opt" data-v="mob">Treinar sem dor</button><button class="opt" data-v="zero">Nunca treinei</button>
+      </div>
+      <h3>Dias por semana</h3>
+      <div class="range"><input type="range" id="oDays" min="2" max="5" value="3" aria-label="Dias por semana"><output id="oDaysOut">3<small>x</small></output></div>
+      <h3>Melhor horário</h3>
+      <div class="opts" id="oTime">
+        <button class="opt" data-v="manha">Cedo (6h–8h)</button><button class="opt" data-v="almoco">Almoço</button><button class="opt is-on" data-v="noite">Noite (17h–21h)</button>
+      </div>
+    </div>
+    <div class="pout rv">
+      <div class="ptop">
+        <div class="ring"><svg viewBox="0 0 120 120"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" id="ringFg" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"/></svg><div><b id="ringN">36</b><span>TREINOS</span></div></div>
+        <div><h4 id="pTitle">Sua semana de força</h4><p id="pSub">Em 12 semanas, 36 treinos. É aí que a força fica.</p></div>
+      </div>
+      <ul class="week" id="week"></ul>
+      <div class="plan-pick"><span id="pPlanTxt">Plano indicado: 3x por semana</span><b id="pPlanPrice">R$ 389/mês</b></div>
+      <a class="btn wa" id="pBtn" href="#"><svg><use href="#wa"/></svg>Marcar aula experimental</a>
+    </div>
+  </div>
+</div></section>
+
+<section id="estudio" style="padding-top:20px"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label v">O estúdio</span><h2 class="cond">Pequeno de propósito.</h2></div>
+    <p class="lead">Um salão, oito alunos e um professor que sabe o seu nome. O resto existe para você voltar amanhã.</p>
+  </div>
+  <div class="bento rv">
+    <div class="bx"><svg><use href="#i-coach"/></svg><p>Professores com 5+ anos de chão<small>Formados em educação física</small></p></div>
+    <div class="bx"><svg><use href="#i-test"/></svg><p>Avaliação a cada 8 semanas<small>Carga, fôlego e medidas</small></p></div>
+    <div class="bx big"><figure class="ph" data-ph="07-estudio"><img src="/assets/ex/movimento/07-estudio.webp" alt="Estúdio Movimento ao amanhecer com kettlebells em fila" loading="lazy" onerror="this.remove()"></figure><span class="cap">Rua Cardoso de Almeida · Perdizes</span></div>
+    <div class="bx num"><b>8</b><p>alunos por turma<small>Nunca mais que isso</small></p></div>
+    <div class="bx"><svg><use href="#i-shower"/></svg><p>Vestiário com ducha<small>E toalha inclusa</small></p></div>
+    <div class="bx"><svg><use href="#i-app"/></svg><p>Treino no celular<small>Cargas anotadas aula a aula</small></p></div>
+    <div class="bx"><svg><use href="#i-car"/></svg><p>Estacionamento conveniado<small>A 50 metros</small></p></div>
+    <div class="bx num"><b>6h</b><p>primeira aula do dia<small>Seg a sex até 21h30</small></p></div>
+    <div class="bx w2 hot"><svg><use href="#i-bolt"/></svg><p>Aula experimental grátis<small>Com avaliação de 15 minutos antes da aula</small></p></div>
+    <div class="bx"><svg><use href="#wa"/></svg><p>Remarque pelo WhatsApp<small>Até 2 horas antes</small></p></div>
+  </div>
+</div></section>
+
+<section style="padding:30px 0 110px"><div class="wrap">
+  <div class="nums rv">
+    <div><b><span data-count="420">420</span></b><span>alunos treinando hoje</span></div>
+    <div><b>8</b><span>alunos por turma, no máximo</span></div>
+    <div><b><span data-count="87">87</span><small>%</small></b><span>seguem depois de 6 meses</span></div>
+    <div><b>4,9<small>/5</small></b><span>no Google, 312 avaliações</span></div>
+  </div>
+</div></section>
+
+<section class="manifesto">
+  <figure class="ph" data-ph="06-manifesto"><img src="/assets/ex/movimento/06-manifesto.webp" alt="Corredora amarrando o tênis numa laje de Perdizes ao amanhecer" loading="lazy" onerror="this.remove()"></figure>
+  <div class="grain"></div>
+  <div class="wrap">
+    <p class="rv"><b>[ Nosso jeito ]</b>Ninguém muda o corpo num mês de sofrimento. Muda em um ano de terças e quintas. Por isso a turma é pequena e a grade é larga.</p>
+    <h2 class="cond rv">Constância<span>vence</span>intensidade.</h2>
+  </div>
+</section>
+
+<section id="planos"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label v">Planos</span><h2 class="cond">Sem taxa de matrícula,<br><em>sem fidelidade.</em></h2></div>
+    <p class="lead">Todos incluem avaliação a cada 8 semanas e o treino no celular.</p>
+  </div>
+  <div class="plans rv">
+    <div class="pl"><h3>2x por semana</h3><div class="pr">R$ 289<small> /mês</small></div><ul><li>8 aulas por mês</li><li>Qualquer aula da grade</li><li>Remarque até 2h antes</li></ul><a class="btn ghost" data-msg="Olá, Movimento! Quero saber do plano 2x por semana." href="#">Quero esse</a></div>
+    <div class="pl is-hot"><span class="badge">Mais escolhido</span><h3>3x por semana</h3><div class="pr">R$ 389<small> /mês</small></div><ul><li>12 aulas por mês</li><li>Qualquer aula da grade</li><li>Remarque até 2h antes</li><li>1 aula extra de mobilidade</li></ul><a class="btn ghost" data-msg="Olá, Movimento! Quero saber do plano 3x por semana." href="#">Quero esse</a></div>
+    <div class="pl"><h3>Livre</h3><div class="pr">R$ 489<small> /mês</small></div><ul><li>Aulas ilimitadas</li><li>Prioridade nas turmas cheias</li><li>Remarque até 1h antes</li></ul><a class="btn ghost" data-msg="Olá, Movimento! Quero saber do plano Livre." href="#">Quero esse</a></div>
+  </div>
+  <div class="trial rv"><b>Primeira aula por nossa conta.</b><a class="btn wa" data-msg="Olá, Movimento! Quero marcar uma aula experimental grátis." href="#"><svg><use href="#wa"/></svg>Marcar aula experimental</a></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="head rv"><div><span class="label v">Quem ficou</span><h2 class="cond">Gente que <em>não largou.</em></h2></div></div>
+  <div class="quotes rv">
+    <blockquote><span class="stars">★★★★★</span><p>"Já tinha largado três academias. Aqui o professor sabe meu nome e manda mensagem quando eu falto. Estou no meu segundo ano."</p><footer><b>Camila R.</b><span>Força · 3x</span></footer></blockquote>
+    <blockquote><span class="stars">★★★★★</span><p>"Entrei com dor nas costas e medo de carga. Seis meses de mobilidade e força depois, levanto 60 kg sem dor."</p><footer><b>Paulo S.</b><span>Mobilidade · 2x</span></footer></blockquote>
+    <blockquote><span class="stars">★★★★★</span><p>"Treino às 6h30 antes do trabalho. Turma pequena, música boa e eu saio às 7h30 com o dia ganho."</p><footer><b>Beatriz L.</b><span>Condicionamento · Livre</span></footer></blockquote>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap faq">
+  <div class="rv">
+    <span class="label v">Primeira vez?</span>
+    <h2 class="cond" style="margin-top:16px">Dúvidas <em>de quem começa.</em></h2>
+  </div>
+  <div class="rv">
+    <details open><summary>Nunca treinei. Vou acompanhar?</summary><p>Vai. A turma Começar do zero existe para isso, e em toda aula o professor ajusta carga e exercício para cada pessoa. Ninguém fica para trás.</p></details>
+    <details><summary>Preciso de avaliação médica?</summary><p>Fazemos uma avaliação de 15 minutos antes da aula experimental. Se você tem alguma condição de saúde, traga a liberação do seu médico.</p></details>
+    <details><summary>E se eu faltar?</summary><p>Remarque pelo WhatsApp até 2 horas antes, sem perder a aula. Se sumir por uma semana, a gente manda mensagem.</p></details>
+    <details><summary>O que levo na primeira aula?</summary><p>Roupa confortável, tênis e uma garrafa de água. Toalha e cadeado a gente empresta.</p></details>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="final-card rv">
+    <figure class="ph" data-ph="08-fachada"><img src="/assets/ex/movimento/08-fachada.webp" alt="Fachada do estúdio Movimento em Perdizes" loading="lazy" onerror="this.remove()"></figure>
+    <div class="in">
+      <span class="label v">Visite o estúdio</span>
+      <h2 class="cond">A primeira aula <em>é por nossa conta.</em></h2>
+      <p>Mande o seu melhor horário e a gente reserva uma vaga na turma certa.</p>
+      <div class="info">
+        <div><span>Agora</span><span id="infoNow">Aberto até 21h30</span></div>
+        <div><span>Endereço</span><span>Rua Cardoso de Almeida, 1450<br>Perdizes, São Paulo</span></div>
+        <div><span>Horário</span><span>Seg a sex 6h às 21h30<br>Sáb 8h às 12h</span></div>
+      </div>
+      <a class="btn wa" data-msg="Olá, Movimento! Quero marcar uma aula experimental. Meu melhor horário é: ___" href="#"><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+  </div>
+</div></section>
+
+<footer class="f"><div class="wrap">
+  <a class="logo" href="#top" style="font-size:18px"><svg style="width:24px;height:24px"><use href="#mark"/></svg>MOVIMENTO</a>
+  <span>Exemplo ProNTech · negócio fictício</span>
+</div></footer>
+
+<a class="btn wa float" data-msg="Olá, Movimento! Quero saber mais sobre as aulas." href="#"><svg><use href="#wa"/></svg><span>Aula grátis</span></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+  var WA='https://wa.me/5511967794744?text=';
+  function wa(a,msg){a.href=WA+encodeURIComponent(msg)}
+  document.querySelectorAll('[data-msg]').forEach(function(a){wa(a,a.dataset.msg)});
+
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('solid',scrollY>40)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // ---------- tempo de São Paulo ----------
+  function spNow(){
+    var o={};
+    try{
+      new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(p){o[p.type]=p.value});
+      return {d:new Date(Date.UTC(+o.year,+o.month-1,+o.day)),min:(+o.hour%24)*60+(+o.minute)};
+    }catch(e){var n=new Date();return {d:new Date(Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())),min:n.getHours()*60+n.getMinutes()}}
+  }
+  var NOW=spNow();
+  var WD=['domingo','segunda','terça','quarta','quinta','sexta','sábado'],WDs=['dom','seg','ter','qua','qui','sex','sáb'];
+  function addDays(d,k){return new Date(d.getTime()+k*864e5)}
+  function fmtH(m){var h=Math.floor(m/60),mm=m%60;return h+'h'+(mm?String(mm).padStart(2,'0'):'')}
+  function hash(s){var h=2166136261;for(var i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
+
+  // ---------- grade ----------
+  var MOD={forca:'Força',cond:'Condicionamento',mob:'Mobilidade',zero:'Começar do zero'};
+  var PROF={forca:'Duda',cond:'Rafa',mob:'Lia',zero:'Téo'};
+  var DESC={forca:'Barra e kettlebell',cond:'Circuito de 45 min',mob:'Quadril, ombro e coluna',zero:'Técnica antes de carga'};
+  function c(t,m){var p=t.split(':');return {min:+p[0]*60+(+p[1]),m:m}}
+  var A=[c('6:30','cond'),c('7:30','forca'),c('8:30','zero'),c('12:15','cond'),c('17:30','zero'),c('18:30','forca'),c('19:30','mob'),c('20:30','cond')];
+  var B=[c('6:30','forca'),c('7:30','mob'),c('8:30','zero'),c('12:15','forca'),c('17:30','cond'),c('18:30','zero'),c('19:30','forca'),c('20:30','cond')];
+  var SAT=[c('8:00','cond'),c('9:00','forca'),c('10:00','mob'),c('11:00','zero')];
+  var GRID={1:A,2:B,3:A,4:B,5:A,6:SAT};
+  var HOURS={1:[360,1290],2:[360,1290],3:[360,1290],4:[360,1290],5:[360,1290],6:[480,720]};
+
+  var DAYS=[];
+  for(var k=0;DAYS.length<6&&k<9;k++){var d=addDays(NOW.d,k);if(GRID[d.getUTCDay()])DAYS.push({d:d,o:k,w:d.getUTCDay()})}
+  function dname(x){return x.o===0?'hoje':x.o===1?'amanhã':WD[x.w]}
+  function taken(x,cl){return 2+hash(x.d.toISOString().slice(0,10)+cl.min+cl.m)%7} // 2..8
+  function state(x,cl){
+    var t=taken(x,cl);
+    if(x.o===0&&NOW.min>=cl.min+50)return {s:'past',t:t};
+    if(x.o===0&&NOW.min>=cl.min)return {s:'now',t:t};
+    if(t>=8)return {s:'full',t:8};
+    return {s:'open',t:t};
+  }
+  var day=0,filter='all';
+  var daysEl=document.getElementById('days'),chipsEl=document.getElementById('chips'),clEl=document.getElementById('classes');
+  daysEl.innerHTML=DAYS.map(function(x,i){return '<button class="day" data-i="'+i+'"><b>'+(x.o===0?'Hoje':WDs[x.w])+'</b><span>'+String(x.d.getUTCDate()).padStart(2,'0')+'/'+String(x.d.getUTCMonth()+1).padStart(2,'0')+'</span></button>'}).join('');
+  chipsEl.innerHTML='<button class="chip" data-m="all">Todas</button>'+Object.keys(MOD).map(function(m){return '<button class="chip" data-m="'+m+'">'+MOD[m]+'</button>'}).join('');
+  daysEl.addEventListener('click',function(e){var b=e.target.closest('.day');if(!b)return;day=+b.dataset.i;renderGrade()});
+  chipsEl.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;setFilter(b.dataset.m)});
+  function setFilter(m){
+    filter=m;renderGrade();
+    document.querySelectorAll('.path').forEach(function(p){p.classList.toggle('is-on',p.dataset.m===m)});
+  }
+  document.getElementById('paths').addEventListener('click',function(e){
+    var p=e.target.closest('.path');if(!p)return;
+    setFilter(filter===p.dataset.m?'all':p.dataset.m);
+    if(filter!=='all')document.getElementById('grade').scrollIntoView({behavior:'smooth'});
+  });
+  function renderGrade(){
+    var x=DAYS[day];
+    daysEl.querySelectorAll('.day').forEach(function(b,i){b.classList.toggle('is-on',i===day)});
+    chipsEl.querySelectorAll('.chip').forEach(function(b){b.classList.toggle('is-on',b.dataset.m===filter)});
+    var list=GRID[x.w].filter(function(cl){return filter==='all'||cl.m===filter});
+    if(!list.length){clEl.innerHTML='<div class="empty-cl">Sem aulas de '+MOD[filter]+' neste dia. Veja outro dia.</div>';return}
+    clEl.innerHTML=list.map(function(cl){
+      var st=state(x,cl),free=8-st.t,act;
+      if(st.s==='past')act='<span class="tag">Encerrada</span>';
+      else if(st.s==='now')act='<span class="tag">Acontecendo agora</span>';
+      else if(st.s==='full')act='<a class="btn ghost" style="border-color:rgba(15,15,14,.25)" data-wa="Olá, Movimento! A aula de '+MOD[cl.m]+' de '+dname(x)+' às '+fmtH(cl.min)+' está lotada. Pode me colocar na lista de espera?">Lista de espera</a>';
+      else act='<a class="btn wa" data-wa="Olá, Movimento! Quero reservar a aula de '+MOD[cl.m]+' com '+(cl.m==='forca'?'a ':cl.m==='mob'?'a ':'o ')+PROF[cl.m]+', '+dname(x)+' às '+fmtH(cl.min)+'."><svg><use href="#wa"/></svg>Reservar</a>';
+      var bar='';for(var i=0;i<8;i++)bar+='<i'+(i<st.t?' class="f"':'')+'></i>';
+      var vtxt=st.s==='full'?'Lotada · 8/8':st.s==='past'?st.t+'/8 treinaram':(free===1?'Última vaga':free+' vagas')+' · '+st.t+'/8';
+      return '<div class="cl is-'+st.s+'"><span class="t">'+fmtH(cl.min)+'</span><div class="m"><b>'+MOD[cl.m]+'</b><small>'+DESC[cl.m]+' · 50 min</small></div><div class="pr"><i>'+PROF[cl.m][0]+'</i>'+PROF[cl.m]+'</div><div class="vag">'+vtxt+'<div class="bar">'+bar+'</div></div><div class="act">'+act+'</div></div>';
+    }).join('');
+    clEl.querySelectorAll('[data-wa]').forEach(function(a){wa(a,a.dataset.wa)});
+  }
+
+  // ---------- monte sua semana ----------
+  var goal='forca',time='noite',nd=3;
+  var ROT={forca:['forca','forca','mob'],cond:['cond','cond','forca'],mob:['mob','forca','mob'],zero:['zero','zero','mob']};
+  var PICK={2:[1,4],3:[1,3,5],4:[1,2,4,5],5:[1,2,3,4,5]};
+  var WIN={manha:[0,540],almoco:[690,840],noite:[1020,1290]};
+  var TITLE={forca:'Sua semana de força',cond:'Sua semana de fôlego',mob:'Sua semana sem dor',zero:'Seu começo do zero'};
+  function inWin(cl){var w=WIN[time];return cl.min>=w[0]&&cl.min<=w[1]}
+  function plan(){
+    var out=[];
+    PICK[nd].forEach(function(w,i){
+      var want=ROT[goal][i%3],opts=GRID[w].filter(inWin);
+      var cl=opts.filter(function(o){return o.m===want})[0]||opts.filter(function(o){return o.m===goal})[0]||opts.filter(function(o){return o.m!=='zero'||goal==='zero'})[0]||opts[0];
+      if(cl)out.push({w:w,cl:cl});
+    });
+    return out;
+  }
+  function renderPlan(){
+    var p=plan(),total=nd*12;
+    document.getElementById('oDaysOut').innerHTML=nd+'<small>x</small>';
+    document.getElementById('week').innerHTML=p.map(function(r){return '<li><b>'+WDs[r.w].toUpperCase()+'</b><span>'+fmtH(r.cl.min)+'</span><span>'+MOD[r.cl.m]+' <small>· '+PROF[r.cl.m]+'</small></span></li>'}).join('');
+    document.getElementById('pTitle').textContent=TITLE[goal];
+    document.getElementById('pSub').textContent='Em 12 semanas, '+total+' treinos. É aí que a força fica.';
+    var ringN=document.getElementById('ringN');
+    if(window.gsap){var o={v:+ringN.textContent||0};gsap.to(o,{v:total,duration:.6,ease:'power2.out',onUpdate:function(){ringN.textContent=Math.round(o.v)}})}else ringN.textContent=total;
+    document.getElementById('ringFg').style.strokeDashoffset=326.7*(1-total/60);
+    var pl=nd===2?['2x por semana','R$ 289/mês']:nd===3?['3x por semana','R$ 389/mês']:['Livre','R$ 489/mês'];
+    document.getElementById('pPlanTxt').textContent='Plano indicado: '+pl[0];
+    document.getElementById('pPlanPrice').textContent=pl[1];
+    var lines=p.map(function(r){return '• '+WD[r.w]+' '+fmtH(r.cl.min)+' · '+MOD[r.cl.m]}).join('\n');
+    var first=p[0];
+    wa(document.getElementById('pBtn'),'Olá, Movimento! Montei minha semana no site:\n'+lines+'\n\nObjetivo: '+{forca:'ganhar força',cond:'mais fôlego',mob:'treinar sem dor',zero:'começar do zero'}[goal]+' · Plano '+pl[0]+'.\nQuero marcar a aula experimental'+(first?' na '+WD[first.w]+' às '+fmtH(first.cl.min):'')+'. Pode ser?');
+  }
+  function bindOpts(id,set){document.getElementById(id).addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;this.querySelectorAll('.opt').forEach(function(o){o.classList.toggle('is-on',o===b)});set(b.dataset.v);renderPlan()})}
+  bindOpts('oGoal',function(v){goal=v});
+  bindOpts('oTime',function(v){time=v});
+  document.getElementById('oDays').addEventListener('input',function(){nd=+this.value;renderPlan()});
+
+  // ---------- status ao vivo ----------
+  var live=document.getElementById('live'),liveTxt=document.getElementById('liveTxt'),info=document.getElementById('infoNow');
+  var hT=HOURS[NOW.d.getUTCDay()],open=hT&&NOW.min>=hT[0]&&NOW.min<hT[1];
+  var next=null;
+  for(var i=0;i<DAYS.length&&!next;i++){GRID[DAYS[i].w].some(function(cl){var st=state(DAYS[i],cl);if(st.s==='open'){next={x:DAYS[i],cl:cl,free:8-st.t};return true}})}
+  if(next){
+    var v=next.free===1?'última vaga':next.free+' vagas';
+    liveTxt.textContent=(next.x.o===0?'Próxima aula com vaga: ':'Próxima vaga: '+dname(next.x)+', ')+MOD[next.cl.m]+' '+fmtH(next.cl.min)+' · '+v;
+  }
+  if(open){info.textContent='Aberto até '+fmtH(hT[1])}
+  else{
+    live.classList.toggle('off',!next||next.x.o!==0);
+    var nx=null;for(var j=0;j<8&&!nx;j++){var dd=addDays(NOW.d,j),h2=HOURS[dd.getUTCDay()];if(h2&&(j>0||NOW.min<h2[0]))nx={o:j,d:dd,h:h2[0]}}
+    if(nx){var nm=nx.o===0?'hoje':nx.o===1?'amanhã':WD[nx.d.getUTCDay()];info.textContent='Fechado · abre '+nm+' às '+fmtH(nx.h)}
+  }
+
+  // ---------- início ----------
+  renderGrade();renderPlan();
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  if(window.gsap&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    gsap.from('#bigword span',{yPercent:100,opacity:0,duration:1.1,stagger:.05,ease:'expo.out'});
+    gsap.from('#athlete',{y:80,opacity:0,duration:1.3,delay:.25,ease:'expo.out'});
+    gsap.from('#heroTitle',{y:50,opacity:0,duration:1,delay:.15,ease:'power3.out'});
+    gsap.from('.stat',{y:24,opacity:0,duration:.8,stagger:.12,delay:.6,ease:'power2.out'});
+    var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;cio.unobserve(e.target);var el=e.target,o={v:0},t=+el.dataset.count;gsap.to(o,{v:t,duration:1.4,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(o.v)}})})},{threshold:.5});
+    document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+  }
+})();
+</script>
+<script>(function(){var d=document.getElementById('pt-demo');function u(){document.documentElement.style.setProperty('--pt-demo',Math.max(0,d.offsetHeight-scrollY)+'px')}addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();</script>
+</body>
+</html>

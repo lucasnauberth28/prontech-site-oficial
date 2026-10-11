@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0D0E10">
+<meta name="description" content="Brand board de exemplo da ProNTech: identidade visual da Ponto Auto, negócio fictício.">
+<title>Ponto Auto — Marca | ProNTech</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --massa:#EEECE7; --latte:#D8D5CF; --foam:#F7F6F3; --espresso:#0D0E10; --roast:#1A1C20; --crosta:#E3221B; --mel:#FF4A3D; --soft:#62666E; --onDark:#EEECE7; --onDark2:#8C9099;
+  --wa:#25d366; --waInk:#0b2914;
+  --display:'Archivo',system-ui,sans-serif;
+  --head:'Archivo',system-ui,sans-serif;
+  --body:'Archivo',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  color-scheme:light;
+}
+
+/* Layout: brand board em blocos de tamanhos diferentes, como um mosaico de aplicações */
+*{box-sizing:border-box}
+body{background:var(--massa);color:var(--espresso);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,p,ul,figure{margin:0}ul{padding:0;list-style:none}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+.label{font:600 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--crosta)}
+.on-dark .label{color:var(--mel)}
+section{padding-block:clamp(40px,6vw,80px)}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:clamp(20px,3vw,32px);border-bottom:1px solid rgba(20,20,20,.14);padding-bottom:14px}
+.sh h2{font:800 clamp(26px,3.2vw,40px)/1.05 var(--head);letter-spacing:-.03em}
+.sh h2 em{font:400 italic 1.08em var(--display);color:var(--crosta)}
+.sh p{color:var(--soft);max-width:460px;font-size:15px}
+
+/* capa */
+.cover{background:var(--espresso);color:var(--onDark);padding-block:clamp(28px,4vw,48px) clamp(48px,7vw,96px);position:relative;overflow:hidden}
+.cover .top{display:flex;justify-content:space-between;gap:12px;font:500 12px var(--mono);letter-spacing:.08em;color:var(--onDark2);text-transform:uppercase}
+.cover-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,5vw,72px);align-items:center;margin-top:clamp(36px,6vw,80px)}
+.cover h1{font:800 clamp(44px,6.4vw,92px)/.95 var(--head);letter-spacing:-.04em;text-wrap:balance}
+.cover h1 em{font:400 italic 1.06em var(--display);color:var(--mel)}
+.cover p{margin-top:18px;color:var(--onDark2);max-width:500px;font-size:18px}
+.idea{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.idea span{padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2);font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.cover .mark-big{justify-self:center;width:min(100%,380px)}
+
+/* logo */
+.logo-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.tile{border-radius:24px;padding:clamp(20px,3vw,32px);position:relative;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;gap:16px;overflow:hidden}
+.tile .label{position:relative}
+.t-main{grid-column:span 4;background:var(--foam);border:1px solid rgba(20,20,20,.08);min-height:320px}
+.t-sym{grid-column:span 2;background:var(--crosta);color:var(--foam)}
+.t-sym .label{color:var(--foam);opacity:.8}
+.t-dark{grid-column:span 2;background:var(--espresso);color:var(--onDark)}
+.t-dark .label{color:var(--mel)}
+.t-mel{grid-column:span 2;background:var(--mel)}
+.t-mel .label{color:var(--espresso)}
+.t-rule{grid-column:span 2;background:var(--latte)}
+.lockup{display:flex;align-items:center;gap:clamp(14px,2vw,24px);margin:auto 0}
+.lockup svg{flex:none}
+.wm{display:flex;flex-direction:column;line-height:.9}
+.wm b{font:400 clamp(44px,6vw,84px)/.85 var(--display);letter-spacing:-.03em;font-weight:400}
+.wm small{font:600 clamp(11px,1.2vw,14px) var(--mono);letter-spacing:.32em;text-transform:uppercase;margin-top:10px;padding-left:4px}
+.center{display:grid;place-items:center;flex:1}
+.rules{display:grid;gap:8px;font-size:14px}
+.rules li{display:flex;gap:8px}
+.rules li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--crosta);margin-top:8px}
+
+/* cores */
+.colors{display:grid;grid-auto-flow:column;grid-template-columns:2fr 1.4fr;grid-auto-columns:1fr;gap:10px}
+.sw{border-radius:20px;min-height:200px;padding:16px;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;border:1px solid rgba(20,20,20,.08)}
+.sw b{font:700 16px var(--head)}
+.sw span{font:500 12px var(--mono);letter-spacing:.04em;opacity:.8}
+.sw i{font-style:normal;font-size:12px;opacity:.75;line-height:1.35;margin-top:6px}
+
+/* tipografia */
+.type{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:14px}
+.type .tile{background:var(--foam);border:1px solid rgba(20,20,20,.08)}
+.spec{font:400 clamp(72px,10vw,150px)/.85 var(--display);letter-spacing:-.03em}
+.spec em{color:var(--crosta)}
+.stack{display:grid;gap:18px}
+.stack div{display:grid;gap:4px;padding-bottom:16px;border-bottom:1px solid rgba(20,20,20,.1)}
+.stack div:last-child{border:0;padding:0}
+.s1{font:800 34px/1 var(--head);letter-spacing:-.03em}
+.s2{font:400 17px/1.5 var(--body)}
+.s3{font:600 13px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--crosta)}
+
+/* aplicações */
+.apps{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}
+.app{border-radius:24px;overflow:hidden;position:relative;min-height:300px;display:grid;place-items:center;padding:24px}
+.app .label{position:absolute;left:18px;top:18px}
+.a-bag{grid-column:span 4;background:var(--latte)}
+.a-box{grid-column:span 4;background:var(--espresso)}
+.a-box .label{color:var(--mel)}
+.a-card{grid-column:span 4;background:var(--mel)}
+.a-card .label{color:var(--espresso)}
+.a-phone{grid-column:span 5;background:var(--foam);border:1px solid rgba(20,20,20,.08);min-height:440px}
+.a-front{grid-column:span 7;background:var(--roast);min-height:440px}
+.a-front .label{color:var(--mel)}
+
+/* sacola */
+.bag{position:relative;width:170px;height:210px;margin-top:30px;background:linear-gradient(180deg,#cfac80,#bf9a6c);border-radius:6px 6px 10px 10px;box-shadow:0 26px 40px -20px rgba(20,20,20,.55);display:grid;place-items:center}
+.bag::before{content:"";position:absolute;left:50%;top:-44px;width:80px;height:70px;transform:translateX(-50%);border:6px solid var(--espresso);border-bottom:0;border-radius:40px 40px 0 0}
+.bag::after{content:"";position:absolute;inset:0 0 auto;height:22px;background:rgba(0,0,0,.06);border-radius:6px 6px 0 0}
+.bag .in{display:grid;justify-items:center;gap:8px;color:var(--espresso);text-align:center}
+.bag .in b{font:400 30px/.9 var(--display)}
+.bag .in small{font:600 8px var(--mono);letter-spacing:.3em;text-transform:uppercase}
+
+/* caixa */
+.box{position:relative;width:230px;height:150px;margin-top:20px;background:var(--massa);border-radius:10px;box-shadow:0 30px 40px -20px rgba(0,0,0,.6);transform:perspective(600px) rotateX(18deg);display:grid;place-items:center;overflow:hidden}
+.box .stripe{position:absolute;inset:0 auto 0 50%;width:34px;transform:translateX(-50%);background:var(--crosta)}
+.box .seal{position:relative;width:96px;height:96px;border-radius:50%;background:var(--espresso);color:var(--onDark);display:grid;place-items:center;text-align:center;border:3px solid var(--massa)}
+.box .seal span{font:600 8px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase}
+.box .seal b{display:block;font:400 26px/1 var(--display);color:var(--mel);letter-spacing:0;text-transform:none}
+
+/* cartão */
+.cards2{position:relative;width:260px;height:220px;margin-top:30px}
+.c-back,.c-front{position:absolute;width:210px;height:130px;border-radius:12px;box-shadow:0 20px 30px -16px rgba(20,20,20,.5);padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+.c-back{left:0;top:-14px;justify-content:flex-start;gap:8px;background:var(--espresso);color:var(--onDark);transform:rotate(-8deg)}
+.c-back b{font:400 italic 26px/1 var(--display);color:var(--mel)}
+.c-back small{font:500 8px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--onDark2)}
+.c-front{right:0;bottom:-6px;background:var(--foam);transform:rotate(5deg);color:var(--espresso)}
+.c-front .row{display:flex;justify-content:space-between;align-items:flex-end;gap:10px}
+.c-front p{font:600 13px/1.25 var(--head)}
+.c-front small{font:500 8px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.qr{width:46px;height:46px;flex:none;border-radius:6px;background:
+ conic-gradient(var(--espresso) 25%,transparent 0 50%,var(--espresso) 0 75%,transparent 0) 0 0/12px 12px,var(--latte);border:4px solid var(--latte)}
+
+/* celular */
+.phone{width:250px;height:380px;border-radius:36px;background:var(--espresso);padding:10px;box-shadow:0 30px 50px -24px rgba(20,20,20,.6);margin-top:24px}
+.screen{height:100%;border-radius:28px;background:#efe7dc;overflow:hidden;display:flex;flex-direction:column}
+.wa-head{background:var(--espresso);color:var(--onDark);padding:18px 14px 12px;display:flex;align-items:center;gap:10px}
+.av{width:36px;height:36px;border-radius:50%;background:var(--crosta);display:grid;place-items:center;flex:none}
+.wa-head b{font:600 13px var(--body);display:block}
+.wa-head small{font-size:10px;color:var(--onDark2)}
+.chat{flex:1;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:11px;line-height:1.35}
+.msg{max-width:82%;padding:8px 10px;border-radius:12px;background:#fff}
+.msg.me{align-self:flex-end;background:#d9fdd3}
+.msg small{display:block;font-size:9px;color:#8a7a6c;text-align:right;margin-top:2px}
+.prod{display:flex;gap:8px;align-items:center;padding:6px;border-radius:10px;background:var(--massa);margin-top:6px}
+.prod i{width:30px;height:30px;border-radius:8px;background:var(--mel);flex:none}
+
+/* fachada */
+.front{position:relative;width:min(100%,520px);margin-top:30px}
+.awning{height:70px;border-radius:12px 12px 0 0;background:repeating-linear-gradient(90deg,var(--massa) 0 34px,var(--crosta) 34px 68px);position:relative}
+.awning::after{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px;background:radial-gradient(circle at 17px 0,var(--massa) 16px,transparent 17px) 0 0/68px 16px,radial-gradient(circle at 51px 0,var(--crosta) 16px,transparent 17px) 0 0/68px 16px}
+.facade{background:var(--espresso);border:6px solid #1f130d;border-top:0;padding:96px 24px 0;display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:16px;align-items:end;height:300px}
+.win{background:linear-gradient(180deg,#f7d9a8,#e9a24a);height:150px;border-radius:90px 90px 6px 6px;box-shadow:inset 0 0 30px rgba(198,106,43,.6)}
+.door{background:linear-gradient(180deg,#f7d9a8,#d8893f);height:190px;border-radius:100px 100px 0 0;display:grid;place-items:start center;padding-top:30px}
+.sign{position:absolute;left:50%;top:92px;display:flex;align-items:center;gap:10px;white-space:nowrap;transform:translateX(-50%);color:var(--mel);text-align:center}
+.sign b{font:400 28px/1 var(--display);display:block;color:var(--onDark);text-align:left}
+.sign span{display:grid;justify-items:start}
+.sign small{font:600 9px var(--mono);letter-spacing:.3em;text-transform:uppercase}
+
+.apps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ph{position:relative;border-radius:24px;overflow:hidden;background:var(--latte)}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.ph:hover img{transform:scale(1.04)}
+.ph.pv{aspect-ratio:4/5}
+.ph.ph-h{grid-column:span 2;aspect-ratio:16/9}
+.ph figcaption{position:absolute;left:14px;bottom:14px;padding:7px 12px;border-radius:999px;background:rgba(255,250,243,.9);backdrop-filter:blur(8px);font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--espresso)}
+@media (max-width:900px){.apps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.apps{grid-template-columns:minmax(0,1fr)}.ph.ph-h{grid-column:auto}}
+/* voz */
+.voice{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.v{border-radius:24px;padding:24px;background:var(--foam);border:1px solid rgba(20,20,20,.08);display:grid;gap:10px}
+.v q{font:400 italic 26px/1.15 var(--display);quotes:none}
+.v p{font-size:14px;color:var(--soft)}
+.dont{background:transparent;border-style:dashed}
+.dont q{text-decoration:line-through;text-decoration-color:var(--crosta);color:var(--soft)}
+
+/* assinatura */
+.sig{background:var(--espresso);color:var(--onDark)}
+.sig .sh{border-color:rgba(255,255,255,.15)}
+.sig .sh h2 em{color:var(--mel)}
+.sig .sh p{color:var(--onDark2)}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.f{border-radius:24px;padding:24px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);display:grid;gap:10px;align-content:start}
+.f h3{font:700 20px/1.2 var(--head)}
+.f p{font-size:14px;color:var(--onDark2)}
+.f .demo{margin-top:6px;display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;background:var(--foam);color:var(--espresso);font-size:13px;width:max-content;max-width:100%}
+.f .demo i{width:26px;height:26px;border-radius:50%;background:var(--mel);flex:none}
+.f .demo.wa{background:var(--wa);color:var(--waInk);font-weight:600;padding:10px 16px}
+footer{padding-block:28px;text-align:center;font-size:13px;color:var(--soft)}
+
+@media (max-width:900px){
+  .cover-grid,.type{grid-template-columns:minmax(0,1fr)}
+  .t-main{grid-column:span 6}.t-sym,.t-dark,.t-mel,.t-rule{grid-column:span 3}
+  .colors{grid-auto-flow:row;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .a-bag,.a-box,.a-card{grid-column:span 6}.a-phone,.a-front{grid-column:span 12}
+  .voice,.feats{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  .t-sym,.t-dark,.t-mel,.t-rule{grid-column:span 6}
+  .colors{grid-auto-flow:row;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .a-bag,.a-box,.a-card{grid-column:span 12}
+  .facade{height:250px;padding:90px 14px 0}.sign b{font-size:20px}.win{height:110px}.door{height:150px}
+  .cover .top span:last-child{display:none}
+}
+
+.ph.pend{display:grid;place-items:center;background:var(--latte);border:1.5px dashed rgba(20,20,20,.25)}
+.pend-in{padding:24px;display:grid;gap:8px;text-align:center;max-width:280px}
+.pend-in p{font-size:13px;color:var(--soft)}
+.cover h1,.wm b,.spec,.sh h2{font-stretch:125%;font-weight:800;text-transform:uppercase;letter-spacing:-.01em}.cover h1 em,.sh h2 em,.spec em{font:inherit;font-style:normal;color:var(--crosta)}.wm b{font-weight:800}.v q{font-style:normal;font-weight:700;font-size:22px}.apps .ph:nth-child(1){aspect-ratio:auto}.apps .ph:nth-child(4){grid-column:1/-1;aspect-ratio:21/9}.mark-big{color:var(--onDark)!important}
+#pt-demo{position:relative;z-index:80;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:9px clamp(16px,3vw,24px);background:#131412;color:#f4f3f0;font:500 13px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}
+#pt-demo a{color:inherit;text-decoration:none}
+#pt-demo span{color:#c4c1bb}
+#pt-demo span a{text-decoration:underline}
+#pt-demo .cta{padding:6px 12px;border-radius:999px;background:#f4f3f0;color:#131412;font-weight:600;white-space:nowrap}
+@media (max-width:640px){#pt-demo span{display:none}}
+</style>
+</head>
+<body>
+<div id="pt-demo"><a href="/"><b>ProNTech</b></a><span>Brand board de exemplo · negócio fictício · <a href="/ponto-auto/">ver o site</a></span><a class="cta" href="https://wa.me/5511967794744?text=Ol%C3%A1%2C%20ProNTech%21%20Vi%20o%20exemplo%20Ponto%20Auto%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio.">Quero uma assim ↗</a></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sym" viewBox="0 0 120 120"><g transform='scale(1.875)'><path d='M12 46 A23 23 0 1 1 52 46' fill='none' stroke='currentColor' stroke-width='6' stroke-linecap='round'/><path d='M32 33 L45 18' stroke='currentColor' stroke-width='6' stroke-linecap='round'/><circle cx='32' cy='35' r='7.5' fill='#E3221B' stroke='#0D0E10' stroke-width='2.5'/></g></symbol></svg>
+<header class="cover on-dark">
+  <div class="wrap">
+    <div class="top"><span>Brand board · v1</span><span>Exemplo ProNTech · negócio fictício</span></div>
+    <div class="cover-grid">
+      <div>
+        <span class="label">Oficina mecânica · Mooca</span>
+        <h1 style="margin-top:16px">Você aprova <em>antes.</em></h1>
+        <p>Ponto Auto é uma oficina de bairro num galpão de tijolo da Mooca. A marca nasce do maior medo de quem leva o carro para consertar: a conta surpresa. Asfalto, um único vermelho e o carro do cliente tratado como carro de vitrine.</p>
+        <div class="idea"><span>Você aprova antes</span><span>Foto de cada etapa</span><span>Peça velha na mão</span><span>Carro de vitrine</span></div>
+      </div>
+      <svg class="mark-big" viewBox="0 0 120 120" style="color:var(--mel)"><use href="#sym"/></svg>
+    </div>
+  </div>
+</header>
+<main>
+<section><div class="wrap">
+  <div class="sh"><h2>Logo <em>e símbolo</em></h2><p>Um velocímetro com o ponteiro parado num ponto vermelho. O ponto é o &quot;pode fazer&quot; do cliente: nada anda antes dele.</p></div>
+  <div class="logo-grid">
+    <div class="tile t-main"><span class="label">Assinatura principal</span><div class="lockup"><svg width="96" height="96" style="color:var(--crosta)"><use href="#sym"/></svg><div class="wm"><b>PONTO AUTO</b><small>oficina mecânica · Mooca</small></div></div></div>
+    <div class="tile t-sym"><span class="label">Símbolo</span><div class="center"><svg width="120" height="120" style="color:currentColor"><use href="#sym"/></svg></div></div>
+    <div class="tile t-dark"><span class="label">Sobre escuro</span><div class="center"><div class="lockup" style="gap:12px"><svg width="54" height="54" style="color:var(--mel)"><use href="#sym"/></svg><div class="wm"><b style="font-size:44px">PONTO AUTO</b><small style="font-size:9px">VOCÊ APROVA ANTES</small></div></div></div></div>
+    <div class="tile t-mel"><span class="label">Avatar</span><div class="center"><div style="width:112px;height:112px;border-radius:50%;background:var(--espresso);display:grid;place-items:center"><svg width="62" height="62" style="color:var(--mel)"><use href="#sym"/></svg></div></div></div>
+    <div class="tile t-rule"><span class="label">Regras rápidas</span><ul class="rules"><li>Vermelho é o único acento: ponto do símbolo, uma palavra por título e botões</li><li>Títulos sempre em caixa alta, Archivo larga e pesada</li><li>Fundo asfalto; o claro só no papel do relatório</li><li>Carros e peças em render de estúdio, nunca foto de banco</li></ul></div>
+  </div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><h2>Cores <em>de asfalto e um vermelho</em></h2><p>O amarelo de sinalização do conceito original saiu: a referência favorita mostrou que um só vermelho sobre preto pesa mais. O verde do WhatsApp aparece só no botão de pedir orçamento.</p></div>
+  <div class="colors"><div class="sw" style="background:#0D0E10;color:#EEECE7"><b>Asfalto</b><span>#0D0E10</span><i>Fundo de tudo</i></div><div class="sw" style="background:#E3221B;color:#FFFFFF"><b>Vermelho Ponto</b><span>#E3221B</span><i>Símbolo, palavra-chave e botões</i></div><div class="sw" style="background:#5A0B08;color:#EEECE7"><b>Brasa</b><span>#5A0B08</span><i>Palco do herói</i></div><div class="sw" style="background:#1A1C20;color:#EEECE7"><b>Grafite</b><span>#1A1C20</span><i>Cards de vidro</i></div><div class="sw" style="background:#EEECE7;color:#0D0E10"><b>Giz</b><span>#EEECE7</span><i>Texto e papel do relatório</i></div><div class="sw" style="background:#8C9099;color:#0D0E10"><b>Aço</b><span>#8C9099</span><i>Texto secundário</i></div></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><h2>Tipografia</h2><p>Archivo no eixo mais largo e pesado faz os títulos de vitrine da referência, e a mesma família, normal, segura o texto. Quilometragem, preços e horários em mono, como no painel.</p></div>
+  <div class="type">
+    <div class="tile"><span class="label">Display · Archivo Expanded 800</span><div class="spec">Aa <em>Ponto</em></div></div>
+    <div class="tile"><div class="stack">
+      <div><span class="label">Títulos · Archivo Expanded</span><span class="s1">Qual é o seu carro?</span></div>
+      <div><span class="label">Texto · Archivo</span><span class="s2">Pastilhas dianteiras no fim. Troca com peça da especificação do manual: R$ 420. Posso fazer?</span></div>
+      <div><span class="label">Rótulos · JetBrains Mono</span><span class="s3">BOX LIVRE HOJE · 15H</span></div>
+    </div></div>
+  </div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><h2>Aplicações</h2><p>O galpão da Mooca, o box, o relatório com a peça velha e o aviso no WhatsApp. O ponto vermelho aparece em todos.</p></div>
+  <div class="apps"><figure class="ph ph-h"><img src="/assets/ex/ponto-auto/08-box.webp" alt="Box escuro com carro no elevador e faixa vermelha no piso" loading="lazy"><figcaption>O box</figcaption></figure><figure class="ph pv"><img src="/assets/ex/ponto-auto/09-relatorio.webp" alt="Relatório com checks vermelhos, chave e pastilha gasta no saquinho" loading="lazy"><figcaption>Relatório + peça velha</figcaption></figure><figure class="ph pv"><img src="/assets/ex/ponto-auto/10-celular.webp" alt="WhatsApp: foto da pastilha gasta e Orçamento R$ 420, posso trocar?" loading="lazy"><figcaption>Aprovação no WhatsApp</figcaption></figure><figure class="ph ph-h"><img src="/assets/ex/ponto-auto/07-fachada.webp" alt="Galpão de tijolo grafite na Mooca com letreiro Ponto Auto" loading="lazy"><figcaption>Fachada · Mooca</figcaption></figure></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <div class="sh"><h2>Voz <em>da marca</em></h2><p>Mecânico de confiança: direto, mostra antes de cobrar e fala o nome da peça sem esconder atrás de jargão.</p></div>
+  <div class="voice"><div class="v"><span class="label">Assim</span><q>Pastilha no fim. Troca sai R$ 420. Posso fazer?</q><p>Foto, preço e pergunta. Nada anda sem resposta.</p></div><div class="v"><span class="label">Assim</span><q>A correia ainda aguenta uns 5 mil km. Dá para esperar.</q><p>Diz quando não precisa trocar.</p></div><div class="v dont"><span class="label">Nunca assim</span><q>Revisão completa com desconto imperdível!!!</q><p>Genérico, gritado e sem dizer o que foi feito.</p></div></div>
+</div></section>
+<section class="sig on-dark"><div class="wrap">
+  <div class="sh"><h2>Assinatura <em>ProNTech</em></h2><p>Três peças que vão em todo projeto, qualquer que seja a marca. É o que transforma "Apareça. Converse. Venda." em função.</p></div>
+  <div class="feats">
+    <div class="f"><span class="label">01 · Pedido pronto</span><h3>Orçamento montado no WhatsApp</h3><p>O cliente escolhe o carro e os serviços; a mensagem sai com modelo, km, itens, estimativa e o dia.</p><span class="demo wa">Onix 2019 · 40.000 km · R$ 1.130</span></div>
+    <div class="f"><span class="label">02 · Status ao vivo</span><h3>Box livre ao vivo</h3><p>O site mostra o próximo horário livre do box, calculado pelo horário de São Paulo.</p><span class="demo"><i></i>Box livre hoje às 15h</span></div>
+    <div class="f"><span class="label">03 · Rótulo mono</span><h3>Horários e preços em mono</h3><p>Um detalhe tipográfico discreto que identifica um site ProNTech sem roubar a marca do cliente.</p><span class="demo" style="font-family:var(--mono);font-size:12px;letter-spacing:.1em">SEG–SEX 8–18H · SÁB 8–13H</span></div>
+  </div>
+</div></section>
+</main>
+<footer>Brand board de exemplo da ProNTech com um negócio fictício.</footer>
+</body>
+</html>
