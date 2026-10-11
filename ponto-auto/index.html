@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0D0E10">
+<meta name="description" content="Página de exemplo premium da ProNTech para oficina mecânica e autopeças: Ponto Auto, negócio fictício.">
+<title>Ponto Auto — Exemplo premium de oficina mecânica e autopeças | ProNTech</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --asfalto:#0D0E10; --grafite:#1A1C20; --grafite2:#24272C; --vermelho:#E3221B; --vermelho2:#FF4A3D; --brasa:#5A0B08;
+  --giz:#EEECE7; --aco:#8C9099; --linha:rgba(238,236,231,.1); --vidro:rgba(26,28,32,.72);
+  --wa:#25D366; --waInk:#0b2914;
+  --sans:'Archivo',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--asfalto);color:var(--giz);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1200px,100% - 32px);margin:0 auto}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--aco)}
+.label.r{color:var(--vermelho2)}
+.wide{font-stretch:125%;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:.92}
+h2.wide{font-size:clamp(34px,5.2vw,68px)}
+h2 em,h1 em{font-style:normal;color:var(--vermelho)}
+.lead{color:var(--aco);max-width:560px;font-size:17px}
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.head .label{display:block;margin-bottom:16px}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;font-size:15px;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.red{background:var(--vermelho);color:#fff}
+.btn.red:hover{background:var(--vermelho2)}
+.btn.ghost{border:1px solid rgba(238,236,231,.25)}
+.btn.wa{background:var(--wa);color:var(--waInk)}
+.btn.wa svg{width:18px;height:18px}
+
+.ph{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 70%,rgba(227,34,27,.18),transparent 60%),var(--grafite)}
+.ph::before{content:attr(data-ph);position:absolute;inset:auto 0 50% 0;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:rgba(238,236,231,.25);text-transform:uppercase}
+.ph img{position:relative;width:100%;height:100%;object-fit:cover}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.solid{background:rgba(13,14,16,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--linha)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;white-space:nowrap;font-stretch:125%;font-weight:800;font-size:17px;letter-spacing:.02em}
+.logo svg{width:30px;height:30px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;color:var(--aco)}
+nav ul a:hover{color:var(--giz)}
+nav .btn{padding:11px 18px;font-size:14px}
+
+/* hero */
+.hero{position:relative;min-height:max(720px,100svh);padding:120px 0 0;overflow:hidden;display:flex;flex-direction:column;
+  background:radial-gradient(120% 70% at 50% 108%,var(--vermelho) 0%,#A3140F 18%,var(--brasa) 38%,var(--asfalto) 68%)}
+.hero::after{content:"";position:absolute;left:50%;bottom:-36vw;width:150vw;height:62vw;transform:translateX(-50%);border-radius:50%;
+  border-top:1px solid rgba(255,120,100,.35);background:radial-gradient(60% 50% at 50% 0%,rgba(255,80,60,.28),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero-top{display:grid;grid-template-columns:1fr 370px;align-items:end;gap:40px}
+.hero h1{font-size:clamp(50px,10.4vw,164px)}
+.hero-side{padding-bottom:14px}
+.hero-side p{color:#C9C6C0;margin:16px 0 24px}
+.hero-side .row{display:flex;gap:10px;flex-wrap:wrap}
+.live{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 12px;border-radius:999px;background:rgba(13,14,16,.55);border:1px solid var(--linha);font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--wa);box-shadow:0 0 0 0 rgba(37,211,102,.6);animation:pulse 2s infinite}
+.live.off i{background:var(--aco);animation:none}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.car{position:relative;z-index:1;flex:1;display:flex;align-items:end;justify-content:center;margin-top:-4vw;min-height:280px}
+.car .ph{width:min(980px,96%);aspect-ratio:16/8;background:none}
+.car .ph::before{color:rgba(255,255,255,.35)}
+.car img{object-fit:contain;filter:drop-shadow(0 30px 40px rgba(0,0,0,.55))}
+.car .floor{position:absolute;bottom:4%;left:50%;width:min(760px,80%);height:40px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.7),transparent 70%);filter:blur(4px)}
+.stats{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14);margin-top:8px}
+.stats>div{padding:22px 0 30px;min-width:0}
+.stats>div+div{border-left:1px solid rgba(255,255,255,.14);padding-left:28px}
+.stats b{display:block;font-stretch:125%;font-weight:800;font-size:clamp(30px,4vw,52px);line-height:1}
+.stats b small{font-size:.38em;font-weight:600;margin-left:6px;color:#E8B5AE}
+.stats span{font-size:13px;color:#D4CFC9}
+
+/* carro */
+.brands{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.brand{padding:22px 10px;border-radius:16px;background:var(--grafite);border:1px solid var(--linha);font-stretch:112%;font-weight:700;font-size:15px;text-align:center;transition:border-color .2s,background .2s;min-width:0}
+.brand:hover{border-color:rgba(238,236,231,.3)}
+.brand[aria-pressed=true]{background:var(--vermelho);border-color:var(--vermelho);color:#fff}
+.picker{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px;margin-top:10px}
+.field{background:var(--grafite);border:1px solid var(--linha);border-radius:16px;padding:12px 16px;min-width:0}
+.field .label{display:block;font-size:10px;margin-bottom:4px}
+.field select{width:100%;background:none;border:0;color:var(--giz);font:600 17px var(--sans);outline:none;appearance:none;-webkit-appearance:none;cursor:pointer}
+.field select option{background:var(--grafite)}
+.mycar{display:flex;align-items:center;gap:14px;background:linear-gradient(90deg,rgba(227,34,27,.22),rgba(227,34,27,.04));border:1px solid rgba(227,34,27,.35);border-radius:16px;padding:12px 18px;min-width:0}
+.mycar b{font-stretch:115%;font-size:17px}
+.mycar p{font-size:13px;color:#D4CFC9}
+
+/* como funciona: arco */
+.how{background:linear-gradient(180deg,var(--asfalto),#111215)}
+.arc{position:relative;max-width:900px;margin:0 auto;aspect-ratio:2/1.08}
+.arc svg.track{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.arc .node{position:absolute;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;width:120px;text-align:center}
+.arc .node b{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--grafite);border:1px solid rgba(238,236,231,.18);font:500 15px var(--mono);transition:background .3s,border-color .3s,transform .3s}
+.arc .node span{font-size:13px;font-weight:600;color:var(--aco);transition:color .3s}
+.arc .node[aria-current=true] b{background:var(--vermelho);border-color:var(--vermelho);transform:scale(1.12);box-shadow:0 0 30px rgba(227,34,27,.5)}
+.arc .node[aria-current=true] span{color:var(--giz)}
+.arc .center{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);width:min(420px,60%);text-align:center}
+.arc .center .big{font-stretch:125%;font-weight:800;font-size:clamp(60px,9vw,120px);line-height:1;color:var(--vermelho)}
+.arc .center h3{font-stretch:115%;font-size:24px;margin:4px 0 8px}
+.arc .center p{color:var(--aco);font-size:15px;min-height:3.2em}
+
+/* medidor */
+.gauge-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.gauge{position:relative;background:radial-gradient(70% 60% at 50% 60%,rgba(227,34,27,.16),transparent 70%);border-radius:28px;padding:20px 20px 30px;min-width:0}
+.gauge svg{width:100%;height:auto;overflow:visible}
+.gauge .km{text-align:center;margin-top:6px}
+.gauge .km b{display:block;font-stretch:125%;font-weight:800;font-size:clamp(40px,6vw,64px);line-height:1}
+.gauge .km span{font-family:var(--mono);font-size:12px;color:var(--aco);letter-spacing:.12em}
+.gauge input{width:100%;margin-top:26px;accent-color:var(--vermelho);height:28px}
+.due{display:flex;flex-direction:column;gap:8px}
+.due li{list-style:none;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:14px 18px;border-radius:14px;background:var(--grafite);border:1px solid var(--linha);transition:border-color .3s,background .3s}
+.due li b{font-weight:600}
+.due li small{display:block;color:var(--aco);font-size:12px}
+.due li .tag{font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:5px 10px;border-radius:999px;background:var(--grafite2);color:var(--aco);white-space:nowrap}
+.due li.now{border-color:rgba(227,34,27,.55);background:linear-gradient(90deg,rgba(227,34,27,.16),var(--grafite) 70%)}
+.due li.now .tag{background:var(--vermelho);color:#fff}
+.due-cta{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+.due-cta small{color:var(--aco);font-size:13px}
+
+/* orçamento */
+.quote-grid{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.svc{position:relative;background:var(--vidro);border:1px solid var(--linha);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .25s;min-width:0}
+.svc .ph{aspect-ratio:16/9;background:radial-gradient(circle at 50% 60%,rgba(227,34,27,.22),transparent 62%),#121316}
+.svc .ph img{object-fit:cover;transition:transform .6s}
+.svc:hover .ph img{transform:scale(1.05)}
+.svc .ico{position:absolute;inset:0;margin:auto;width:42%;height:60%;color:var(--vermelho2);filter:drop-shadow(0 0 18px rgba(227,34,27,.6))}
+.svc .ph:has(.ico)::before{content:none}
+.svc .body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.svc h3{font-stretch:112%;font-size:19px;line-height:1.2}
+.svc p{font-size:14px;color:var(--aco);flex:1}
+.svc .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px}
+.svc .price{font-family:var(--mono);font-size:14px}
+.svc .price small{display:block;font-size:10px;color:var(--aco);letter-spacing:.1em;text-transform:uppercase}
+.svc .add{padding:10px 16px;border-radius:999px;background:var(--vermelho);color:#fff;font-weight:700;font-size:14px;transition:background .2s}
+.svc .add:hover{background:var(--vermelho2)}
+.svc[data-on=true]{border-color:var(--vermelho)}
+.svc[data-on=true] .add{background:transparent;border:1px solid var(--vermelho);color:var(--vermelho2)}
+.svc .km-tag{position:absolute;top:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;padding:5px 9px;border-radius:999px;background:var(--vermelho);color:#fff;text-transform:uppercase;display:none}
+.svc[data-due=true] .km-tag{display:block}
+.sum{position:sticky;top:92px;background:var(--grafite);border:1px solid var(--linha);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:16px}
+.sum h3{font-stretch:115%;font-size:22px}
+.sum .car-line{font-family:var(--mono);font-size:12px;color:var(--vermelho2);letter-spacing:.06em}
+.sum ul{list-style:none;display:flex;flex-direction:column;gap:8px;min-height:40px}
+.sum li{display:flex;justify-content:space-between;gap:10px;font-size:14px}
+.sum li span:last-child{font-family:var(--mono);color:var(--aco);white-space:nowrap}
+.sum .empty{color:var(--aco);font-size:14px}
+.sum .total{border-top:1px solid var(--linha);padding-top:14px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.sum .total b{font-stretch:120%;font-weight:800;font-size:26px;white-space:nowrap}
+.sum .days{display:flex;gap:6px}
+.sum .day{flex:1;padding:8px 0;border-radius:12px;border:1px solid var(--linha);text-align:center;font-size:12px;color:var(--aco);min-width:0}
+.sum .day b{display:block;font-size:16px;color:var(--giz)}
+.sum .day[aria-pressed=true]{border-color:var(--vermelho);background:rgba(227,34,27,.14)}
+.sum .promise{font-size:13px;color:#C9C6C0;display:flex;gap:10px;align-items:start}
+.sum .promise svg{flex:none;width:18px;height:18px;color:var(--vermelho2);margin-top:2px}
+.sum .btn{justify-content:center}
+
+/* agora */
+.now-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.steps{list-style:none;position:relative;display:flex;flex-direction:column;gap:6px}
+.steps::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:var(--grafite2)}
+.steps .bar{position:absolute;left:19px;top:20px;width:2px;background:var(--vermelho);height:0;transition:height .8s ease}
+.steps li{position:relative;display:grid;grid-template-columns:40px 1fr auto;gap:16px;align-items:center;padding:12px 0}
+.steps li i{width:40px;height:40px;border-radius:50%;background:var(--grafite);border:1px solid var(--linha);display:grid;place-items:center;font:500 12px var(--mono);color:var(--aco);z-index:1;transition:all .4s}
+.steps li b{display:block;font-weight:600}
+.steps li small{color:var(--aco);font-size:13px}
+.steps li time{font-family:var(--mono);font-size:12px;color:var(--aco)}
+.steps li.done i{background:var(--vermelho);border-color:var(--vermelho);color:#fff}
+.steps li.cur i{border-color:var(--vermelho);color:var(--vermelho2);box-shadow:0 0 0 6px rgba(227,34,27,.15)}
+.phone{aspect-ratio:4/5;border-radius:28px}
+
+/* box */
+.gal{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:auto auto;gap:14px}
+.gal figure{border-radius:22px;min-width:0}
+.gal figure:first-child{grid-row:span 2;aspect-ratio:auto;min-height:520px}
+.gal figure:nth-child(2){aspect-ratio:16/10}
+.gal figure:nth-child(3){aspect-ratio:16/10}
+.gal figcaption{position:absolute;left:16px;bottom:16px;z-index:2;padding:8px 14px;border-radius:999px;background:rgba(13,14,16,.72);backdrop-filter:blur(8px);font-size:13px}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:22px;overflow:hidden;margin-top:14px}
+.trust div{background:var(--asfalto);padding:24px;min-width:0}
+.trust b{display:block;font-stretch:115%;font-size:17px;margin:12px 0 4px}
+.trust p{font-size:13px;color:var(--aco)}
+.trust svg{width:26px;height:26px;color:var(--vermelho2)}
+
+/* depoimentos */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.quotes blockquote{background:var(--grafite);border:1px solid var(--linha);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.quotes p{font-size:16px}
+.quotes footer{display:flex;justify-content:space-between;font-size:13px;color:var(--aco);gap:10px}
+.quotes .stars{color:var(--vermelho2);letter-spacing:2px}
+
+/* final */
+.final{padding:0 0 110px}
+.final-card{position:relative;overflow:hidden;border-radius:32px;padding:60px;display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;
+  background:radial-gradient(90% 120% at 100% 100%,var(--vermelho),#8E120D 40%,var(--brasa) 70%,#1d0605)}
+.final-card h2{font-size:clamp(34px,4.6vw,60px)}
+.final-card p{color:#F2D3CF;margin:16px 0 26px;max-width:460px}
+.info{display:flex;flex-direction:column;gap:14px;background:rgba(13,14,16,.5);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:26px;min-width:0}
+.info div{display:flex;justify-content:space-between;gap:14px;font-size:14px;border-bottom:1px solid rgba(255,255,255,.08);padding-bottom:12px}
+.info div:last-child{border:0;padding:0}
+.info span:first-child{color:#E8B5AE;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding-top:2px}
+.info span:last-child{text-align:right}
+body>footer{border-top:1px solid var(--linha);padding:40px 0 100px;font-size:13px;color:var(--aco)}
+body>footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+
+.float{position:fixed;right:18px;bottom:18px;z-index:60;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:980px){
+  nav ul{display:none}
+  .hero-top{grid-template-columns:1fr;gap:24px}
+  .brands{grid-template-columns:repeat(4,1fr)}
+  .picker{grid-template-columns:1fr 1fr}
+  .mycar{grid-column:span 2}
+  .gauge-grid,.now-grid,.quote-grid{grid-template-columns:1fr}
+  .sum{position:static}
+  .final-card{grid-template-columns:1fr;padding:40px 28px}
+  .trust{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:700px){
+  section{padding:80px 0}
+  .hero{padding-top:100px;min-height:auto}
+
+  .car{margin-top:20px;min-height:200px}
+  .stats>div+div{padding-left:14px}
+  .stats span{font-size:12px}
+  .brands{grid-template-columns:repeat(3,1fr)}
+  .brand{padding:16px 6px;font-size:14px}
+  .picker{grid-template-columns:1fr}
+  .mycar{grid-column:auto}
+  .svcs{grid-template-columns:1fr}
+  .quotes{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .gal figure:first-child{grid-row:auto;min-height:0;aspect-ratio:4/5}
+  .trust{grid-template-columns:1fr}
+  /* arco vira lista */
+  .arc{aspect-ratio:auto;display:flex;flex-direction:column;gap:10px}
+  .arc svg.track{display:none}
+  .arc .node{position:static;transform:none;flex-direction:row;width:auto;text-align:left;gap:14px}
+  .arc .node b{width:46px;height:46px;flex:none}
+  .arc .node span{font-size:15px}
+  .arc .center{position:static;transform:none;width:auto;text-align:left;margin-top:16px;padding:22px;border-radius:20px;background:var(--grafite);border:1px solid var(--linha)}
+  .arc .center .big{font-size:56px}
+  .float span{display:none}
+  nav .btn{display:none}
+  .arc .center{order:2}
+  .stats b{font-size:28px}
+  .stats b small{display:block;margin:4px 0 0;font-size:11px;letter-spacing:.04em}
+  .svc .ph{aspect-ratio:16/7}
+  .float{padding:15px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+#pt-demo{position:relative;z-index:80;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:9px clamp(16px,3vw,24px);background:#131412;color:#f4f3f0;font:500 13px/1.3 system-ui,-apple-system,"Segoe UI",sans-serif}
+#pt-demo a{color:inherit;text-decoration:none}
+#pt-demo span{color:#c4c1bb}
+#pt-demo span a{text-decoration:underline}
+#pt-demo .cta{padding:6px 12px;border-radius:999px;background:#f4f3f0;color:#131412;font-weight:600;white-space:nowrap}
+@media (max-width:640px){#pt-demo span{display:none}}
+nav#nav{transform:translateY(var(--pt-demo,0px))}
+</style>
+</head>
+<body>
+<div id="pt-demo"><a href="/"><b>ProNTech</b></a><span>Página de exemplo · negócio fictício · <a href="/ponto-auto/marca/">ver a marca</a></span><a class="cta" href="https://wa.me/5511967794744?text=Ol%C3%A1%2C%20ProNTech%21%20Vi%20o%20exemplo%20Ponto%20Auto%20e%20quero%20um%20site%20assim%20para%20o%20meu%20neg%C3%B3cio.">Quero uma assim ↗</a></div>
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="mark" viewBox="0 0 64 64"><path d="M12 46 A23 23 0 1 1 52 46" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M32 33 L45 18" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="35" r="7.5" fill="#E3221B" stroke="#0D0E10" stroke-width="2.5"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="chk" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<nav id="nav"><div class="wrap">
+  <a class="logo" href="#top"><svg><use href="#mark"/></svg>PONTO AUTO</a>
+  <ul><li><a href="#carro">Seu carro</a></li><li><a href="#como">Como funciona</a></li><li><a href="#revisao">Revisão</a></li><li><a href="#orcamento">Orçamento</a></li><li><a href="#agora">Acompanhar</a></li></ul>
+  <a class="btn red" href="#orcamento">Montar orçamento</a>
+</div></nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-top">
+      <div>
+        <span class="label r" style="display:block;margin-bottom:18px">Oficina mecânica · Mooca, São Paulo</span>
+        <h1 class="wide" id="heroTitle">Você aprova<br><em>antes.</em></h1>
+      </div>
+      <div class="hero-side">
+        <span class="live" id="live"><i></i><span id="liveTxt">Box livre hoje</span></span>
+        <p>Antes de mexer em qualquer peça, a gente manda a foto e o preço no seu WhatsApp. Só começa depois do seu "pode fazer".</p>
+        <div class="row">
+          <a class="btn red" href="#orcamento">Montar orçamento</a>
+          <a class="btn ghost" href="#como">Como funciona</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="car" id="car">
+    <span class="floor"></span>
+    <figure class="ph" data-ph="01-hero-carro"><img src="/assets/ex/ponto-auto/01-hero-carro.webp" alt="Hatch vermelho em estúdio" onerror="this.remove()"></figure>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div><b data-count="4200">4.200</b><span>carros revisados desde 2009</span></div>
+      <div><b>0</b><span>serviços feitos sem aprovação</span></div>
+      <div><b>12<small>meses</small></b><span>de garantia em peça e serviço</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="carro"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label r">01 · Seu carro</span><h2 class="wide">Qual é o <em>seu carro?</em></h2></div>
+    <p class="lead">Escolha a marca, o modelo e o ano. Os preços da página se ajustam ao seu carro e o orçamento já sai com ele.</p>
+  </div>
+  <div class="brands rv" id="brands"></div>
+  <div class="picker rv">
+    <label class="field"><span class="label">Modelo</span><select id="model"></select></label>
+    <label class="field"><span class="label">Ano</span><select id="year"></select></label>
+    <div class="mycar"><svg width="30" height="30" style="color:var(--vermelho2);flex:none"><use href="#mark"/></svg><div><b id="mycarName">Onix 2019</b><p id="mycarTxt">Revisão completa a partir de R$ 389</p></div></div>
+  </div>
+</div></section>
+
+<section class="how" id="como"><div class="wrap">
+  <div class="head rv" style="justify-content:center;text-align:center">
+    <div><span class="label r">02 · Como funciona</span><h2 class="wide">Cinco passos. <em>Nenhuma surpresa.</em></h2></div>
+  </div>
+  <div class="arc rv" id="arc">
+    <svg class="track" viewBox="0 0 900 486" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M70 470 A380 380 0 0 1 830 470" fill="none" stroke="rgba(238,236,231,.12)" stroke-width="2" stroke-dasharray="2 8"/>
+      <path id="arcProg" d="M70 470 A380 380 0 0 1 830 470" fill="none" stroke="#E3221B" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <div class="center"><div class="big" id="arcN">01</div><h3 id="arcH">Diagnóstico</h3><p id="arcP"></p></div>
+  </div>
+</div></section>
+
+<section id="revisao"><div class="wrap">
+  <div class="gauge-grid">
+    <div class="rv">
+      <span class="label r">03 · Medidor de revisão</span>
+      <h2 class="wide" style="margin:16px 0 18px">O que vence <em>no seu km?</em></h2>
+      <p class="lead">Arraste o ponteiro até a quilometragem do painel. A gente mostra o que já passou da hora e o que vem logo depois.</p>
+      <div class="gauge">
+        <svg viewBox="0 0 400 240" aria-hidden="true">
+          <defs><linearGradient id="gArc" x1="0" x2="1"><stop offset="0" stop-color="#3a3d44"/><stop offset=".6" stop-color="#8C9099"/><stop offset="1" stop-color="#E3221B"/></linearGradient></defs>
+          <path d="M40 210 A160 160 0 0 1 360 210" fill="none" stroke="#24272C" stroke-width="22" stroke-linecap="round"/>
+          <path id="gFill" d="M40 210 A160 160 0 0 1 360 210" fill="none" stroke="url(#gArc)" stroke-width="22" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100"/>
+          <g id="ticks"></g>
+          <g id="needle" style="transform-origin:200px 210px;transition:transform .5s cubic-bezier(.3,1.4,.5,1)"><path d="M196 210 L200 70 L204 210 Z" fill="#E3221B"/><circle cx="200" cy="210" r="14" fill="#1A1C20" stroke="#E3221B" stroke-width="4"/></g>
+        </svg>
+        <div class="km"><b id="kmVal">40.000</b><span>KM NO PAINEL</span></div>
+        <input type="range" id="km" min="0" max="150000" step="1000" value="40000" aria-label="Quilometragem do carro">
+      </div>
+    </div>
+    <div class="rv">
+      <ul class="due" id="due"></ul>
+      <div class="due-cta"><button class="btn red" id="addDue">Pôr no orçamento</button><small>Intervalos médios de manual. A gente confirma pelo seu carro.</small></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="orcamento" style="background:#111215"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label r">04 · Orçamento</span><h2 class="wide">Monte o seu <em>orçamento.</em></h2></div>
+    <p class="lead">Preço de referência para o seu carro. O valor final chega por foto no WhatsApp, e você aprova item por item.</p>
+  </div>
+  <div class="quote-grid">
+    <div class="svcs" id="svcs"></div>
+    <aside class="sum rv" id="sum">
+      <div><span class="car-line" id="sumCar">ONIX 2019</span><h3>Seu orçamento</h3></div>
+      <ul id="sumList"></ul>
+      <div class="total"><span class="label">Estimativa</span><b id="sumTotal">R$ 0</b></div>
+      <div><span class="label" style="display:block;margin-bottom:8px">Quando você traz?</span><div class="days" id="days"></div></div>
+      <div class="promise"><svg><use href="#chk"/></svg><span>Você só paga o que aprovar pela foto. Diagnóstico grátis se fizer o serviço.</span></div>
+      <a class="btn wa" id="sumBtn" href="#"><svg><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
+    </aside>
+  </div>
+</div></section>
+
+<section id="agora"><div class="wrap">
+  <div class="now-grid">
+    <div class="rv">
+      <span class="label r">05 · Seu carro agora</span>
+      <h2 class="wide" style="margin:16px 0 18px">Você acompanha <em>de longe.</em></h2>
+      <p class="lead" style="margin-bottom:34px">Cada etapa vira uma foto no seu WhatsApp. Sem ligar para perguntar se já ficou pronto.</p>
+      <ol class="steps" id="steps"><span class="bar" id="stepBar"></span></ol>
+    </div>
+    <figure class="ph phone rv" data-ph="10-celular"><img src="/assets/ex/ponto-auto/10-celular.webp" alt="WhatsApp da Ponto Auto com foto da pastilha gasta e o orçamento" loading="lazy" onerror="this.remove()"></figure>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="head rv">
+    <div><span class="label r">06 · O box</span><h2 class="wide">Oficina limpa, <em>peça na mão.</em></h2></div>
+    <p class="lead">Galpão de tijolo na Mooca desde 2009. A peça trocada volta para você num saquinho, junto com o relatório.</p>
+  </div>
+  <div class="gal rv">
+    <figure class="ph" data-ph="08-box"><img src="/assets/ex/ponto-auto/08-box.webp" alt="Box da oficina com carro no elevador" loading="lazy" onerror="this.remove()"><figcaption>3 elevadores, 1 carro por vez em cada</figcaption></figure>
+    <figure class="ph" data-ph="09-relatorio"><img style="object-position:50% 30%" src="/assets/ex/ponto-auto/09-relatorio.webp" alt="Relatório de revisão e peça antiga" loading="lazy" onerror="this.remove()"><figcaption>Relatório de 40 itens</figcaption></figure>
+    <figure class="ph" data-ph="07-fachada"><img src="/assets/ex/ponto-auto/07-fachada.webp" alt="Fachada da Ponto Auto na Mooca" loading="lazy" onerror="this.remove()"><figcaption>Rua dos Trilhos, Mooca</figcaption></figure>
+  </div>
+  <div class="trust rv">
+    <div><svg><use href="#chk"/></svg><b>Aprovação por foto</b><p>Nada é trocado sem o seu sim no WhatsApp.</p></div>
+    <div><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6z" fill="none" stroke="currentColor" stroke-width="2"/></svg><b>12 meses de garantia</b><p>Em peça e mão de obra, com nota.</p></div>
+    <div><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 7V4h6v3" fill="none" stroke="currentColor" stroke-width="2"/></svg><b>Peça velha devolvida</b><p>Você vê com os próprios olhos o que saiu.</p></div>
+    <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><b>Prazo combinado</b><p>Se atrasar, a gente avisa antes de você perguntar.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="head rv"><div><span class="label r">07 · Quem já trouxe</span><h2 class="wide">Conta <em>sem susto.</em></h2></div></div>
+  <div class="quotes rv">
+    <blockquote><span class="stars">★★★★★</span><p>"Mandaram a foto da pastilha no fim e o preço antes de trocar. Pela primeira vez saí da oficina pagando o que esperava."</p><footer><span>Renata M.</span><span>HB20 2018</span></footer></blockquote>
+    <blockquote><span class="stars">★★★★★</span><p>"O mecânico me devolveu a correia velha e mostrou onde estava rachada. Agora meu carro só vai lá."</p><footer><span>Carlos T.</span><span>Gol 2015</span></footer></blockquote>
+    <blockquote><span class="stars">★★★★★</span><p>"Deixei o carro de manhã e acompanhei tudo pelo WhatsApp do trabalho. Às 17h chegou a foto: pronto para retirar."</p><footer><span>Juliana P.</span><span>Compass 2021</span></footer></blockquote>
+  </div>
+</div></section>
+
+<section class="final"><div class="wrap">
+  <div class="final-card rv">
+    <div>
+      <span class="label" style="color:#F2D3CF">Manda a placa</span>
+      <h2 class="wide" style="margin-top:14px">A gente responde <em style="color:#fff">com o preço.</em></h2>
+      <p>Mande a placa e o que o carro está fazendo. Em poucos minutos chega a primeira estimativa, sem compromisso.</p>
+      <a class="btn wa" data-msg="Olá, Ponto Auto! Quero um orçamento. Placa: ___ . O que está acontecendo: ___" href="#"><svg><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+    <div class="info">
+      <div><span>Agora</span><span id="infoNow">Aberto até 18h</span></div>
+      <div><span>Endereço</span><span>Rua dos Trilhos, 1240<br>Mooca, São Paulo</span></div>
+      <div><span>Horário</span><span>Seg a sex 8h às 18h<br>Sáb 8h às 13h</span></div>
+      <div><span>Leva e traz</span><span>Mooca, Tatuapé, Belém e Ipiranga</span></div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <a class="logo" href="#top" style="font-size:14px"><svg style="width:24px;height:24px"><use href="#mark"/></svg>PONTO AUTO</a>
+  <span>Exemplo ProNTech · negócio fictício</span>
+</div></footer>
+
+<a class="btn wa float" data-msg="Olá, Ponto Auto! Quero um orçamento para o meu carro." href="#"><svg><use href="#wa"/></svg><span>Orçamento</span></a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+  var WA='https://wa.me/5511967794744?text=';
+  document.querySelectorAll('[data-msg]').forEach(function(a){a.href=WA+encodeURIComponent(a.dataset.msg)});
+  function brl(v){return 'R$ '+Math.round(v).toLocaleString('pt-BR')}
+  function km(v){return v.toLocaleString('pt-BR')}
+
+  // nav sólida ao rolar
+  var nav=document.getElementById('nav');
+  function onScroll(){nav.classList.toggle('solid',scrollY>40)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  // ---------- carros ----------
+  // classe: p popular, m médio, g SUV/picape (multiplica os preços)
+  var CARS={
+    'Chevrolet':[['Onix','p'],['Tracker','m'],['Cruze','m'],['Spin','p'],['S10','g']],
+    'Fiat':[['Argo','p'],['Mobi','p'],['Pulse','m'],['Strada','p'],['Toro','g']],
+    'Volkswagen':[['Gol','p'],['Polo','p'],['T-Cross','m'],['Nivus','m'],['Saveiro','p']],
+    'Hyundai':[['HB20','p'],['Creta','m'],['Tucson','g']],
+    'Toyota':[['Corolla','m'],['Yaris','p'],['Corolla Cross','g'],['Hilux','g']],
+    'Honda':[['City','m'],['Civic','m'],['Fit','p'],['HR-V','m']],
+    'Renault':[['Kwid','p'],['Sandero','p'],['Duster','m'],['Captur','m']],
+    'Jeep':[['Renegade','m'],['Compass','g'],['Commander','g']],
+    'Ford':[['Ka','p'],['EcoSport','m'],['Ranger','g']],
+    'Nissan':[['Versa','p'],['Kicks','m'],['Frontier','g']],
+    'Peugeot':[['208','p'],['2008','m']],
+    'Outra':[['Outro modelo','m']]
+  };
+  var FACTOR={p:1,m:1.18,g:1.38};
+  var car={brand:'Chevrolet',model:'Onix',cls:'p',year:2019};
+  var brandsEl=document.getElementById('brands'),modelEl=document.getElementById('model'),yearEl=document.getElementById('year');
+  brandsEl.innerHTML=Object.keys(CARS).map(function(b){return '<button class="brand" data-b="'+b+'">'+b+'</button>'}).join('');
+  var Y=new Date().getFullYear();for(var y=Y;y>=Y-25;y--)yearEl.insertAdjacentHTML('beforeend','<option>'+y+'</option>');
+  yearEl.value=car.year;
+  function fillModels(){
+    modelEl.innerHTML=CARS[car.brand].map(function(m){return '<option>'+m[0]+'</option>'}).join('');
+    if(!CARS[car.brand].some(function(m){return m[0]===car.model}))car.model=CARS[car.brand][0][0];
+    modelEl.value=car.model;
+  }
+  function setCls(){car.cls=CARS[car.brand].find(function(m){return m[0]===car.model})[1]}
+  brandsEl.addEventListener('click',function(e){var b=e.target.closest('.brand');if(!b)return;car.brand=b.dataset.b;fillModels();setCls();updateCar()});
+  modelEl.addEventListener('change',function(){car.model=modelEl.value;setCls();updateCar()});
+  yearEl.addEventListener('change',function(){car.year=+yearEl.value;updateCar()});
+  function carName(){return (car.brand==='Outra'?'Seu carro':car.model)+' '+car.year}
+  function f(){return FACTOR[car.cls]*(Y-car.year>12?1.08:1)}
+
+  // ---------- serviços ----------
+  var SVC=[
+    {id:'revisao',img:'09-relatorio',n:'Revisão completa',d:'Checklist de 40 itens com óleo, filtros, fluidos e relatório com fotos.',a:389,b:590},
+    {id:'oleo',img:'03-oleo',n:'Troca de óleo e filtro',d:'Óleo na especificação do manual e filtro novo. Sai em 40 minutos.',a:220,b:320},
+    {id:'freio',img:'02-freio',n:'Freios',d:'Pastilhas e, se precisar, discos. A peça gasta volta para você.',a:380,b:720},
+    {id:'susp',img:'04-suspensao',n:'Suspensão',d:'Amortecedores, molas e buchas. Barulho na lombada acaba aqui.',a:650,b:1200},
+    {id:'diag',img:'05-scanner',n:'Diagnóstico com scanner',d:'Luz acesa no painel? Leitura completa e laudo. Grátis se fizer o serviço.',a:120,b:120},
+    {id:'pneu',img:'06-pneu',n:'Alinhamento e balanceamento',d:'Volante reto e pneu gastando por igual. Com rodízio incluso.',a:120,b:180},
+    {id:'correia',img:'',n:'Correia dentada',d:'Correia, tensor e bomba d\'água conferida. A troca que não pode passar.',a:480,b:900},
+    {id:'ar',img:'',n:'Ar-condicionado',d:'Higienização, filtro de cabine e carga de gás se precisar.',a:150,b:260}
+  ];
+  // serviços sem foto ganham um ícone de traço no palco vermelho
+  var ICON={
+    correia:'<svg class="ico" viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="3"><circle cx="30" cy="40" r="18"/><circle cx="90" cy="40" r="22"/><circle cx="30" cy="40" r="4"/><circle cx="90" cy="40" r="5"/><path d="M30 22 L90 18 M30 58 L90 62" stroke-dasharray="3 4"/></svg>',
+    ar:'<svg class="ico" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M40 8v64M12 24l56 32M12 56l56-32"/><path d="M32 12l8 6 8-6M32 68l8-6 8 6M10 33l10-2-2-10M70 47l-10 2 2 10M10 47l10 2-2 10M70 33l-10-2 2-10"/></svg>'
+  };
+  var sel={};
+  var svcsEl=document.getElementById('svcs');
+  svcsEl.innerHTML=SVC.map(function(s){
+    return '<article class="svc rv" data-id="'+s.id+'"><span class="km-tag">Vence no seu km</span><figure class="ph" data-ph="'+(s.img||s.id)+'">'+(s.img?'<img src="/assets/ex/ponto-auto/'+s.img+'.webp" alt="'+s.n+'" loading="lazy" onerror="this.remove()">':(ICON[s.id]||''))+'</figure><div class="body"><h3>'+s.n+'</h3><p>'+s.d+'</p><div class="row"><span class="price"><small>para o seu carro</small><span class="pv"></span></span><button class="add">Adicionar</button></div></div></article>';
+  }).join('');
+  svcsEl.addEventListener('click',function(e){var b=e.target.closest('.add');if(!b)return;var id=b.closest('.svc').dataset.id;sel[id]=!sel[id];renderQuote()});
+  function range(s){var k=f();return s.a===s.b?[s.a,s.a]:[Math.round(s.a*k/10)*10,Math.round(s.b*k/10)*10]}
+  function rtxt(r){return r[0]===r[1]?brl(r[0]):brl(r[0])+' a '+brl(r[1])}
+
+  // dias úteis
+  function spNow(){
+    var o={};
+    try{
+      new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',hourCycle:'h23'}).formatToParts(new Date()).forEach(function(p){o[p.type]=p.value});
+      return {d:new Date(Date.UTC(+o.year,+o.month-1,+o.day)),min:(+o.hour%24)*60+(+o.minute)};
+    }catch(e){var n=new Date();return {d:new Date(Date.UTC(n.getFullYear(),n.getMonth(),n.getDate())),min:n.getHours()*60+n.getMinutes()}}
+  }
+  var NOW=spNow();
+  var HOURS={1:[8,18],2:[8,18],3:[8,18],4:[8,18],5:[8,18],6:[8,13]};
+  var WD=['domingo','segunda','terça','quarta','quinta','sexta','sábado'],WDs=['dom','seg','ter','qua','qui','sex','sáb'];
+  function addDays(d,k){return new Date(d.getTime()+k*864e5)}
+  var DAYS=[];
+  for(var k=0;DAYS.length<5&&k<10;k++){var d=addDays(NOW.d,k),h=HOURS[d.getUTCDay()];if(h&&(k>0||NOW.min<h[1]*60-90))DAYS.push({d:d,o:k})}
+  function dname(x){return x.o===0?'hoje':x.o===1?'amanhã':WD[x.d.getUTCDay()]}
+  var day=0;
+  var daysEl=document.getElementById('days');
+  daysEl.addEventListener('click',function(e){var b=e.target.closest('.day');if(!b)return;day=+b.dataset.i;renderQuote()});
+
+  function renderQuote(){
+    document.querySelectorAll('.svc').forEach(function(el){
+      var s=SVC.find(function(x){return x.id===el.dataset.id});
+      el.querySelector('.pv').textContent=rtxt(range(s));
+      el.dataset.on=!!sel[s.id];el.querySelector('.add').textContent=sel[s.id]?'Adicionado ✓':'Adicionar';
+    });
+    var items=SVC.filter(function(s){return sel[s.id]}),lo=0,hi=0;
+    document.getElementById('sumList').innerHTML=items.length?items.map(function(s){var r=range(s);lo+=r[0];hi+=r[1];return '<li><span>'+s.n+'</span><span>'+rtxt(r)+'</span></li>'}).join(''):'<li class="empty">Adicione serviços ao lado ou use o medidor de revisão.</li>';
+    document.getElementById('sumTotal').textContent=items.length?(lo===hi?brl(lo):brl(lo)+' a '+brl(hi)):'R$ 0';
+    document.getElementById('sumCar').textContent=carName().toUpperCase()+' · '+km(kmNow)+' KM';
+    daysEl.innerHTML=DAYS.map(function(x,i){return '<button class="day" data-i="'+i+'" aria-pressed="'+(day===i)+'">'+(x.o<2?dname(x):WDs[x.d.getUTCDay()])+'<b>'+x.d.getUTCDate()+'</b></button>'}).join('');
+    var x=DAYS[day];
+    var msg='Olá, Ponto Auto! Quero um orçamento.\n\nCarro: '+(car.brand==='Outra'?'':car.brand+' ')+carName()+'\nQuilometragem: '+km(kmNow)+' km\n'+
+      (items.length?'Serviços:\n'+items.map(function(s){return '• '+s.n+' ('+rtxt(range(s))+')'}).join('\n')+'\nEstimativa do site: '+document.getElementById('sumTotal').textContent+'\n':'Ainda não sei o que precisa, quero um diagnóstico.\n')+
+      'Posso levar '+dname(x)+' ('+x.d.getUTCDate()+'/'+(x.d.getUTCMonth()+1)+').\n\nPode me mandar as fotos antes de fazer?';
+    document.getElementById('sumBtn').href=WA+encodeURIComponent(msg);
+  }
+
+  function updateCar(){
+    document.querySelectorAll('.brand').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.b===car.brand)});
+    document.getElementById('mycarName').textContent=carName();
+    document.getElementById('mycarTxt').textContent='Revisão completa a partir de '+brl(range(SVC[0])[0]);
+    renderQuote();
+  }
+
+  // ---------- como funciona (arco) ----------
+  var STEPS=[
+    ['Diagnóstico','Você deixa o carro ou a gente busca. O mecânico testa, roda o scanner e anota tudo.'],
+    ['Foto no WhatsApp','Cada problema vira uma foto com o preço da peça e da mão de obra, separado.'],
+    ['Você aprova','Responde item por item. O que você não aprovar, a gente não toca.'],
+    ['Serviço','Só o combinado, com peça na especificação do manual e prazo marcado.'],
+    ['Entrega','Carro lavado, relatório de 40 itens e a peça velha num saquinho para você ver.']
+  ];
+  var arc=document.getElementById('arc'),cur=0,auto=true;
+  STEPS.forEach(function(s,i){
+    var a=Math.PI-(i/(STEPS.length-1))*Math.PI,x=450+380*Math.cos(a),y=470-380*Math.sin(a);
+    arc.insertAdjacentHTML('beforeend','<button class="node" data-i="'+i+'" style="left:'+(x/9)+'%;top:'+(y/4.86)+'%"><b>0'+(i+1)+'</b><span>'+s[0]+'</span></button>');
+  });
+  var prog=document.getElementById('arcProg'),L=prog.getTotalLength();prog.style.strokeDasharray=L;prog.style.strokeDashoffset=L;prog.style.transition='stroke-dashoffset .7s ease';
+  function setStep(i){
+    cur=i;
+    arc.querySelectorAll('.node').forEach(function(n){n.setAttribute('aria-current',+n.dataset.i===i)});
+    document.getElementById('arcN').textContent='0'+(i+1);
+    document.getElementById('arcH').textContent=STEPS[i][0];
+    document.getElementById('arcP').textContent=STEPS[i][1];
+    prog.style.strokeDashoffset=L*(1-i/(STEPS.length-1));
+  }
+  arc.addEventListener('click',function(e){var n=e.target.closest('.node');if(!n)return;auto=false;setStep(+n.dataset.i)});
+  setStep(0);
+  var arcSeen=false;
+  new IntersectionObserver(function(es){arcSeen=es[0].isIntersecting},{threshold:.4}).observe(arc);
+  setInterval(function(){if(auto&&arcSeen&&!document.hidden)setStep((cur+1)%STEPS.length)},3200);
+
+  // ---------- medidor ----------
+  var DUE=[
+    {id:'oleo',n:'Óleo e filtro de óleo',e:10000},
+    {id:'pneu',n:'Alinhamento e rodízio',e:10000},
+    {id:'ar',n:'Filtro de cabine e ar-condicionado',e:15000},
+    {id:'revisao',n:'Revisão completa e filtro de ar',e:20000},
+    {id:'freio',n:'Pastilhas de freio',e:30000},
+    {id:'correia',n:'Correia dentada',e:60000},
+    {id:'susp',n:'Amortecedores',e:80000}
+  ];
+  var kmNow=40000,MAX=150000,kmEl=document.getElementById('km');
+  var ticks='';for(var t=0;t<=15;t++){var ang=Math.PI-(t/15)*Math.PI,r1=t%5?140:132,r2=150;ticks+='<line x1="'+(200+r1*Math.cos(ang))+'" y1="'+(210-r1*Math.sin(ang))+'" x2="'+(200+r2*Math.cos(ang))+'" y2="'+(210-r2*Math.sin(ang))+'" stroke="'+(t%5?'#3a3d44':'#8C9099')+'" stroke-width="2"/>';if(t%5===0)ticks+='<text x="'+(200+112*Math.cos(ang))+'" y="'+(214-112*Math.sin(ang))+'" fill="#8C9099" font-family="JetBrains Mono" font-size="11" text-anchor="middle">'+(t*10)+'k</text>'}
+  document.getElementById('ticks').innerHTML=ticks;
+  // vence se passou da marca há pouco (até 12% do intervalo) ou se faltam menos de 1.500 km
+  function dueList(){
+    return DUE.map(function(x){
+      var r=kmNow%x.e,now=kmNow>=x.e*.9&&(r<=x.e*.12||r>=x.e-1500);
+      return {x:x,left:x.e-r,now:now};
+    });
+  }
+  function renderGauge(){
+    var p=kmNow/MAX;
+    document.getElementById('needle').style.transform='rotate('+(-90+p*180)+'deg)';
+    document.getElementById('gFill').setAttribute('stroke-dasharray',(p*100)+' 100');
+    document.getElementById('kmVal').textContent=km(kmNow);
+    var list=dueList().sort(function(a,b){return (b.now-a.now)||(a.left-b.left)});
+    document.getElementById('due').innerHTML=list.map(function(d){return '<li class="'+(d.now?'now':'')+'"><span><b>'+d.x.n+'</b><small>a cada '+km(d.x.e)+' km</small></span><span class="tag">'+(d.now?'vence agora':'em '+km(d.left)+' km')+'</span></li>'}).join('');
+    var dueIds={};list.forEach(function(d){if(d.now)dueIds[d.x.id]=1});
+    document.querySelectorAll('.svc').forEach(function(el){el.dataset.due=!!dueIds[el.dataset.id]});
+    document.getElementById('addDue').textContent=Object.keys(dueIds).length?'Pôr os '+Object.keys(dueIds).length+' itens no orçamento':'Nada vencendo agora';
+    document.getElementById('addDue').disabled=!Object.keys(dueIds).length;
+    document.getElementById('addDue').style.opacity=Object.keys(dueIds).length?1:.5;
+    return dueIds;
+  }
+  kmEl.addEventListener('input',function(){kmNow=+kmEl.value;renderGauge();renderQuote()});
+  document.getElementById('addDue').addEventListener('click',function(){var ids=renderGauge();Object.keys(ids).forEach(function(id){sel[id]=true});renderQuote();document.getElementById('orcamento').scrollIntoView()});
+
+  // ---------- seu carro agora ----------
+  var TRACK=[['Recebido','Check-in com fotos do painel e da lataria','8h12'],['Diagnóstico','Pastilha dianteira no fim e óleo vencido','9h05'],['Você aprovou','Pastilhas e troca de óleo, R$ 640','9h40'],['Em serviço','Box 2 com o Seu Antônio','10h15'],['Pronto para retirar','Lavado, com relatório e peças antigas','16h30']];
+  var stepsEl=document.getElementById('steps');
+  stepsEl.insertAdjacentHTML('beforeend',TRACK.map(function(s,i){return '<li><i>0'+(i+1)+'</i><span><b>'+s[0]+'</b><small>'+s[1]+'</small></span><time>'+s[2]+'</time></li>'}).join(''));
+  var tStep=0,lis=stepsEl.querySelectorAll('li'),bar=document.getElementById('stepBar');
+  function renderTrack(){
+    lis.forEach(function(li,i){li.className=i<tStep?'done':i===tStep?'cur':''});
+    var a=lis[0],b=lis[tStep];bar.style.height=(b.offsetTop-a.offsetTop)+'px';
+  }
+  var trackSeen=false;
+  new IntersectionObserver(function(es){trackSeen=es[0].isIntersecting},{threshold:.3}).observe(stepsEl);
+  setInterval(function(){if(trackSeen&&!document.hidden){tStep=(tStep+1)%TRACK.length;renderTrack()}},1800);
+  addEventListener('resize',renderTrack);
+
+  // ---------- status ao vivo ----------
+  function busy(key){var h=2166136261;for(var i=0;i<key.length;i++){h^=key.charCodeAt(i);h=Math.imul(h,16777619)}return ((h>>>0)%100)<55}
+  function fmtH(m){var h=Math.floor(m/60),mm=m%60;return h+'h'+(mm?String(mm).padStart(2,'0'):'')}
+  var live=document.getElementById('live'),liveTxt=document.getElementById('liveTxt'),info=document.getElementById('infoNow');
+  var hT=HOURS[NOW.d.getUTCDay()],open=hT&&NOW.min>=hT[0]*60&&NOW.min<hT[1]*60;
+  var slot=null;
+  for(var i=0;i<DAYS.length&&!slot;i++){
+    var hh=HOURS[DAYS[i].d.getUTCDay()],ds=DAYS[i].d.toISOString().slice(0,10);
+    for(var m=hh[0]*60;m<=hh[1]*60-120;m+=60){if(DAYS[i].o===0&&m<NOW.min+60)continue;if(!busy(ds+m)){slot={x:DAYS[i],m:m};break}}
+  }
+  if(open){
+    info.textContent='Aberto até '+hT[1]+'h';
+    liveTxt.textContent=slot&&slot.x.o===0?'Box livre hoje às '+fmtH(slot.m):'Aberto agora · box livre '+(slot?dname(slot.x)+' '+fmtH(slot.m):'esta semana');
+  }else{
+    live.classList.add('off');
+    var nx=null;for(var j=0;j<8&&!nx;j++){var dd=addDays(NOW.d,j),h2=HOURS[dd.getUTCDay()];if(h2&&(j>0||NOW.min<h2[0]*60))nx={o:j,d:dd,h:h2[0]}}
+    var nm=nx?(nx.o===0?'hoje':nx.o===1?'amanhã':WD[nx.d.getUTCDay()]):'';
+    if(nx){liveTxt.textContent='Fechado agora · abrimos '+nm+' às '+nx.h+'h';info.textContent='Fechado · abre '+nm+' às '+nx.h+'h'}
+  }
+
+  // ---------- início ----------
+  fillModels();setCls();updateCar();renderGauge();renderTrack();
+
+  // revelar ao rolar
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+
+  // entrada do herói com GSAP: carro entra pela direita e para no palco
+  if(window.gsap&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    gsap.from('#heroTitle',{y:60,opacity:0,duration:1,ease:'power3.out'});
+    gsap.from('.hero-side',{y:30,opacity:0,duration:.9,delay:.25,ease:'power3.out'});
+    gsap.from('#car figure',{xPercent:40,opacity:0,duration:1.4,delay:.2,ease:'expo.out'});
+    gsap.from('.stats>div',{y:20,opacity:0,duration:.7,stagger:.1,delay:.6,ease:'power2.out'});
+    var c={v:0};gsap.to(c,{v:4200,duration:1.8,delay:.6,ease:'power2.out',onUpdate:function(){document.querySelector('[data-count]').textContent=km(Math.round(c.v))}});
+  }
+})();
+</script>
+<script>(function(){var d=document.getElementById('pt-demo');function u(){document.documentElement.style.setProperty('--pt-demo',Math.max(0,d.offsetHeight-scrollY)+'px')}addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u()})();</script>
+</body>
+</html>
