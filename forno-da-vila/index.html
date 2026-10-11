@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#2e1d14">
+<meta name="description" content="Página de exemplo premium da ProNTech para padarias: Forno da Vila, negócio fictício.">
+<title>Forno da Vila — Exemplo premium de padaria | ProNTech</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: produto como protagonista, palavra gigante como grafismo, onda que vira seção escura de cardápio */
+:root{
+  --cream:#f6efe5; --latte:#eadbc7; --foam:#fffaf3; --espresso:#2e1d14; --roast:#4a3021;
+  --caramel:#c66a2b; --honey:#e9a24a; --ink:#2e1d14; --soft:#7a6252; --onDark:#f3e6d6; --onDark2:#c9b39e;
+  --wa:#25d366; --waInk:#0b2914;
+  --display:'DM Serif Display',Georgia,serif;
+  --head:'Bricolage Grotesque','Figtree',system-ui,sans-serif;
+  --body:'Figtree',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:var(--cream);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+:focus-visible{outline:3px solid var(--caramel);outline-offset:3px}
+
+/* demo bar */
+.demo{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:9px clamp(16px,3vw,24px);background:#131412;color:#f4f3f0;font:500 13px/1.3 var(--body)}
+.demo a{text-decoration:none}
+.demo span{color:#c4c1bb}
+.demo .cta{padding:6px 12px;border-radius:999px;background:#f4f3f0;color:#131412;font-weight:600;white-space:nowrap}
+
+/* nav em pílula */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding-block:14px}
+.nav .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 20px;border-radius:999px;background:rgba(255,250,243,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(74,48,33,.1)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.logo svg{color:var(--caramel)}
+.logo b{font:400 26px/.8 var(--display);letter-spacing:-.02em;display:block}
+.logo small{display:block;font:600 8px var(--mono);letter-spacing:.3em;text-transform:uppercase;margin-top:3px}
+.links{display:flex;gap:26px;font:500 15px var(--body)}
+.links a{text-decoration:none;color:var(--soft)}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;border:0;text-decoration:none;font:600 15px var(--body);cursor:pointer;transition:transform .35s var(--ease),background-color .3s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:var(--waInk)}
+.btn-dark{background:var(--espresso);color:var(--onDark)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px rgba(46,29,20,.25)}
+.btn svg{width:18px;height:18px}
+
+/* hero */
+.hero{position:relative;padding-top:clamp(8px,2vw,24px)}
+.giant{font:400 clamp(110px,23vw,330px)/.78 var(--display);letter-spacing:-.04em;color:var(--latte);text-align:center;user-select:none;margin-bottom:clamp(-150px,-12vw,-40px)}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font:600 12px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--caramel)}
+.hero h1{font:800 clamp(40px,5.6vw,76px)/.98 var(--head);letter-spacing:-.035em;margin:14px 0 18px;text-wrap:balance}
+.hero h1 em{font:400 italic 1.08em var(--display);letter-spacing:-.02em;color:var(--caramel)}
+.lead{max-width:440px;color:var(--soft);font-size:18px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.live{display:inline-flex;align-items:center;gap:12px;margin-top:26px;padding:10px 18px 10px 10px;border-radius:999px;background:var(--foam);border:1px solid rgba(74,48,33,.1);font-size:15px}
+.live .dot{width:34px;height:34px;border-radius:50%;background:var(--honey);display:grid;place-items:center}
+.live .dot b{width:10px;height:10px;border-radius:50%;background:var(--espresso);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(.6);opacity:.6}}
+.live small{display:block;color:var(--soft);font:600 10px var(--mono);letter-spacing:.12em;text-transform:uppercase}
+
+.plate{position:relative;justify-self:center;width:min(100%,520px);aspect-ratio:1}
+.plate .ring{position:absolute;inset:0;border-radius:50%;background:var(--foam);box-shadow:0 40px 80px -20px rgba(46,29,20,.35),inset 0 -10px 30px rgba(46,29,20,.06)}
+.plate .ring{background:radial-gradient(circle at 50% 40%,var(--foam) 0 55%,var(--latte) 100%)}
+.plate .cut{position:absolute;left:-14%;top:-6%;width:128%;max-width:none;filter:drop-shadow(0 30px 30px rgba(46,29,20,.28));animation:settle 2.4s var(--ease) both}
+@keyframes settle{from{transform:translateY(-24px) rotate(-6deg);opacity:0}to{transform:none;opacity:1}}
+.steam{position:absolute;left:50%;top:-14%;width:34%;transform:translateX(-50%);pointer-events:none}
+.steam path{fill:none;stroke:rgba(122,98,82,.35);stroke-width:5;stroke-linecap:round;stroke-dasharray:120;animation:rise 3.2s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.8s}.steam path:nth-child(3){animation-delay:1.6s}
+@keyframes rise{0%{stroke-dashoffset:120;opacity:0}40%{opacity:1}100%{stroke-dashoffset:-120;opacity:0}}
+.badge{position:absolute;right:2%;top:10%;width:clamp(92px,11vw,124px);aspect-ratio:1;border-radius:50%;background:var(--caramel);color:var(--foam);display:grid;place-items:center;text-align:center;font:700 13px/1.15 var(--body);transform:rotate(10deg);box-shadow:0 14px 30px -10px rgba(198,106,43,.7)}
+.badge b{display:block;font:400 34px/1 var(--display)}
+.badge::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px dashed rgba(255,250,243,.55)}
+
+.wave{display:block;width:100%;height:clamp(70px,10vw,150px);margin-top:clamp(20px,4vw,40px)}
+.wheat{position:absolute;right:clamp(8px,4vw,60px);bottom:clamp(-20px,-1vw,0px);width:clamp(90px,10vw,140px);z-index:2;pointer-events:none}
+
+/* por que */
+.why{background:var(--espresso);color:var(--onDark);padding-block:clamp(48px,7vw,90px)}
+.section-head{text-align:center;max-width:620px;margin:0 auto clamp(28px,4vw,44px)}
+.section-head h2{font:800 clamp(32px,4.2vw,54px)/1.02 var(--head);letter-spacing:-.03em;text-wrap:balance}
+.section-head h2 em{font:400 italic 1.08em var(--display);color:var(--honey)}
+.section-head p{margin-top:12px;color:var(--onDark2)}
+.on-light .section-head p{color:var(--soft)}
+.on-light .section-head h2 em{color:var(--caramel)}
+.pills{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pill{display:flex;align-items:center;gap:14px;padding:12px 18px 12px 12px;border-radius:999px;background:rgba(243,230,214,.07);border:1px solid rgba(243,230,214,.12)}
+.pill .ic{flex:none;width:52px;height:52px;border-radius:50%;background:var(--onDark);color:var(--espresso);display:grid;place-items:center}
+.pill .ic svg{width:24px;height:24px}
+.pill b{display:block;font:700 16px/1.2 var(--head)}
+.pill span{font-size:13px;color:var(--onDark2);line-height:1.35;display:block}
+
+/* promo */
+.promo{background:var(--espresso);padding-bottom:clamp(48px,7vw,90px)}
+.promo-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border-radius:32px;overflow:hidden;background:var(--roast);color:var(--onDark)}
+.promo-txt{padding:clamp(28px,4vw,56px);display:flex;flex-direction:column;gap:16px;justify-content:center}
+.promo-txt .tag{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--honey)}
+.promo-txt h3{font:800 clamp(30px,3.6vw,46px)/1 var(--head);letter-spacing:-.03em}
+.promo-txt h3 em{font:400 italic 1.08em var(--display);color:var(--honey)}
+.promo-txt p{color:var(--onDark2);max-width:400px}
+.promo-txt hr{border:0;border-top:1px solid rgba(243,230,214,.15);margin:4px 0;width:100%}
+.promo-txt small{color:var(--onDark2);font-size:13px}
+.promo-img{position:relative;min-height:320px}
+.promo-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.promo-img .badge{left:-46px;right:auto;top:28px;background:var(--honey);color:var(--espresso)}
+.promo-img .badge::before{border-color:rgba(46,29,20,.35)}
+
+/* cardápio */
+.menu{background:var(--cream);padding-block:clamp(56px,8vw,110px)}
+.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:clamp(24px,3vw,36px)}
+.chip{min-height:42px;padding:0 20px;border-radius:999px;border:1.5px solid rgba(46,29,20,.18);background:transparent;font:600 14px var(--body);color:var(--ink);cursor:pointer;transition:background-color .25s,color .25s,border-color .25s}
+.chip[aria-pressed="true"]{background:var(--espresso);border-color:var(--espresso);color:var(--onDark)}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.card{display:flex;flex-direction:column;border-radius:24px;background:var(--foam);overflow:hidden;border:1px solid rgba(74,48,33,.08);transition:transform .4s var(--ease),box-shadow .4s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 40px -24px rgba(46,29,20,.4)}
+.card figure{aspect-ratio:1;overflow:hidden;background:#f5eee5}
+.card figure img{transition:transform .6s var(--ease)}.card:hover figure img{transform:scale(1.06) rotate(-2deg)}
+.card figure img{width:100%;height:100%;object-fit:cover}
+.card .info{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex:1}
+.card h3{font:700 18px/1.2 var(--head);letter-spacing:-.01em}
+.card p{font-size:14px;line-height:1.45;color:var(--soft);flex:1}
+.card .row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:8px}
+.card .price{font:600 17px var(--mono);font-variant-numeric:tabular-nums}
+.card .price small{font:500 12px var(--body);color:var(--soft);margin-left:4px}
+.add{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 14px;border-radius:999px;background:var(--espresso);color:var(--onDark);text-decoration:none;font:600 13px var(--body)}
+.add:hover{background:var(--caramel)}
+
+/* fornadas */
+.batches{position:relative;padding-block:clamp(56px,8vw,110px);overflow:hidden}
+.batches .giant2{position:absolute;left:50%;top:clamp(10px,3vw,30px);transform:translateX(-50%);font:400 italic clamp(120px,22vw,320px)/.8 var(--display);color:var(--latte);white-space:nowrap;letter-spacing:-.04em;pointer-events:none;user-select:none}
+.b-grid{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.duo{position:relative;height:clamp(380px,46vw,560px)}
+.duo img{position:absolute;object-fit:cover;border-radius:28px;box-shadow:0 30px 60px -30px rgba(46,29,20,.5)}
+.duo .a{left:0;top:0;width:62%;height:78%}
+.duo .b{right:0;bottom:0;width:52%;height:62%;border:8px solid var(--cream)}
+.b-txt h2{font:800 clamp(32px,4.2vw,54px)/1.02 var(--head);letter-spacing:-.03em;text-wrap:balance}
+.b-txt h2 em{font:400 italic 1.08em var(--display);color:var(--caramel)}
+.b-txt > p{margin-top:12px;color:var(--soft);max-width:460px}
+.timeline{display:grid;gap:10px;margin-top:26px}
+.slot{display:grid;grid-template-columns:76px minmax(0,1fr) auto;align-items:center;gap:16px;padding:14px 18px;border-radius:20px;background:var(--foam);border:1px solid rgba(74,48,33,.08)}
+.slot .t{font:400 34px/1 var(--display);font-variant-numeric:tabular-nums}
+.slot b{display:block;font:700 16px var(--head)}
+.slot span{font-size:14px;color:var(--soft)}
+.slot .st{font:600 10px var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--latte);color:var(--roast);white-space:nowrap}
+.slot.next{background:var(--espresso);color:var(--onDark);border-color:var(--espresso)}
+.slot.next span{color:var(--onDark2)}
+.slot.next .st{background:var(--honey);color:var(--espresso)}
+.slot.done{opacity:.55}
+
+/* visite */
+.facade-photo{border-radius:36px;overflow:hidden;aspect-ratio:16/7;margin-bottom:-90px}
+.facade-photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.visit-card{margin-inline:clamp(0px,3vw,40px)}
+@media (max-width:760px){.facade-photo{aspect-ratio:4/3;margin-bottom:-40px}}
+.visit{padding-bottom:clamp(56px,8vw,100px)}
+.visit-card{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;padding:clamp(28px,5vw,64px);border-radius:36px;background:var(--espresso);color:var(--onDark);position:relative;overflow:hidden}
+.visit-card h2{font:800 clamp(34px,4.6vw,60px)/1 var(--head);letter-spacing:-.03em;text-wrap:balance}
+.visit-card h2 em{font:400 italic 1.08em var(--display);color:var(--honey)}
+.visit-card > div > p{margin-top:14px;color:var(--onDark2);max-width:420px}
+.visit-card .actions{margin-top:24px}
+.facts{display:grid;gap:0;border-top:1px solid rgba(243,230,214,.15)}
+.facts div{display:grid;grid-template-columns:96px minmax(0,1fr);gap:12px;padding-block:14px;border-bottom:1px solid rgba(243,230,214,.15)}
+.facts dt{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--onDark2);padding-top:3px}
+.facts dd{margin:0;font-weight:500}
+
+footer{padding-block:28px 100px;text-align:center;color:var(--soft);font-size:13px}
+footer a{font-weight:600}
+.wa-float{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.wa-float svg{width:30px;height:30px}
+
+/* entrada */
+.rise{animation:up 1s var(--ease) both}
+.rise.d1{animation-delay:.1s}.rise.d2{animation-delay:.2s}.rise.d3{animation-delay:.3s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+@media (max-width:980px){
+  .pills{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .links{display:none}
+}
+@media (max-width:760px){
+  .hero-grid,.b-grid,.visit-card,.promo-card{grid-template-columns:minmax(0,1fr)}
+  .plate{width:min(88%,420px);order:-1}
+  .giant{margin-bottom:-24vw}
+  .promo-img{min-height:240px;order:-1}
+  .promo-img .badge{left:auto;right:18px;top:18px}
+  .duo{height:clamp(320px,90vw,440px)}
+  .wheat{display:none}
+}
+@media (max-width:520px){
+  .pills{grid-template-columns:minmax(0,1fr)}
+  .cards{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+  .card .info{padding:12px}
+  .card .row{flex-direction:column;align-items:stretch}
+  .add{justify-content:center}
+  .demo span{display:none}
+  .slot{grid-template-columns:60px minmax(0,1fr)}
+  .slot .st{grid-column:2;justify-self:start}
+  .nav .btn span{display:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="demo"><a href="/"><b>ProNTech</b></a><span>Página de exemplo · negócio fictício · <a href="/forno-da-vila/marca/" style="text-decoration:underline">ver a marca</a></span><a class="cta" href="https://wa.me/5511967794744">Quero uma assim ↗</a></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="sym" viewBox="0 0 120 120"><path d="M18 104V62a42 42 0 0 1 84 0v42" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M34 104V66a26 26 0 0 1 52 0v38" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M50 104V70a10 10 0 0 1 20 0v34" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><path d="M8 104h104" stroke="currentColor" stroke-width="7" stroke-linecap="round"/><circle cx="60" cy="14" r="6" fill="currentColor"/></symbol></svg>
+<header class="nav"><div class="wrap"><div class="bar">
+  <a class="logo" href="#topo" aria-label="Forno da Vila"><svg width="30" height="30"><use href="#sym"/></svg><span><b>Forno</b><small>da Vila</small></span></a>
+  <nav class="links" aria-label="Seções"><a href="#cardapio">Cardápio</a><a href="#fornadas">Fornadas</a><a href="#cesta">Cesta</a><a href="#visite">Visite</a></nav>
+  <a class="btn btn-wa" data-msg="Oi! Quero fazer uma encomenda." href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/></svg><span>Encomendar</span></a>
+</div></div></header>
+
+<main id="topo">
+<section class="hero">
+  <div class="giant rise" aria-hidden="true">fornada</div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow rise d1">Fermentação natural · Vila Madalena</span>
+      <h1 class="rise d1">Pão quente <em>três vezes</em> por dia.</h1>
+      <p class="lead rise d2">Fornadas às 7h, 11h e 16h, café coado na hora e encomendas para o fim de semana. Peça pelo WhatsApp e retire sem fila.</p>
+      <div class="actions rise d2">
+        <a class="btn btn-wa" data-msg="Oi! Quero fazer uma encomenda." href="#"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/></svg>Encomendar no WhatsApp</a>
+        <a class="btn btn-ghost" href="#cardapio">Ver cardápio</a>
+      </div>
+      <div class="live rise d3" aria-live="polite"><span class="dot"><b></b></span><span><small id="liveLabel">Próxima fornada</small><strong id="liveTime">hoje às 16h</strong></span></div>
+    </div>
+    <div class="plate rise d1">
+            <div class="ring"></div>
+      <img class="cut" src="/assets/ex/forno-da-vila/hero-alpha.webp" alt="Croissant dourado e folhado num pires de cerâmica">
+      <div class="badge"><span><b>36h</b>de fermentação</span></div>
+    </div>
+  </div>
+  <svg class="wheat" viewBox="0 0 120 120" aria-hidden="true" style="color:var(--honey);opacity:.9"><use href="#sym"/></svg>
+  <svg class="wave" viewBox="0 0 1440 150" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C240 140 420 150 720 90S1200 0 1440 50V150H0Z" fill="#2e1d14"/></svg>
+</section>
+
+<section class="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="why-h">Por que o nosso é <em>mais gostoso</em></h2><p>Massa que descansa, forno que não apaga e gente que sabe seu pedido de cor.</p></div>
+    <ul class="pills">
+      <li class="pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><b>36h de descanso</b><span>Fermentação natural, sem fermento químico</span></span></li>
+      <li class="pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M3 20h18M5 20V11a7 7 0 0 1 14 0v9"/><path d="M10 16c0-2 2-2 2-4M14 16c0-2-2-2-2-4"/></svg></span><span><b>Forno a lenha</b><span>Casca crocante que estala</span></span></li>
+      <li class="pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 11h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 12h1.5a2.5 2.5 0 0 1 0 5H17M8 4c0 1.5 1 1.5 1 3M12 4c0 1.5 1 1.5 1 3"/></svg></span><span><b>Café coado na hora</b><span>Grãos de Minas, torra média</span></span></li>
+      <li class="pill"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 10h6M9 13h4"/></svg></span><span><b>Pediu, separou</b><span>Encomenda pelo WhatsApp, retirada sem fila</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="promo" id="cesta" aria-labelledby="promo-h">
+  <div class="wrap">
+    <div class="promo-card">
+      <div class="promo-txt">
+        <span class="tag">Só aos domingos</span>
+        <h3 id="promo-h">Cesta de café <em>da manhã</em></h3>
+        <p>Pão de fermentação natural, croissants, pão de queijo, geleia da casa e 500 ml de café coado. Serve duas a três pessoas.</p>
+        <hr>
+        <div class="actions" style="margin-top:0"><a class="btn btn-wa" data-msg="Oi! Quero reservar a cesta de café da manhã de domingo." href="#">Reservar a cesta</a></div>
+        <small>Peça até sábado às 18h. Retirada a partir das 7h ou entrega na Vila Madalena.</small>
+      </div>
+      <div class="promo-img">
+        <img src="/assets/ex/forno-da-vila/cesta.webp" alt="Cesta de vime com pão, croissants, pães de queijo, geleia e garrafa de café" loading="lazy">
+        <div class="badge"><span><b>R$89</b>para 2 a 3</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu on-light" id="cardapio" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="section-head"><h2 id="menu-h">Escolha e <em>peça em um toque</em></h2><p>Cada botão abre o WhatsApp com o pedido já escrito. É só mandar.</p></div>
+    <div class="chips" role="group" aria-label="Filtrar cardápio">
+      <button class="chip" id="f-todos" data-f="todos" aria-pressed="true">Tudo</button>
+      <button class="chip" id="f-paes" data-f="paes" aria-pressed="false">Pães</button>
+      <button class="chip" id="f-doces" data-f="doces" aria-pressed="false">Doces</button>
+      <button class="chip" id="f-cafe" data-f="cafe" aria-pressed="false">Café</button>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="batches" id="fornadas" aria-labelledby="b-h">
+  <div class="giant2" aria-hidden="true">quentinho</div>
+  <div class="wrap b-grid">
+    <div class="duo">
+      <img class="a" src="/assets/ex/forno-da-vila/interior.webp" alt="Balcão com vitrine de pães e o forno a lenha aceso ao fundo" loading="lazy" style="object-position:70% center">
+      <img class="b" src="/assets/ex/padaria/03-maos-sovando-massa.webp" alt="Mãos sovando massa sobre mármore" loading="lazy">
+    </div>
+    <div class="b-txt">
+      <span class="eyebrow">Fornadas do dia</span>
+      <h2 id="b-h" style="margin-top:12px">Chegue na hora <em>do pão quente</em></h2>
+      <p>O forno abre três vezes por dia. A fornada marcada abaixo é a próxima, pelo horário de São Paulo.</p>
+      <div class="timeline" id="timeline">
+        <div class="slot" data-h="7"><span class="t">7h</span><span><b>Fornada da manhã</b><span>Pão francês, fermentação natural, pão de queijo</span></span><span class="st"></span></div>
+        <div class="slot" data-h="11"><span class="t">11h</span><span><b>Fornada do almoço</b><span>Integrais, focaccia, croissants recheados</span></span><span class="st"></span></div>
+        <div class="slot" data-h="16"><span class="t">16h</span><span><b>Fornada do café</b><span>Pão francês, bolos, sonhos</span></span><span class="st"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visite" aria-labelledby="v-h">
+  <div class="wrap">
+    <figure class="facade-photo"><img src="/assets/ex/forno-da-vila/fachada.webp" alt="Fachada da Forno da Vila com toldo listrado na esquina"></figure>
+    <div class="visit-card">
+      <div>
+        <h2 id="v-h">Tem cadeira <em>e café passado</em></h2>
+        <p>Sente, peça um pingado e veja a próxima fornada sair. Ou mande mensagem e passe só para buscar.</p>
+        <div class="actions"><a class="btn btn-wa" data-msg="Oi! Quero fazer uma encomenda." href="#">Chamar no WhatsApp</a></div>
+      </div>
+      <dl class="facts">
+        <div><dt>Endereço</dt><dd>Rua Aspicuelta, 000 · Vila Madalena, São Paulo</dd></div>
+        <div><dt>Horário</dt><dd>Todos os dias, 6h30 às 20h</dd></div>
+        <div><dt>Telefone</dt><dd>(11) 90000-0000</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Página de exemplo da <a href="/">ProNTech</a> com um negócio fictício. Nomes, preços, endereço e telefone são ilustrativos.</div></footer>
+<a class="wa-float" data-msg="Oi! Quero fazer uma encomenda." href="#" aria-label="Encomendar pelo WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11.6 9.8c-.3-.7-.6-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.6 1.5 3.9c.2.2 2.6 4.1 6.4 5.6 3.2 1.2 3.8 1 4.5.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5l-2.4-1.2c-.3-.1-.6-.2-.8.2l-1.1 1.3c-.2.3-.4.3-.8.1-.3-.2-1.4-.5-2.7-1.7-1-.9-1.7-2-1.9-2.3-.2-.3 0-.5.1-.7l.6-.7c.2-.2.2-.4.3-.6.1-.2.1-.5 0-.7l-1-2.6z" fill="currentColor"/></svg></a>
+
+<script>
+(function(){
+  var WA='https://wa.me/5511967794744?text=';
+  document.querySelectorAll('[data-msg]').forEach(function(a){a.href=WA+encodeURIComponent(a.dataset.msg)});
+
+  var items=[
+    {c:'paes',n:'Fermentação natural',d:'36h de descanso, casca grossa e miolo aberto.',p:'28',u:'800 g',img:'pao-natural.webp',pos:'center'},
+    {c:'paes',n:'Pão de queijo',d:'Polvilho azedo e queijo canastra. Sai às 7h.',p:'14',u:'6 un.',img:'pao-queijo.webp',pos:'center'},
+    {c:'doces',n:'Croissant',d:'Manteiga francesa, 27 camadas, folhado de verdade.',p:'12',u:'un.',img:'hero-creme.webp',pos:'center'},
+    {c:'doces',n:'Bolo de vó',d:'Fubá com goiabada. Inteiro sob encomenda de 48h.',p:'9',u:'fatia',img:'bolo.webp',pos:'center'},
+    {c:'paes',n:'Integral com sementes',d:'Linhaça, girassol e gergelim. Sai às 11h.',p:'22',u:'600 g',img:'integral.webp',pos:'center'},
+    {c:'doces',n:'Sonho de creme',d:'Recheio de baunilha e açúcar fino. Sai às 16h.',p:'10',u:'un.',img:'sonho.webp',pos:'center'},
+    {c:'cafe',n:'Café coado',d:'Grão de Minas, torra média, passado na hora.',p:'8',u:'200 ml',img:'cafe.webp',pos:'center'},
+    {c:'cafe',n:'Pingado e pão na chapa',d:'O clássico do balcão, com manteiga da serra.',p:'15',u:'combo',img:'../padaria/04-cafe-da-manha.webp',pos:'center'}
+  ];
+  var box=document.getElementById('cards');
+  box.innerHTML=items.map(function(it){
+    var msg='Oi! Quero pedir: '+it.n+' ('+it.u+', R$ '+it.p+').';
+    return '<article class="card" data-c="'+it.c+'"><figure><img src="/assets/ex/forno-da-vila/'+it.img+'" alt="'+it.n+'" loading="lazy" style="object-position:'+it.pos+'"></figure><div class="info"><h3>'+it.n+'</h3><p>'+it.d+'</p><div class="row"><span class="price">R$ '+it.p+'<small>'+it.u+'</small></span><a class="add" href="'+WA+encodeURIComponent(msg)+'">+ Pedir</a></div></div></article>';
+  }).join('');
+  document.querySelectorAll('.chip').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.chip').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+      var f=b.dataset.f;
+      box.querySelectorAll('.card').forEach(function(c){c.hidden=!(f==='todos'||c.dataset.c===f)});
+    });
+  });
+
+  // próxima fornada pelo horário de São Paulo
+  var h;
+  try{h=Number(new Intl.DateTimeFormat('pt-BR',{hour:'numeric',hourCycle:'h23',timeZone:'America/Sao_Paulo'}).format(new Date()))}catch(e){h=new Date().getHours()}
+  var hours=[7,11,16], next=hours.find(function(x){return x>h});
+  var slots=document.querySelectorAll('.slot');
+  slots.forEach(function(s){
+    var sh=Number(s.dataset.h), st=s.querySelector('.st');
+    if(next!==undefined&&sh===next){s.classList.add('next');st.textContent='Próxima'}
+    else if(next===undefined||sh<next){s.classList.add('done');st.textContent='Já saiu'}
+    else{st.textContent='Mais tarde'}
+  });
+  if(next===undefined){document.querySelector('.slot[data-h="7"]').classList.replace('done','next');document.querySelector('.slot[data-h="7"] .st').textContent='Amanhã'}
+  document.getElementById('liveTime').textContent=next!==undefined?'hoje às '+next+'h':'amanhã às 7h';
+})();
+</script>
+
+</body>
+</html>
